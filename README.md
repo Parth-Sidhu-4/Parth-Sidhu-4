@@ -28,7 +28,7 @@ I am a passionate Electronics and Communication Engineering student at Gati Shak
 
 ### 📫 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/YourProfile)  
-- [Email](mailto:parthecstasy@gmail.com)   
+- [LinkedIn](https://in.linkedin.com/in/parth-sidhu)  
+- [Email](mailto:parth.sidhu_btech23@gsv.ac.in)   
 
 Thanks for visiting! 😊
