@@ -1,6 +1,6 @@
 # <p align="center">👋 Hi there, I'm Parth Sidhu!</p>
 
-🎓 Electronics and Communication Engineering (ECE) student  
+🎓 Just a University student  
 💻 Aspiring Software Developer | AI Explorer  
 🎨 Hobbyist Singer • Poet • Artist
 
