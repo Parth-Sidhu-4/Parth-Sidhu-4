@@ -249,6 +249,12 @@
         grid-template-columns: 1fr;
       }
     }
+    .footer {
+    text-align: center;
+    color: #9ca3af; /* faded gray */
+    font-size: 0.875rem; /* small text */
+    padding: 1rem 0;
+  }
   </style>
 </head>
 <body>
@@ -394,5 +400,12 @@
       </div>
     </section>
   </div>
+  <footer class="footer">
+  © <span id="year"></span> Parth Sidhu. Made with ❤️.
+</footer>
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
