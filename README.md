@@ -1,34 +1,47 @@
-# Hi there! 👋 I'm Parth Sidhu
+# <p align="center">👋 Hi there, I'm Parth Sidhu!</p>
 
-I am a passionate Electronics and Communication Engineering student at Gati Shakti Vishwavidyalaya, Vadodara. My interests lie at the intersection of software development, data analysis, and artificial intelligence. I love exploring how technology can solve real-world problems and am currently diving into Data Structures, Algorithms, and Machine Learning.
-
----
-
-### 🛠️ Skills & Technologies
-
-- **Languages:** C++, Python, Java (Basic)  
-- **Tools & Frameworks:** Ubuntu, Git  
-- **Areas of Interest:** Software Development, Data Analysis, ML  
+🎓 Electronics and Communication Engineering (ECE) student  
+💻 Aspiring Software Developer | AI Explorer  
+🎨 Hobbyist Singer • Poet • Artist
 
 ---
 
-### 🚀 Projects
+## 👨‍💻 Parth's Corner
 
-- **Face-Vision:** Detect faces in images and videos using a Python script with OpenCV. Features include loading a face detection model, applying it to various media formats, and drawing bounding boxes around detected faces. [Link](https://github.com/Parth-Sidhu-4/Face-Vision.git)  
-- **Star-Detection:** A Python project that fetches images from NASA's Hubble's Star Clusters Flickr album, enhances the contrast of the images, detects stars, and overlays the results with annotations. [Link](https://github.com/Parth-Sidhu-4/Star-Detection.git)  
-
----
-
-### 🌱 Currently Learning
-
-- Java and Data Structures  
-- Deep Learning and GANs  
+🐞 Trying to learn it all  
+🌱 Currently diving into Machine Learning & Deep Learning  
+📂 All of my projects live on GitHub (uploading... slowly but surely)  
+🔍 Wanna know a bit more? [Check this out](https://parth-sidhu-4.github.io/Parth-Sidhu-4/)  
+⚡ **Fun fact: Octopuses have three hearts and blue blood. Just like your crush — cold and complicated.**
 
 ---
 
-### 📫 Connect with Me
+## 🛠️ Skills & Tools
 
-- [LinkedIn](https://in.linkedin.com/in/parth-sidhu)  
-- [Email](mailto:parth.sidhu_btech23@gsv.ac.in)   
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="32" height="32"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="32" height="32"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="32" height="32"/>
+  &nbsp;
+  <img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Ubuntu" width="32" height="32"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="32" height="32"/>
+</p>
 
-Thanks for visiting! 😊
+## 📫 Let's Connect!
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/YourProfile" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32"/>
+  </a>
+  &nbsp;
+  <a href="mailto:youremail@example.com">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" width="32" height="32"/>
+  </a>
+</p>
+
+---
+
+_“Code is poetry, and I'm learning to write it well.”_
