@@ -33,11 +33,11 @@
 ## 📫 Let's Connect!
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/YourProfile" target="_blank">
+  <a href="https://www.linkedin.com/in/parth-sidhu/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32"/>
   </a>
   &nbsp;
-  <a href="mailto:youremail@example.com">
+  <a href="mailto:parth.sidhu_btech23@gsv.ac.in">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" width="32" height="32"/>
   </a>
 </p>
