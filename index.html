@@ -493,7 +493,7 @@
     // Check every half second
     setInterval(() => {
       if (devToolsOpen()) {
-        window.location.href = "about:blank"; // Redirects to blank page
+        document.body.style.filter = "blur(20px)";
       }
     }, 500);
   </script>
