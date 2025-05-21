@@ -1,6 +1,6 @@
 # <p align="center">👋 Hi there, I'm Parth Sidhu!</p>
 
-🎓 Just a University student  
+🎓 Just an average uni student trying to make sense of life 
 💻 Aspiring Software Developer | AI Explorer  
 🎨 Hobbyist Singer • Poet • Artist
 
