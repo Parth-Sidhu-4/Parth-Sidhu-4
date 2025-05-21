@@ -468,32 +468,6 @@
 
   document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
-
- <script>
-  (function() {
-    const wrapper = document.getElementById("profile-wrapper");
-
-    const checkDevTools = () => {
-      let devtools =
-        window.outerWidth - window.innerWidth > 100 ||
-        window.outerHeight - window.innerHeight > 100;
-
-      if (devtools) {
-        wrapper.style.filter = "blur(20px)";
-        wrapper.style.pointerEvents = "none";
-        wrapper.style.userSelect = "none";
-      } else {
-        wrapper.style.filter = "none";
-        wrapper.style.pointerEvents = "auto";
-        wrapper.style.userSelect = "auto";
-      }
-    };
-
-    setInterval(checkDevTools, 300);
-  })();
-</script>
-
-
 </body>
 </html>
 
