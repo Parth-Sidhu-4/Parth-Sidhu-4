@@ -223,7 +223,11 @@
   list-style: none; 
   padding-left: 0;  
 }
-
+    .no-download {
+      pointer-events: none;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
 #education li {
   margin-bottom: 1.2rem;
   background: rgba(255, 255, 255, 0.1);
@@ -258,7 +262,6 @@
 <body>
   <div class="container">
     <header>
-  <a href="public/parth-sidhu.jpeg" target="_blank">
     <img
       src="public/parth-sidhu.jpeg"
       alt="Parth Sidhu"
@@ -427,6 +430,12 @@
       </div>
     </section>
   </div>
-
+<script>
+    document.addEventListener("contextmenu", (e) => {
+      if (e.target.classList.contains("no-download")) {
+        e.preventDefault(); // Disable right-click
+      }
+    });
+  </script>
 </body>
 </html>
