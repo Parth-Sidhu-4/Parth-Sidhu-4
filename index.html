@@ -481,6 +481,25 @@
   // Block right click globally
   document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
+  <!-- Your existing HTML content -->
+
+  <script>
+    function devToolsOpen() {
+      const threshold = 160;
+      return window.outerWidth - window.innerWidth > threshold ||
+             window.outerHeight - window.innerHeight > threshold;
+    }
+
+    // Check every half second
+    setInterval(() => {
+      if (devToolsOpen()) {
+        window.location.href = "about:blank"; // Redirects to blank page
+      }
+    }, 500);
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
