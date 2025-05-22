@@ -253,6 +253,32 @@
   pointer-events: all;
   background-color: transparent;
 }
+    body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Optional: Style the toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
 
 #education li {
   margin-bottom: 1.2rem;
@@ -285,6 +311,7 @@
   </style>
 </head>
 <body>
+  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
   <div class="container">
     <header>
    <div class="image-container">
@@ -468,6 +495,28 @@
 
   document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
+<script>
+  const toggleButton = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Load saved preference if any
+  const savedTheme = localStorage.getItem("theme") || "light";
+  body.classList.add(`${savedTheme}-mode`);
+  toggleButton.textContent = savedTheme === "dark" ? "🌞" : "🌙";
+
+  toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark-mode")) {
+      body.classList.replace("dark-mode", "light-mode");
+      toggleButton.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    } else {
+      body.classList.replace("light-mode", "dark-mode");
+      toggleButton.textContent = "🌞";
+      localStorage.setItem("theme", "dark");
+    }
+  });
+</script>
+
 </body>
 </html>
 
