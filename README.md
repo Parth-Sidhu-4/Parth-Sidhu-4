@@ -8,7 +8,7 @@
 
 ## 👨‍💻 Parth's Corner
 
-🐞 Trying to learn it all  
+🐞 Creating bugs more than solving them  
 🌱 Currently diving into Machine Learning & Deep Learning  
 📂 All of my projects live on GitHub (uploading... slowly but surely)  
 🔍 Wanna know a bit more? [Check this out](https://parth-sidhu-4.github.io/Parth-Sidhu-4/)  
