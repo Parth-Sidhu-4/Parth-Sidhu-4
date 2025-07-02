@@ -3,45 +3,59 @@ document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
 });
 
-// --- Carousel Logic ---
+// --- Global Carousel Variables (for Education Carousel) ---
+// These are declared globally because the helper functions (updateCarousel, nextEducation, etc.)
+// are also global and rely on these variables. Their values will be assigned inside DOMContentLoaded.
 let currentSlide = 0;
-const slides = document.querySelectorAll(".education-slide");
-const dots = document.querySelectorAll(".dot");
-const carousel = document.querySelector(".education-carousel");
+let slides; // Will be assigned NodeList of .education-slide inside DOMContentLoaded
+let dots; // Will be assigned NodeList of .dot inside DOMContentLoaded
+let educationCarouselElement; // Will be assigned the .education-carousel element inside DOMContentLoaded
 let intervalId;
 let touchStartX = 0;
 let touchEndX = 0;
-const swipeThreshold = 50;
+const swipeThreshold = 50; // Pixels for swipe detection
 
+// --- Global Carousel Helper Functions (for Education Carousel) ---
 function updateCarousel() {
-  slides.forEach((slide, idx) => {
-    slide.classList.toggle("active", idx === currentSlide);
-  });
-  dots.forEach((dot, idx) => {
-    dot.classList.toggle("active", idx === currentSlide);
-  });
+  if (slides && dots && slides.length > 0) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle("active", idx === currentSlide);
+    });
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === currentSlide);
+    });
+  }
 }
 
 function nextEducation() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateCarousel();
+  if (slides && slides.length > 0) {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }
 }
 
 function prevEducation() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateCarousel();
+  if (slides && slides.length > 0) {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
+  }
 }
 
 function goToSlide(index) {
-  currentSlide = index;
-  updateCarousel();
-  resetAutoSlide();
+  if (slides && slides.length > 0) {
+    currentSlide = index;
+    updateCarousel();
+    resetAutoSlide(); // Resets auto-slide timer after manual navigation
+  }
 }
 
 function autoSlide() {
-  intervalId = setInterval(() => {
-    nextEducation();
-  }, 5000);
+  clearInterval(intervalId); // Clear any existing interval before setting a new one
+  if (slides && slides.length > 0) {
+    intervalId = setInterval(() => {
+      nextEducation();
+    }, 5000); // Slide every 5 seconds
+  }
 }
 
 function resetAutoSlide() {
@@ -49,40 +63,134 @@ function resetAutoSlide() {
   autoSlide();
 }
 
-// Touch event handlers for carousel
-carousel.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
-});
+// --- Experience Carousel Logic ---
+let currentExperienceSlide = 0;
+const experienceSlides = document.querySelectorAll(".experience-slide");
+const experienceDots = document.querySelectorAll(".experience-dot");
+const experienceCarousel = document.querySelector(".experience-carousel"); // Get the carousel container
+const experienceLeftArrow = document.querySelector(".experience-arrow.left");
+const experienceRightArrow = document.querySelector(".experience-arrow.right");
 
-carousel.addEventListener(
-  "touchmove",
-  (e) => {
-    e.preventDefault(); // Prevent scrolling while swiping
-    touchEndX = e.touches[0].clientX;
-  },
-  { passive: false }
-); // Use passive: false to allow preventDefault
+let experienceIntervalId;
+let experienceTouchStartX = 0;
+let experienceTouchEndX = 0;
+const experienceSwipeThreshold = 50; // pixels for swipe detection
 
-carousel.addEventListener("touchend", () => {
-  const swipeDistance = touchEndX - touchStartX;
-  if (swipeDistance > swipeThreshold) {
-    prevEducation();
-    resetAutoSlide();
-  } else if (swipeDistance < -swipeThreshold) {
-    nextEducation();
-    resetAutoSlide();
+function updateExperienceCarousel() {
+  experienceSlides.forEach((slide, idx) => {
+    slide.classList.toggle("active", idx === currentExperienceSlide);
+  });
+  experienceDots.forEach((dot, idx) => {
+    dot.classList.toggle("active", idx === currentExperienceSlide);
+  });
+}
+
+function nextExperience() {
+  currentExperienceSlide =
+    (currentExperienceSlide + 1) % experienceSlides.length;
+  updateExperienceCarousel();
+}
+
+function prevExperience() {
+  currentExperienceSlide =
+    (currentExperienceSlide - 1 + experienceSlides.length) %
+    experienceSlides.length;
+  updateExperienceCarousel();
+}
+
+function goToExperienceSlide(index) {
+  currentExperienceSlide = index;
+  updateExperienceCarousel();
+  resetAutoExperienceSlide(); // Reset auto-slide when a dot is clicked
+}
+
+function autoExperienceSlide() {
+  experienceIntervalId = setInterval(() => {
+    nextExperience();
+  }, 5000); // Auto-slide every 5 seconds
+}
+
+function resetAutoExperienceSlide() {
+  clearInterval(experienceIntervalId);
+  autoExperienceSlide();
+}
+
+// Initialize and add event listeners for Experience Carousel
+if (experienceCarousel && experienceSlides.length > 0) {
+  updateExperienceCarousel(); // Set initial slide visibility
+  autoExperienceSlide(); // Start auto-sliding
+
+  // Click listeners for arrows
+  if (experienceLeftArrow) {
+    experienceLeftArrow.addEventListener("click", prevExperience);
   }
-  touchStartX = 0;
-  touchEndX = 0;
-});
+  if (experienceRightArrow) {
+    experienceRightArrow.addEventListener("click", nextExperience);
+  }
 
-// --- Internationalization (i18n) Logic ---
-const translations = {
+  // Click listeners for dots
+  experienceDots.forEach((dot) => {
+    dot.addEventListener("click", (e) => {
+      const slideIndex = parseInt(e.target.dataset.slide);
+      goToExperienceSlide(slideIndex);
+    });
+  });
+
+  // Pause/Resume auto-slide on mouse hover
+  experienceCarousel.addEventListener("mouseenter", () =>
+    clearInterval(experienceIntervalId)
+  );
+  experienceCarousel.addEventListener("mouseleave", autoExperienceSlide);
+
+  // Touch event handlers for swiping
+  experienceCarousel.addEventListener("touchstart", (e) => {
+    experienceTouchStartX = e.touches[0].clientX;
+  });
+
+  experienceCarousel.addEventListener("touchend", (e) => {
+    experienceTouchEndX = e.changedTouches[0].clientX;
+    handleExperienceSwipe();
+  });
+
+  experienceCarousel.addEventListener(
+    "touchmove",
+    (e) => {
+      // Prevent default only if swiping horizontally to avoid interfering with vertical scroll
+      if (
+        Math.abs(e.touches[0].clientX - experienceTouchStartX) >
+        Math.abs(e.touches[0].clientY - e.touches[0].clientY)
+      ) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  ); // Use passive: false for preventDefault to work
+
+  function handleExperienceSwipe() {
+    if (
+      experienceTouchEndX <
+      experienceTouchStartX - experienceSwipeThreshold
+    ) {
+      nextExperience(); // Swipe left
+    } else if (
+      experienceTouchEndX >
+      experienceTouchStartX + experienceSwipeThreshold
+    ) {
+      prevExperience(); // Swipe right
+    }
+  }
+}
+// --- Global Language Setup ---
+window.currentLanguage = localStorage.getItem("portfolioLanguage") || "en";
+
+// --- Translations for Poems & Articles Page ---
+window.translations = {
   en: {
     page_title: "Parth Sidhu - Portfolio",
     nav_home: "Home",
     nav_projects: "Projects",
     nav_connect: "Connect",
+    nav_poems_articles: "Poems & Articles",
     hero_welcome: "WELCOME",
     hero_tagline: "Weaving Dreams in the Digital Loom.",
     profile_name: "Parth Sidhu",
@@ -117,7 +225,22 @@ const translations = {
     project_stardetection_desc:
       "Detect stars in images from NASA's Hubble collection.",
     view_project_link: "View project",
+    project_stardetection_desc:
+      "Detect stars in images from NASA's Hubble collection.",
+    project_portfolio_title: "Personal Portfolio Website",
+    project_portfolio_desc:
+      "A vibe - coded personal website showcasing projects, poems, and articles, built with HTML, CSS, and JavaScript, featuring responsive design and multi-language support.",
+    view_project_link: "View project",
     projects_coming_soon: "More projects coming soon — stay tuned!",
+    experience_heading: "Experience",
+    exp_railway_company: "DRM Ambala (Northern Railway)",
+    exp_railway_role: "15 Day Internship in S & T Department",
+    exp_railway_date: "May 2024",
+    exp_railway_description: "Gained insights into Railway Signaling basics.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "1 Month Research Internship",
+    exp_nith_date: "June - July 2025",
+    exp_nith_description: "Conducted research on GAN Models and Deep Learning.",
     currently_learning_heading: "Currently Learning",
     learning_java: "Java",
     learning_datastructures: "Data Structures",
@@ -130,6 +253,7 @@ const translations = {
     nav_home: "होम",
     nav_projects: "प्रोजेक्ट्स",
     nav_connect: "संपर्क करें",
+    nav_poems_articles: "कविताएँ & लेख",
     hero_welcome: "स्वागत है",
     hero_tagline: "डिजिटल करघे में सपनों की बुनाई।",
     profile_name: "पार्थ सिद्धू",
@@ -164,7 +288,21 @@ const translations = {
     project_stardetection_desc:
       "नासा के हबल संग्रह से छवियों में सितारों का पता लगाएं।",
     view_project_link: "प्रोजेक्ट देखें",
+    project_portfolio_title: "व्यक्तिगत पोर्टफोलियो वेबसाइट",
+    project_portfolio_desc:
+      "एक व्यक्तिगत वेबसाइट जो परियोजनाओं, कविताओं और लेखों को प्रदर्शित करती है, HTML, CSS, और JavaScript के साथ निर्मित, जिसमें उत्तरदायी डिज़ाइन और बहु-भाषा समर्थन शामिल है।",
+    view_project_link: "प्रोजेक्ट देखें",
     projects_coming_soon: "अधिक परियोजनाएं जल्द आ रही हैं — बने रहें!",
+    experience_heading: "अनुभव",
+    exp_railway_company: "डीआरएम अंबाला (उत्तरी रेलवे)",
+    exp_railway_role: "एस एंड टी विभाग में 15 दिवसीय इंटर्नशिप",
+    exp_railway_date: "मई 2024",
+    exp_railway_description:
+      "रेलवे सिग्नलिंग की मूल बातें में अंतर्दृष्टि प्राप्त की।",
+    exp_nith_institute: "एनआईटी हमीरपुर",
+    exp_nith_role: "1 महीने का अनुसंधान इंटर्नशिप",
+    exp_nith_date: "जून - जुलाई 2025",
+    exp_nith_description: "GAN मॉडल और डीप लर्निंग पर शोध किया।",
     currently_learning_heading: "वर्तमान में सीख रहा हूँ",
     learning_java: "जावा",
     learning_datastructures: "डेटा स्ट्रक्चर्स",
@@ -177,6 +315,7 @@ const translations = {
     nav_home: "ਘਰ",
     nav_projects: "ਪ੍ਰੋਜੈਕਟ",
     nav_connect: "ਸੰਪਰਕ ਕਰੋ",
+    nav_poems_articles: "ਕਵਿਤਾਵਾਂ ਅਤੇ ਲੇਖ",
     hero_welcome: "ਸੁਆਗਤ ਹੈ",
     hero_tagline: "ਡਿਜੀਟਲ ਲੂਮ ਵਿੱਚ ਸੁਪਨਿਆਂ ਦੀ ਬੁਣਾਈ।",
     profile_name: "ਪਾਰਥ ਸਿੱਧੂ",
@@ -210,7 +349,21 @@ const translations = {
     project_stardetection_desc:
       "ਨਾਸਾ ਦੇ ਹਬਲ ਸੰਗ੍ਰਹਿ ਤੋਂ ਚਿੱਤਰਾਂ ਵਿੱਚ ਤਾਰਿਆਂ ਦਾ ਪਤਾ ਲਗਾਓ।",
     view_project_link: "ਪ੍ਰੋਜੈਕਟ ਦੇਖੋ",
+    project_portfolio_title: "ਨਿੱਜੀ ਪੋਰਟਫੋਲੀਓ ਵੈੱਬਸਾਈਟ",
+    project_portfolio_desc:
+      "ਇੱਕ ਵਾਈਬ-ਕੋਡਿਡ ਨਿੱਜੀ ਵੈੱਬਸਾਈਟ ਜਿਸ ਵਿੱਚ ਪ੍ਰੋਜੈਕਟ, ਕਵਿਤਾਵਾਂ ਅਤੇ ਲੇਖ ਪ੍ਰਦਰਸ਼ਿਤ ਕੀਤੇ ਗਏ ਹਨ, HTML, CSS, ਅਤੇ JavaScript ਨਾਲ ਬਣਾਈ ਗਈ ਹੈ, ਜਿਸ ਵਿੱਚ ਜਵਾਬਦੇਹ ਡਿਜ਼ਾਈਨ ਅਤੇ ਬਹੁ-ਭਾਸ਼ਾਈ ਸਹਾਇਤਾ ਸ਼ਾਮਲ ਹੈ।",
+    view_project_link: "ਪ੍ਰੋਜੈਕਟ ਦੇਖੋ",
     projects_coming_soon: "ਹੋਰ ਪ੍ਰੋਜੈਕਟ ਜਲਦੀ ਆ ਰਹੇ ਹਨ — ਬਣੇ ਰਹੋ!",
+    experience_heading: "ਅਨੁਭਵ",
+    exp_railway_company: "ਡੀਆਰਐਮ ਅੰਬਾਲਾ (ਉੱਤਰੀ ਰੇਲਵੇ)",
+    exp_railway_role: "ਐਸ ਐਂਡ ਟੀ ਵਿਭਾਗ ਵਿੱਚ 15 ਦਿਨਾਂ ਦੀ ਇੰਟਰਨਸ਼ਿਪ",
+    exp_railway_date: "ਮਈ 2024",
+    exp_railway_description:
+      "ਰੇਲਵੇ ਸਿਗਨਲਿੰਗ ਦੇ ਮੂਲ ਸਿਧਾਂਤਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕੀਤੀ।",
+    exp_nith_institute: "ਐਨਆਈਟੀ ਹਮੀਰਪੁਰ",
+    exp_nith_role: "1 ਮਹੀਨੇ ਦੀ ਖੋਜ ਇੰਟਰਨਸ਼ਿਪ",
+    exp_nith_date: "ਜੂਨ - ਜੁਲਾਈ 2025",
+    exp_nith_description: "GAN ਮਾਡਲਾਂ ਅਤੇ ਡੀਪ ਲਰਨਿੰਗ 'ਤੇ ਖੋਜ ਕੀਤੀ।",
     currently_learning_heading: "ਵਰਤਮਾਨ ਵਿੱਚ ਸਿੱਖ ਰਿਹਾ ਹਾਂ",
     learning_java: "ਜਾਵਾ",
     learning_datastructures: "ਡਾਟਾ ਸਟ੍ਰਕਚਰ",
@@ -223,6 +376,7 @@ const translations = {
     nav_home: "گھر",
     nav_projects: "پروجیکٹس",
     nav_connect: "رابطہ کریں",
+    nav_poems_articles: "نظماں تے لیکھ",
     hero_welcome: "خوش آمدید",
     hero_tagline: "ڈیجیٹل لوم وچ سپنیاں دی بنائی۔",
     profile_name: "پارتھ سدھو",
@@ -257,7 +411,20 @@ const translations = {
     project_stardetection_desc:
       "ناسا دے ہبل کلیکشن تو‏ں تصاویر وچ ستاریاں دا پتہ لاؤ۔",
     view_project_link: "پروجیکٹ دیکھو",
+    project_portfolio_title: "نجی پورٹ فولیو ویبسائٹ",
+    project_portfolio_desc:
+      "اک وائب-کوڈڈ نجی ویبسائٹ جیدے وِچ پروجیکٹ، نظماں تے مضمون پیش کیتے گئے نیں، HTML، CSS، تے JavaScript نال بنائی گئی اے، جیدے وِچ رسپانسیو ڈیزائن تے کئی زباناں دی حمایت شامل اے۔",
+    view_project_link: "پروجیکٹ دیکھو",
     projects_coming_soon: "مزید پروجیکٹس جلد آرہے نيں — دیکھتے رہو!",
+    experience_heading: "تجربہ",
+    exp_railway_company: "ڈی آر ایم امبالہ (شمالی ریلوے)",
+    exp_railway_role: "ایس اینڈ ٹی ڈیپارٹمنٹ میں 15 دن کی انٹرن شپ",
+    exp_railway_date: "مئی 2024",
+    exp_railway_description: "ریلوے سگنلنگ کی بنیادی باتوں میں بصیرت حاصل کی۔",
+    exp_nith_institute: "این آئی ٹی ہمیرپور",
+    exp_nith_role: "1 ماہ کی تحقیقی انٹرن شپ",
+    exp_nith_date: "جون - جولائی 2025",
+    exp_nith_description: "GAN ماڈلز اور ڈیپ لرننگ پر تحقیق کی۔",
     currently_learning_heading: "فی الحال سیکھ رہا آں",
     learning_java: "جاوا",
     learning_datastructures: "ڈیٹا سٹرکچرز",
@@ -270,6 +437,7 @@ const translations = {
     nav_home: "ہوم",
     nav_projects: "پروجیکٹس",
     nav_connect: "رابطہ کریں",
+    nav_poems_articles: "نظم اور مضامین",
     hero_welcome: "خوش آمدید",
     hero_tagline: "ڈیجیٹل لوم میں خوابوں کی بنائی۔",
     profile_name: "پارتھ سدھو",
@@ -304,7 +472,21 @@ const translations = {
     project_stardetection_desc:
       "ناسا کے ہبل کلیکشن سے تصاویر میں ستاروں کا پتہ لگائیں۔",
     view_project_link: "پروجیکٹ دیکھیں",
+    project_portfolio_title: "ذاتی پورٹ فولیو ویب سائٹ",
+    project_portfolio_desc:
+      "ایک وائب-کوڈڈ ذاتی ویب سائٹ جو پروجیکٹس، نظموں اور مضامین کی نمائش کرتی ہے، HTML، CSS، اور JavaScript کے ساتھ بنائی گئی ہے، جس میں ریسپانسیو ڈیزائن اور کثیر لسانی حمایت شامل ہے۔",
+    view_project_link: "پروجیکٹ دیکھیں",
     projects_coming_soon: "مزید پروجیکٹس جلد آرہے ہیں — دیکھتے رہیں!",
+    experience_heading: "تجربہ",
+    exp_railway_company: "ڈی آر ایم امبالہ (ناردرن ریلوے)",
+    exp_railway_role: "ایس اینڈ ٹی ڈیپارٹمنٹ میں 15 دن کی انٹرن شپ",
+    exp_railway_date: "مئی 2024",
+    exp_railway_description:
+      "ریلوے سگنلنگ کی بنیادی باتوں کے بارے میں بصیرت حاصل کی۔",
+    exp_nith_institute: "این آئی ٹی ہمیرپور",
+    exp_nith_role: "1 ماہ کی تحقیقی انٹرن شپ",
+    exp_nith_date: "جون - جولائی 2025",
+    exp_nith_description: "GAN ماڈلز اور ڈیپ لرننگ پر تحقیق کی۔",
     currently_learning_heading: "فی الحال سیکھ رہا ہوں",
     learning_java: "جاوا",
     learning_datastructures: "ڈیٹا سٹرکچرز",
@@ -317,6 +499,7 @@ const translations = {
     nav_home: "ઘર",
     nav_projects: "પ્રોજેક્ટ્સ",
     nav_connect: "સંપર્ક કરો",
+    nav_poems_articles: "કવિતાઓ અને લેખો",
     hero_welcome: "સ્વાગત છે",
     hero_tagline: "ડિજિટલ લૂમમાં સપનાનું વણાટ.",
     profile_name: "પાર્થ સિદ્ધુ",
@@ -350,7 +533,21 @@ const translations = {
     project_stardetection_title: "સ્ટાર-ડિટેક્શન",
     project_stardetection_desc: "નાસાના હબલ સંગ્રહમાંથી છબીઓમાં તારાઓ શોધો.",
     view_project_link: "પ્રોજેક્ટ જુઓ",
+    project_portfolio_title: "વ્યક્તિગત પોર્ટફોલિયો વેબસાઇટ",
+    project_portfolio_desc:
+      "એક વાઇબ-કોડેડ વ્યક્તિગત વેબસાઇટ જેમાં પ્રોજેક્ટ્સ, કવિતાઓ અને લેખો પ્રદર્શિત કરવામાં આવ્યા છે, HTML, CSS, અને JavaScript સાથે બનાવેલ છે, જેમાં રિસ્પોન્સિવ ડિઝાઇન અને બહુભાષી સપોર્ટનો સમાવેશ થાય છે.",
+    view_project_link: "પ્રોજેક્ટ જુઓ",
     projects_coming_soon: "વધુ પ્રોજેક્ટ્સ જલ્દી આવી રહ્યા છે — જોડાયેલા રહો!",
+    experience_heading: "અનુભવ",
+    exp_railway_company: "ડીઆરએમ અંબાલા (ઉત્તર રેલવે)",
+    exp_railway_role: "એસ એન્ડ ટી વિભાગમાં 15 દિવસની ઇન્ટર્નશિપ",
+    exp_railway_date: "મે 2024",
+    exp_railway_description:
+      "રેલવે સિગ્નલિંગના મૂળભૂત સિદ્ધાંતો વિશે સમજ મેળવી.",
+    exp_nith_institute: "એનઆઈટી હમીરપુર",
+    exp_nith_role: "1 મહિનાની સંશોધન ઇન્ટર્નશિપ",
+    exp_nith_date: "જૂન - જુલાઈ 2025",
+    exp_nith_description: "GAN મોડેલ્સ અને ડીપ લર્નિંગ પર સંશોધન કર્યું.",
     currently_learning_heading: "હાલમાં શીખી રહ્યો છું",
     learning_java: "જાવા",
     learning_datastructures: "ડેટા સ્ટ્રક્ચર્સ",
@@ -363,6 +560,7 @@ const translations = {
     nav_home: "ମୁଖ୍ୟ ପୃଷ୍ଠା",
     nav_projects: "ପ୍ରୋଜେକ୍ଟଗୁଡିକ",
     nav_connect: "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+    nav_poems_articles: "କବିତା ଏବଂ ପ୍ରବନ୍ଧ",
     hero_welcome: "ସ୍ଵାଗତ",
     hero_tagline: "ଡିଜିଟାଲ୍ ଲୁମ୍ ରେ ସ୍ୱପ୍ନର ବୁଣା।",
     profile_name: "ପାର୍ଥ ସିଧୁ",
@@ -397,7 +595,20 @@ const translations = {
     project_stardetection_desc:
       "NASA ର ହବଲ୍ ସଂଗ୍ରହରୁ ଚିତ୍ରରେ ଥିବା ତାରା ଚିହ୍ନଟ କରନ୍ତୁ।",
     view_project_link: "ପ୍ରୋଜେକ୍ଟ ଦେଖନ୍ତୁ",
+    project_portfolio_title: "ବ୍ୟକ୍ତିଗତ ପୋର୍ଟଫୋଲିଓ ୱେବସାଇଟ୍",
+    project_portfolio_desc:
+      "ଏକ ଭାଇବ୍-କୋଡେଡ୍ ବ୍ୟକ୍ତିଗତ ୱେବସାଇଟ୍ ଯାହା ପ୍ରୋଜେକ୍ଟ, କବିତା, ଏବଂ ପ୍ରବନ୍ଧ ପ୍ରଦର୍ଶିତ କରେ, HTML, CSS, ଏବଂ JavaScript ସହିତ ନିର୍ମିତ, ଯେଉଁଥିରେ ରେସପନ୍ସିଭ୍ ଡିଜାଇନ୍ ଏବଂ ବହୁଭାଷୀ ସମର୍ଥନ ଅନ୍ତର୍ଭୁକ୍ତ।",
+    view_project_link: "ପ୍ରୋଜେକ୍ଟ ଦେଖନ୍ତୁ",
     projects_coming_soon: "ଅଧିକ ପ୍ରୋଜେକ୍ଟ ଶୀଘ୍ର ଆସୁଛି — ଯୋଡି ହୋଇ ରୁହନ୍ତୁ!",
+    experience_heading: "ଅନୁଭବ",
+    exp_railway_company: "ଡିଆରଏମ୍ ଅମ୍ବାଲା (ଉତ୍ତର ରେଳବାଇ)",
+    exp_railway_role: "ଏସ ଆଣ୍ଡ ଟି ବିଭାଗରେ ୧୫ ଦିନର ଇଣ୍ଟର୍ନସିପ୍",
+    exp_railway_date: "ମେ 2024",
+    exp_railway_description: "ରେଳବାଇ ସିଗନାଲିଂ ମୌଳିକ ବିଷୟରେ ଜ୍ଞାନ ଆହରଣ କଲା।",
+    exp_nith_institute: "ଏନଆଇଟି ହମିରପୁର",
+    exp_nith_role: "୧ ମାସର ଗବେଷଣା ଇଣ୍ଟର୍ନସିପ୍",
+    exp_nith_date: "ଜୁନ - ଜୁଲାଇ 2025",
+    exp_nith_description: "GAN ମଡେଲ୍ ଏବଂ ଡିପ୍ ଲର୍ନିଂ ଉପରେ ଗବେଷଣା କଲା।",
     currently_learning_heading: "ବର୍ତ୍ତମାନ ଶିଖୁଛି",
     learning_java: "ଜାଭା",
     learning_datastructures: "ଡାଟା ଷ୍ଟ୍ରକ୍ଚର",
@@ -410,6 +621,7 @@ const translations = {
     nav_home: "হোম",
     nav_projects: "প্রকল্প",
     nav_connect: "যোগাযোগ",
+    nav_poems_articles: "কবিতা এবং প্রবন্ধ",
     hero_welcome: "স্বাগতম",
     hero_tagline: "ডিজিটাল তাঁতে স্বপ্ন বুনন।",
     profile_name: "পার্থ সিধু",
@@ -443,7 +655,21 @@ const translations = {
     project_stardetection_desc:
       "নাসার হাবল সংগ্রহ থেকে ছবিতে তারা সনাক্ত করুন।",
     view_project_link: "প্রকল্প দেখুন",
+    project_portfolio_title: "ব্যক্তিগত পোর্টফোলিও ওয়েবসাইট",
+    project_portfolio_desc:
+      "একটি ভাইব-কোডেড ব্যক্তিগত ওয়েবসাইট যা প্রোজেক্ট, কবিতা এবং প্রবন্ধ প্রদর্শন করে, HTML, CSS, এবং জাভাস্ক্রিপ্ট দিয়ে নির্মিত, প্রতিক্রিয়াশীল ডিজাইন এবং বহু-ভাষা সমর্থন বৈশিষ্ট্যযুক্ত।",
+    view_project_link: "প্রোজেক্ট দেখুন",
     projects_coming_soon: "আরও প্রকল্প শীঘ্রই আসছে — সাথে থাকুন!",
+    experience_heading: "অভিজ্ঞতা",
+    exp_railway_company: "ডিআরএম আম্বালা (নর্দার্ন রেলওয়ে)",
+    exp_railway_role: "এস অ্যান্ড টি বিভাগে ১৫ দিনের ইন্টার্নশিপ",
+    exp_railway_date: "মে 2024",
+    exp_railway_description:
+      "রেলওয়ে সিগনালিং এর মৌলিক বিষয়াবলী সম্পর্কে ধারণা লাভ করেছে।",
+    exp_nith_institute: "এনআইটি হামিরপুর",
+    exp_nith_role: "১ মাসের গবেষণা ইন্টার্নশিপ",
+    exp_nith_date: "জুন - জুলাই 2025",
+    exp_nith_description: "GAN মডেল এবং ডিপ লার্নিং নিয়ে গবেষণা করেছে।",
     currently_learning_heading: "বর্তমানে শিখছি",
     learning_java: "জাভা",
     learning_datastructures: "ডেটা স্ট্রাকচার্স",
@@ -456,6 +682,7 @@ const translations = {
     nav_home: "मुख्यपृष्ठ",
     nav_projects: "प्रकल्प",
     nav_connect: "संपर्क साधा",
+    nav_poems_articles: "कविता आणि लेख",
     hero_welcome: "स्वागत आहे",
     hero_tagline: "डिजिटल मागावर स्वप्नांची विणकाम.",
     profile_name: "पार्थ सिधु",
@@ -490,7 +717,21 @@ const translations = {
     project_stardetection_desc:
       "नासाच्या हबल संग्रहातील प्रतिमांमधून तारे शोधा.",
     view_project_link: "प्रकल्प पहा",
+    project_portfolio_title: "वैयक्तिक पोर्टफोलिओ वेबसाइट",
+    project_portfolio_desc:
+      "एक 'व्हाइब-कोडेड' वैयक्तिक वेबसाइट जी प्रकल्प, कविता आणि लेख प्रदर्शित करते, HTML, CSS आणि JavaScript वापरून तयार केली आहे, ज्यात प्रतिसाद देणारा डिझाइन आणि बहु-भाषा समर्थन समाविष्ट आहे.",
+    view_project_link: "प्रकल्प पहा",
     projects_coming_soon: "अधिक प्रकल्प लवकरच येत आहेत — संपर्कात रहा!",
+    experience_heading: "अनुभव",
+    exp_railway_company: "डीआरएम अंबाला (उत्तर रेल्वे)",
+    exp_railway_role: "एस अँड टी विभागात 15 दिवसांची इंटर्नशिप",
+    exp_railway_date: "मे 2024",
+    exp_railway_description:
+      "रेल्वे सिग्नलिंगच्या मूलभूत गोष्टींची माहिती मिळाली.",
+    exp_nith_institute: "एनआयटी हमीरपूर",
+    exp_nith_role: "1 महिन्याची संशोधन इंटर्नशिप",
+    exp_nith_date: "जून - जुलै 2025",
+    exp_nith_description: "GAN मॉडेल्स आणि डीप लर्निंगवर संशोधन केले.",
     currently_learning_heading: "सध्या शिकत आहे",
     learning_java: "जावा",
     learning_datastructures: "डेटा स्ट्रक्चर्स",
@@ -503,6 +744,7 @@ const translations = {
     nav_home: "முகப்பு",
     nav_projects: "திட்டங்கள்",
     nav_connect: "தொடர்பு",
+    nav_poems_articles: "கவிதைகள் மற்றும் கட்டுரைகள்",
     hero_welcome: "வரவேற்பு",
     hero_tagline: "டிஜிட்டல் தறியில் கனவுகளை நெய்தல்.",
     profile_name: "பார்த்த் சித்து",
@@ -539,8 +781,23 @@ const translations = {
     project_stardetection_desc:
       "நாசாவின் ஹப்பிள் சேகரிப்பிலிருந்து படங்களில் நட்சத்திரங்களைக் கண்டறியவும்.",
     view_project_link: "திட்டத்தைப் பார்க்கவும்",
+    project_portfolio_title: "தனிப்பட்ட போர்ட்ஃபோலியோ வலைத்தளம்",
+    project_portfolio_desc:
+      "திட்டங்கள், கவிதைகள் மற்றும் கட்டுரைகளை காட்சிப்படுத்தும் ஒரு வைப்-கோடட் தனிப்பட்ட வலைத்தளம், HTML, CSS மற்றும் JavaScript உடன் உருவாக்கப்பட்டது, இது மறுமொழி வடிவமைப்பு மற்றும் பல மொழி ஆதரவைக் கொண்டுள்ளது.",
+    view_project_link: "திட்டத்தைப் பார்க்கவும்",
     projects_coming_soon:
       "மேலும் திட்டங்கள் விரைவில் வரவுள்ளன — காத்திருங்கள்!",
+    experience_heading: "அனுபவம்",
+    exp_railway_company: "DRM அம்பாலா (வடக்கு ரயில்வே)",
+    exp_railway_role: "S & T துறையில் 15 நாள் பயிற்சி",
+    exp_railway_date: "மே 2024",
+    exp_railway_description:
+      "ரயில்வே சிக்னலிங் அடிப்படைகள் பற்றிய புரிதலைப் பெற்றது.",
+    exp_nith_institute: "NIT ஹமிர்பூர்",
+    exp_nith_role: "1 மாத ஆராய்ச்சி பயிற்சி",
+    exp_nith_date: "ஜூன் - ஜூலை 2025",
+    exp_nith_description:
+      "GAN மாதிரிகள் மற்றும் ஆழமான கற்றல் குறித்து ஆராய்ச்சி நடத்தப்பட்டது.",
     currently_learning_heading: "தற்போது கற்றுக்கொள்கிறேன்",
     learning_java: "ஜாவா",
     learning_datastructures: "தரவு கட்டமைப்புகள்",
@@ -553,6 +810,7 @@ const translations = {
     nav_home: "హోమ్",
     nav_projects: "ప్రాజెక్టులు",
     nav_connect: "కనెక్ట్ చేయండి",
+    nav_poems_articles: "కవితలు మరియు వ్యాసాలు",
     hero_welcome: "స్వాగతం",
     hero_tagline: "డిజిటల్ మగ్గంలో కలలు నేయడం.",
     profile_name: "పార్థ్ సిద్దు",
@@ -588,8 +846,23 @@ const translations = {
     project_stardetection_desc:
       "NASA యొక్క హబుల్ సేకరణ నుండి చిత్రాలలో నక్షత్రాలను గుర్తించండి.",
     view_project_link: "ప్రాజెక్ట్ చూడండి",
+    project_portfolio_title: "వ్యక్తిగత పోర్ట్‌ఫోలియో వెబ్‌సైట్",
+    project_portfolio_desc:
+      "ప్రాజెక్టులు, కవితలు మరియు వ్యాసాలను ప్రదర్శించే వైబ్-కోడెడ్ వ్యక్తిగత వెబ్‌సైట్, HTML, CSS మరియు JavaScript తో నిర్మించబడింది, ప్రతిస్పందించే డిజైన్ మరియు బహుళ-భాషా మద్దతును కలిగి ఉంది.",
+    view_project_link: "ప్రాజెక్ట్ చూడండి",
     projects_coming_soon:
       "మరిన్ని ప్రాజెక్టులు త్వరలో వస్తున్నాయి — వేచి ఉండండి!",
+    experience_heading: "అనుభవం",
+    exp_railway_company: "DRM అంబాలా (నార్తర్న్ రైల్వే)",
+    exp_railway_role: "S & T విభాగంలో 15 రోజుల ఇంటర్న్‌షిప్",
+    exp_railway_date: "మే 2024",
+    exp_railway_description:
+      "రైల్వే సిగ్నలింగ్ ప్రాథమిక అంశాలపై అవగాహన పొందింది.",
+    exp_nith_institute: "NIT హమీర్‌పూర్",
+    exp_nith_role: "1 నెల పరిశోధన ఇంటర్న్‌షిప్",
+    exp_nith_date: "జూన్ - జూలై 2025",
+    exp_nith_description:
+      "GAN మోడల్స్ మరియు డీప్ లెర్నింగ్‌పై పరిశోధన నిర్వహించబడింది.",
     currently_learning_heading: "ప్రస్తుతం నేర్చుకుంటున్నాను",
     learning_java: "జావా",
     learning_datastructures: "డేటా స్ట్రక్చర్స్",
@@ -602,6 +875,7 @@ const translations = {
     nav_home: "ഹോം",
     nav_projects: "പ്രോജക്റ്റുകൾ",
     nav_connect: "ബന്ധപ്പെടുക",
+    nav_poems_articles: "കവിതകളും ലേഖനങ്ങളും",
     hero_welcome: "സ്വാഗതം",
     hero_tagline: "ഡിജിറ്റൽ തറിയിൽ സ്വപ്നങ്ങൾ നെയ്യുന്നു.",
     profile_name: "പാർത്ഥ് സിദ്ദു",
@@ -638,7 +912,21 @@ const translations = {
     project_stardetection_desc:
       "നാസയുടെ ഹബിൾ ശേഖരത്തിൽ നിന്ന് ചിത്രങ്ങളിലെ നക്ഷത്രങ്ങൾ കണ്ടെത്തുക.",
     view_project_link: "പ്രോജക്റ്റ് കാണുക",
+    project_portfolio_title: "വ്യക്തിഗത പോർട്ട്‌ഫോളിയോ വെബ്സൈറ്റ്",
+    project_portfolio_desc:
+      "പ്രോജക്റ്റുകൾ, കവിതകൾ, ലേഖനങ്ങൾ എന്നിവ പ്രദർശിപ്പിക്കുന്ന ഒരു വൈബ്-കോഡഡ് വ്യക്തിഗത വെബ്സൈറ്റ്, HTML, CSS, JavaScript എന്നിവ ഉപയോഗിച്ച് നിർമ്മിച്ചത്, പ്രതികരണാത്മക രൂപകൽപ്പനയും ബഹുഭാഷാ പിന്തുണയും ഇതിൽ ഉൾപ്പെടുന്നു.",
+    view_project_link: "പ്രോജക്റ്റ് കാണുക",
     projects_coming_soon: "കൂടുതൽ പ്രോജക്റ്റുകൾ ഉടൻ വരുന്നു — കാത്തിരിക്കുക!",
+    experience_heading: "അനുഭവം",
+    exp_railway_company: "ഡിആർഎം അംബാല (നോർത്തേൺ റെയിൽവേ)",
+    exp_railway_role: "എസ് & ടി വകുപ്പിൽ 15 ദിവസത്തെ ഇന്റേൺഷിപ്പ്",
+    exp_railway_date: "മെയ് 2024",
+    exp_railway_description:
+      "റെയിൽവേ സിഗ്നലിംഗിന്റെ അടിസ്ഥാനകാര്യങ്ങളെക്കുറിച്ച് ഉൾക്കാഴ്ച നേടി.",
+    exp_nith_institute: "എൻഐടി ഹമീർപൂർ",
+    exp_nith_role: "1 മാസത്തെ ഗവേഷണ ഇന്റേൺഷിപ്പ്",
+    exp_nith_date: "ജൂൺ - ജൂലൈ 2025",
+    exp_nith_description: "GAN മോഡലുകളിലും ഡീപ് ലേണിംഗിലും ഗവേഷണം നടത്തി.",
     currently_learning_heading: "നിലവിൽ പഠിക്കുന്നു",
     learning_java: "ജാവ",
     learning_datastructures: "ഡാറ്റാ സ്ട്രക്ചറുകൾ",
@@ -651,6 +939,7 @@ const translations = {
     nav_home: "ಮುಖಪುಟ",
     nav_projects: "ಯೋಜನೆಗಳು",
     nav_connect: "ಸಂಪರ್ಕಿಸಿ",
+    nav_poems_articles: "ಕವನಗಳು ಮತ್ತು ಲೇಖನಗಳು",
     hero_welcome: "ಸುಸ್ವಾಗತ",
     hero_tagline: "ಡಿಜಿಟಲ್ ಮಗ್ಗದಲ್ಲಿ ಕನಸುಗಳನ್ನು ನೇಯುವುದು.",
     profile_name: "ಪಾರ್ಥ್ ಸಿಧು",
@@ -686,7 +975,22 @@ const translations = {
     project_stardetection_desc:
       "NASA ದ ಹಬಲ್ ಸಂಗ್ರಹದಿಂದ ಚಿತ್ರಗಳಲ್ಲಿ ನಕ್ಷತ್ರಗಳನ್ನು ಗುರುತಿಸಿ.",
     view_project_link: "ಯೋಜನೆ ವೀಕ್ಷಿಸಿ",
+    project_portfolio_title: "ವೈಯಕ್ತಿಕ ಪೋರ್ಟ್‌ಫೋಲಿಯೊ ವೆಬ್‌ಸೈಟ್",
+    project_portfolio_desc:
+      "ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು, ಕವನಗಳು ಮತ್ತು ಲೇಖನಗಳನ್ನು ಪ್ರದರ್ಶಿಸುವ ವೈಬ್-ಕೋಡೆಡ್ ವೈಯಕ್ತಿಕ ವೆಬ್‌ಸೈಟ್, HTML, CSS, ಮತ್ತು ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ನೊಂದಿಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ, ಇದು ಪ್ರತಿಕ್ರಿಯಾಶೀಲ ವಿನ್ಯಾಸ ಮತ್ತು ಬಹು-ಭಾಷಾ ಬೆಂಬಲವನ್ನು ಒಳಗೊಂಡಿದೆ.",
+    view_project_link: "ಯೋಜನೆ ವೀಕ್ಷಿಸಿ",
     projects_coming_soon: "ಹೆಚ್ಚಿನ ಯೋಜನೆಗಳು ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿವೆ — ನಿರೀಕ್ಷಿಸಿ!",
+    experience_heading: "ಅನುಭವ",
+    exp_railway_company: "DRM ಅಂಬಾಲಾ (ಉತ್ತರ ರೈಲ್ವೆ)",
+    exp_railway_role: "ಎಸ್ & ಟಿ ವಿಭಾಗದಲ್ಲಿ 15 ದಿನಗಳ ಇಂಟರ್ನ್‌ಶಿಪ್",
+    exp_railway_date: "ಮೇ 2024",
+    exp_railway_description:
+      "ರೈಲ್ವೆ ಸಿಗ್ನಲಿಂಗ್ ಮೂಲಭೂತ ಅಂಶಗಳ ಬಗ್ಗೆ ಒಳನೋಟಗಳನ್ನು ಪಡೆದುಕೊಂಡಿದೆ.",
+    exp_nith_institute: "NIT ಹಮೀರ್‌ಪುರ",
+    exp_nith_role: "1 ತಿಂಗಳ ಸಂಶೋಧನಾ ಇಂಟರ್ನ್‌ಶಿಪ್",
+    exp_nith_date: "ಜೂನ್ - ಜುಲೈ 2025",
+    exp_nith_description:
+      "GAN ಮಾದರಿಗಳು ಮತ್ತು ಡೀಪ್ ಲರ್ನಿಂಗ್ ಕುರಿತು ಸಂಶೋಧನೆ ನಡೆಸಲಾಯಿತು.",
     currently_learning_heading: "ಪ್ರಸ್ತುತ ಕಲಿಯುತ್ತಿದ್ದೇನೆ",
     learning_java: "ಜಾವಾ",
     learning_datastructures: "ಡೇಟಾ ರಚನೆಗಳು",
@@ -699,6 +1003,7 @@ const translations = {
     nav_home: "گھر",
     nav_projects: "پروجيڪٽس",
     nav_connect: "رابطو ڪريو",
+    nav_poems_articles: "نظمون ۽ مضمون",
     hero_welcome: "ڀلي ڪري آيا",
     hero_tagline: "ڊجيٽل لوم ۾ خوابن جي بنائي.",
     profile_name: "پارتھ سدھو",
@@ -733,7 +1038,20 @@ const translations = {
     project_stardetection_desc:
       "ناسا جي هبل ڪليڪشن مان تصويرن ۾ ستارا سڃاڻي وٺو.",
     view_project_link: "پروجيڪٽ ڏسو",
+    project_portfolio_title: "ذاتي پورٽفوليو ويبسائيٽ",
+    project_portfolio_desc:
+      "هڪ وائيب-ڪوڊڊ ذاتي ويبسائيٽ جنهن ۾ منصوبا، شعر، ۽ مضمون ڏيکاريا ويا آهن، HTML، CSS، ۽ JavaScript سان ٺهيل آهي، جنهن ۾ جوابي ڊيزائن ۽ گھڻن ٻولين جي حمايت شامل آهي.",
+    view_project_link: "منصوبو ڏسو",
     projects_coming_soon: "وڌيڪ پروجيڪٽ جلد اچي رهيا آهن — گڏ رهو!",
+    experience_heading: "تجربو",
+    exp_railway_company: "ڊي آر ايم امبالا (اتر ريلوي)",
+    exp_railway_role: "ايس ۽ ٽي ڊپارٽمينٽ ۾ 15 ڏينهن جي انٽرنشپ",
+    exp_railway_date: "مئي 2024",
+    exp_railway_description: "ريلوي سگنلنگ جي بنيادي ڳالهين ۾ بصيرت حاصل ڪئي.",
+    exp_nith_institute: "اين آءِ ٽي هميرپور",
+    exp_nith_role: "1 مهيني جي ريسرچ انٽرنشپ",
+    exp_nith_date: "جون - جولاءِ 2025",
+    exp_nith_description: "GAN ماڊلز ۽ ڊيپ لرننگ تي تحقيق ڪئي وئي.",
     currently_learning_heading: "في الحال سکي رهيو آهيان",
     learning_java: "جاوا",
     learning_datastructures: "ڊيٽا اسٽرڪچرز",
@@ -746,6 +1064,7 @@ const translations = {
     nav_home: "主页",
     nav_projects: "项目",
     nav_connect: "联系",
+    nav_poems_articles: "诗文",
     hero_welcome: "欢迎",
     hero_tagline: "在数字织机中编织梦想。",
     profile_name: "帕斯·西杜",
@@ -776,7 +1095,20 @@ const translations = {
     project_stardetection_title: "星星检测",
     project_stardetection_desc: "从NASA哈勃系列图像中检测星星。",
     view_project_link: "查看项目",
+    project_portfolio_title: "个人作品集网站",
+    project_portfolio_desc:
+      "一个通过“感觉编程”开发的个人网站，展示项目、诗歌和文章，使用HTML、CSS和JavaScript构建，具有响应式设计和多语言支持。",
+    view_project_link: "查看项目",
     projects_coming_soon: "更多项目即将推出 — 敬请期待！",
+    experience_heading: "经验",
+    exp_railway_company: "安巴拉铁路局 (北部铁路)",
+    exp_railway_role: "S & T 部门15天实习",
+    exp_railway_date: "2024年5月",
+    exp_railway_description: "获得了铁路信号基础知识的见解。",
+    exp_nith_institute: "哈米尔布尔国立理工学院",
+    exp_nith_role: "1个月研究实习",
+    exp_nith_date: "2025年6月 - 7月",
+    exp_nith_description: "对GAN模型和深度学习进行了研究。",
     currently_learning_heading: "目前正在学习",
     learning_java: "Java",
     learning_datastructures: "数据结构",
@@ -789,6 +1121,7 @@ const translations = {
     nav_home: "首頁",
     nav_projects: "項目",
     nav_connect: "聯繫",
+    nav_poems_articles: "诗文",
     hero_welcome: "歡迎",
     hero_tagline: "在數位織機中編織夢想。",
     profile_name: "帕斯·西杜",
@@ -819,7 +1152,20 @@ const translations = {
     project_stardetection_title: "星星檢測",
     project_stardetection_desc: "從NASA哈勃系列圖像中檢測星星。",
     view_project_link: "查看項目",
+    project_portfolio_title: "個人作品集網站",
+    project_portfolio_desc:
+      "一個透過「感覺編程」開發的個人網站，展示項目、詩歌和文章，使用HTML、CSS和JavaScript構建，具有響應式設計和多語言支持。",
+    view_project_link: "查看項目",
     projects_coming_soon: "更多項目即將推出 — 敬請期待！",
+    experience_heading: "經驗",
+    exp_railway_company: "安巴拉鐵路局 (北部鐵路)",
+    exp_railway_role: "S & T 部門15天實習",
+    exp_railway_date: "2024年5月",
+    exp_railway_description: "獲得了鐵路信號基礎知識的見解。",
+    exp_nith_institute: "哈米爾布爾國立理工學院",
+    exp_nith_role: "1個月研究實習",
+    exp_nith_date: "2025年6月 - 7月",
+    exp_nith_description: "對GAN模型和深度學習進行了研究。",
     currently_learning_heading: "目前正在學習",
     learning_java: "Java",
     learning_datastructures: "數據結構",
@@ -832,6 +1178,7 @@ const translations = {
     nav_home: "홈",
     nav_projects: "프로젝트",
     nav_connect: "연락처",
+    nav_poems_articles: "시와 기사",
     hero_welcome: "환영합니다",
     hero_tagline: "디지털 베틀에서 꿈을 엮다.",
     profile_name: "파스 시두",
@@ -866,7 +1213,20 @@ const translations = {
     project_stardetection_desc:
       "NASA의 허블 컬렉션 이미지에서 별을 감지합니다.",
     view_project_link: "프로젝트 보기",
+    project_portfolio_title: "개인 포트폴리오 웹사이트",
+    project_portfolio_desc:
+      "프로젝트, 시, 기사를 선보이는 '바이브 코딩' 방식으로 개발된 개인 웹사이트로, HTML, CSS, JavaScript로 구축되었으며 반응형 디자인 및 다국어 지원 기능을 제공합니다.",
+    view_project_link: "프로젝트 보기",
     projects_coming_soon: "더 많은 프로젝트가 곧 출시됩니다 — 기대해주세요!",
+    experience_heading: "경험",
+    exp_railway_company: "DRM 암발라 (북부 철도)",
+    exp_railway_role: "S & T 부서 15일 인턴십",
+    exp_railway_date: "2024년 5월",
+    exp_railway_description: "철도 신호 기본 사항에 대한 통찰력을 얻었습니다.",
+    exp_nith_institute: "NIT 하미르푸르",
+    exp_nith_role: "1개월 연구 인턴십",
+    exp_nith_date: "2025년 6월 - 7월",
+    exp_nith_description: "GAN 모델 및 딥러닝에 대한 연구를 수행했습니다.",
     currently_learning_heading: "현재 학습 중",
     learning_java: "Java",
     learning_datastructures: "데이터 구조",
@@ -879,6 +1239,7 @@ const translations = {
     nav_home: "ホーム",
     nav_projects: "プロジェクト",
     nav_connect: "連絡先",
+    nav_poems_articles: "「詩と記事」",
     hero_welcome: "ようこそ",
     hero_tagline: "デジタル織機で夢を織る。",
     profile_name: "パース・シドゥー",
@@ -914,7 +1275,20 @@ const translations = {
     project_stardetection_desc:
       "NASAのハッブルコレクションの画像から星を検出します。",
     view_project_link: "プロジェクトを見る",
+    project_portfolio_title: "個人ポートフォリオウェブサイト",
+    project_portfolio_desc:
+      "プロジェクト、詩、記事を展示する、感覚でコーディングされた個人ウェブサイトです。HTML、CSS、JavaScriptで構築されており、レスポンシブデザインと多言語対応が特徴です。",
+    view_project_link: "プロジェクトを見る",
     projects_coming_soon: "他のプロジェクトも近日公開予定です — お楽しみに！",
+    experience_heading: "経験",
+    exp_railway_company: "DRMアンバラ (北部鉄道)",
+    exp_railway_role: "S & T部門での15日間のインターンシップ",
+    exp_railway_date: "2024年5月",
+    exp_railway_description: "鉄道信号の基礎に関する洞察を得た。",
+    exp_nith_institute: "NITハミールプル",
+    exp_nith_role: "1ヶ月間の研究インターンシップ",
+    exp_nith_date: "2025年6月 - 7月",
+    exp_nith_description: "GANモデルと深層学習に関する研究を実施した。",
     currently_learning_heading: "現在学習中",
     learning_java: "Java",
     learning_datastructures: "データ構造",
@@ -927,6 +1301,7 @@ const translations = {
     nav_home: "الرئيسية",
     nav_projects: "المشاريع",
     nav_connect: "تواصل",
+    nav_poems_articles: "قصائد ومقالات",
     hero_welcome: "مرحبا بك",
     hero_tagline: "نسج الأحلام في نول رقمي.",
     profile_name: "بارث سيدو",
@@ -961,7 +1336,20 @@ const translations = {
     project_stardetection_desc:
       "اكتشاف النجوم في الصور من مجموعة هابل التابعة لوكالة ناسا.",
     view_project_link: "عرض المشروع",
+    project_portfolio_title: "موقع المحفظة الشخصية",
+    project_portfolio_desc:
+      "موقع شخصي مبرمج بأسلوب 'فايبر كودينج' يعرض المشاريع والقصائد والمقالات، مبني باستخدام HTML وCSS وجافاسكريبت، ويتميز بتصميم متجاوب ودعم متعدد اللغات.",
+    view_project_link: "عرض المشروع",
     projects_coming_soon: "المزيد من المشاريع قريبا — ترقبوا!",
+    experience_heading: "الخبرة",
+    exp_railway_company: "DRM أمبالا (السكك الحديدية الشمالية)",
+    exp_railway_role: "تدريب لمدة 15 يومًا في قسم S & T",
+    exp_railway_date: "مايو 2024",
+    exp_railway_description: "اكتسبت رؤى حول أساسيات إشارات السكك الحديدية.",
+    exp_nith_institute: "معهد NIT هاميربور",
+    exp_nith_role: "تدريب بحثي لمدة شهر واحد",
+    exp_nith_date: "يونيو - يوليو 2025",
+    exp_nith_description: "أجرى بحثًا عن نماذج GAN والتعلم العميق.",
     currently_learning_heading: "أتعلم حاليا",
     learning_java: "جافا",
     learning_datastructures: "هياكل البيانات",
@@ -974,6 +1362,7 @@ const translations = {
     nav_home: "خانه",
     nav_projects: "پروژه ها",
     nav_connect: "تماس",
+    nav_poems_articles: "«اشعار و مقالات»",
     hero_welcome: "خوش آمدید",
     hero_tagline: "بافتن رویاها در تار و پود دیجیتال.",
     profile_name: "پارت سیدو",
@@ -1007,7 +1396,22 @@ const translations = {
     project_stardetection_title: "تشخیص ستاره",
     project_stardetection_desc: "تشخیص ستاره‌ها در تصاویر از مجموعه هابل ناسا.",
     view_project_link: "مشاهده پروژه",
+    project_portfolio_title: "وب‌سایت نمونه کار شخصی",
+    project_portfolio_desc:
+      "یک وب‌سایت شخصی 'با کدینگ حسی' که پروژه‌ها، شعرها و مقالات را به نمایش می‌گذارد، با HTML، CSS و JavaScript ساخته شده و دارای طراحی واکنش‌گرا و پشتیبانی چندزبانه است.",
+    view_project_link: "مشاهده پروژه",
     projects_coming_soon: "پروژه‌های بیشتر به زودی — با ما همراه باشید!",
+    experience_heading: "تجربه",
+    exp_railway_company: "DRM امبالا (راه‌آهن شمالی)",
+    exp_railway_role: "دوره کارآموزی 15 روزه در بخش S & T",
+    exp_railway_date: "مه 2024",
+    exp_railway_description:
+      "بینش‌هایی در مورد اصول سیگنالینگ راه‌آهن به دست آورد.",
+    exp_nith_institute: "NIT هامیرپور",
+    exp_nith_role: "دوره کارآموزی تحقیقاتی 1 ماهه",
+    exp_nith_date: "ژوئن - ژوئیه 2025",
+    exp_nith_description:
+      "تحقیقاتی در مورد مدل‌های GAN و یادگیری عمیق انجام داد.",
     currently_learning_heading: "در حال یادگیری",
     learning_java: "جاوا",
     learning_datastructures: "ساختمان داده‌ها",
@@ -1020,6 +1424,7 @@ const translations = {
     nav_home: "Accueil",
     nav_projects: "Projets",
     nav_connect: "Connecter",
+    nav_poems_articles: "Poèmes et articles",
     hero_welcome: "BIENVENUE",
     hero_tagline: "Tisser des rêves dans le métier à tisser numérique.",
     profile_name: "Parth Sidhu",
@@ -1054,7 +1459,22 @@ const translations = {
     project_stardetection_desc:
       "Détecter les étoiles dans les images de la collection Hubble de la NASA.",
     view_project_link: "Voir le projet",
+    project_portfolio_title: "Site Web de Portfolio Personnel",
+    project_portfolio_desc:
+      "Un site web personnel codé « à l'instinct » présentant des projets, des poèmes et des articles, construit avec HTML, CSS et JavaScript, avec un design réactif et un support multilingue.",
+    view_project_link: "Voir le projet",
     projects_coming_soon: "Plus de projets à venir — restez à l'écoute !",
+    experience_heading: "Expérience",
+    exp_railway_company: "DRM Ambala (Chemins de fer du Nord)",
+    exp_railway_role: "Stage de 15 jours au Département S & T",
+    exp_railway_date: "Mai 2024",
+    exp_railway_description:
+      "A acquis des connaissances sur les bases de la signalisation ferroviaire.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "Stage de recherche d'1 mois",
+    exp_nith_date: "Juin - Juillet 2025",
+    exp_nith_description:
+      "A mené des recherches sur les modèles GAN et le Deep Learning.",
     currently_learning_heading: "Apprentissage en cours",
     learning_java: "Java",
     learning_datastructures: "Structures de données",
@@ -1067,6 +1487,7 @@ const translations = {
     nav_home: "Startseite",
     nav_projects: "Projekte",
     nav_connect: "Verbinden",
+    nav_poems_articles: "Gedichte und Artikel",
     hero_welcome: "WILLKOMMEN",
     hero_tagline: "Träume im digitalen Webstuhl weben.",
     profile_name: "Parth Sidhu",
@@ -1101,8 +1522,23 @@ const translations = {
     project_stardetection_desc:
       "Erkennen von Sternen in Bildern aus der Hubble-Sammlung der NASA.",
     view_project_link: "Projekt ansehen",
+    project_portfolio_title: "Persönliche Portfolio-Website",
+    project_portfolio_desc:
+      "Eine 'Vibe-codierte' persönliche Website, die Projekte, Gedichte und Artikel präsentiert, erstellt mit HTML, CSS und JavaScript, mit responsivem Design und mehrsprachiger Unterstützung.",
+    view_project_link: "Projekt ansehen",
     projects_coming_soon:
       "Weitere Projekte folgen in Kürze — bleiben Sie dran!",
+    experience_heading: "Erfahrung",
+    exp_railway_company: "DRM Ambala (Nordbahn)",
+    exp_railway_role: "15-tägiges Praktikum in der S & T Abteilung",
+    exp_railway_date: "Mai 2024",
+    exp_railway_description:
+      "Einblicke in die Grundlagen der Eisenbahnsignaltechnik gewonnen.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "1-monatiges Forschungspraktikum",
+    exp_nith_date: "Juni - Juli 2025",
+    exp_nith_description:
+      "Forschung zu GAN-Modellen und Deep Learning durchgeführt.",
     currently_learning_heading: "Aktuell lerne ich",
     learning_java: "Java",
     learning_datastructures: "Datenstrukturen",
@@ -1115,6 +1551,7 @@ const translations = {
     nav_home: "Inicio",
     nav_projects: "Proyectos",
     nav_connect: "Conectar",
+    nav_poems_articles: "Poemas y artículos",
     hero_welcome: "BIENVENIDO",
     hero_tagline: "Tejiendo sueños en el telar digital.",
     profile_name: "Parth Sidhu",
@@ -1151,7 +1588,22 @@ const translations = {
     project_stardetection_desc:
       "Detectar estrellas en imágenes de la colección Hubble de la NASA.",
     view_project_link: "Ver proyecto",
+    project_portfolio_title: "Sitio Web de Portafolio Personal",
+    project_portfolio_desc:
+      "Un sitio web personal 'codificado con la vibra' que muestra proyectos, poemas y artículos, construido con HTML, CSS y JavaScript, con diseño responsivo y soporte multilingüe.",
+    view_project_link: "Ver proyecto",
     projects_coming_soon: "Más proyectos próximamente — ¡mantente atento!",
+    experience_heading: "Experiencia",
+    exp_railway_company: "DRM Ambala (Ferrocarril del Norte)",
+    exp_railway_role: "Prácticas de 15 días en el Departamento de S & T",
+    exp_railway_date: "Mayo 2024",
+    exp_railway_description:
+      "Obtuvo conocimientos sobre los fundamentos de la señalización ferroviaria.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "Prácticas de investigación de 1 mes",
+    exp_nith_date: "Junio - Julio 2025",
+    exp_nith_description:
+      "Realizó investigaciones sobre modelos GAN y aprendizaje profundo.",
     currently_learning_heading: "Actualmente aprendiendo",
     learning_java: "Java",
     learning_datastructures: "Estructuras de datos",
@@ -1164,6 +1616,7 @@ const translations = {
     nav_home: "Início",
     nav_projects: "Projetos",
     nav_connect: "Conectar",
+    nav_poems_articles: "Poemas e Artigos",
     hero_welcome: "BEM-VINDO",
     hero_tagline: "Tecendo Sonhos no Tear Digital.",
     profile_name: "Parth Sidhu",
@@ -1199,8 +1652,23 @@ const translations = {
     project_stardetection_desc:
       "Detectar estrelas em imagens da coleção Hubble da NASA.",
     view_project_link: "Ver projeto",
+    project_portfolio_title: "Website de Portfólio Pessoal",
+    project_portfolio_desc:
+      "Um website pessoal 'vibe-coded' que exibe projetos, poemas e artigos, construído com HTML, CSS e JavaScript, apresentando design responsivo e suporte a múltiplos idiomas.",
+    view_project_link: "Ver projeto",
     projects_coming_soon: "Mais projetos em breve — fique ligado!",
     currently_learning_heading: "Atualmente Aprendendo",
+    experience_heading: "Experiência",
+    exp_railway_company: "DRM Ambala (Ferrovia do Norte)",
+    exp_railway_role: "Estágio de 15 dias no Departamento de S & T",
+    exp_railway_date: "Maio 2024",
+    exp_railway_description:
+      "Obteve insights sobre os fundamentos da sinalização ferroviária.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "Estágio de Pesquisa de 1 Mês",
+    exp_nith_date: "Junho - Julho 2025",
+    exp_nith_description:
+      "Conduziu pesquisas sobre Modelos GAN e Aprendizagem Profunda.",
     learning_java: "Java",
     learning_datastructures: "Estruturas de Dados",
     learning_deep_learning: "Deep Learning",
@@ -1212,6 +1680,7 @@ const translations = {
     nav_home: "Home",
     nav_projects: "Progetti",
     nav_connect: "Connetti",
+    nav_poems_articles: "Poesie e articoli",
     hero_welcome: "BENVENUTO",
     hero_tagline: "Tessere sogni nel telaio digitale.",
     profile_name: "Parth Sidhu",
@@ -1247,7 +1716,22 @@ const translations = {
     project_stardetection_desc:
       "Rileva le stelle nelle immagini dalla collezione Hubble della NASA.",
     view_project_link: "Visualizza progetto",
+    project_portfolio_title: "Sito Web Portfolio Personale",
+    project_portfolio_desc:
+      "Un sito web personale 'vibe-coded' che mostra progetti, poesie e articoli, costruito con HTML, CSS e JavaScript, con design reattivo e supporto multilingue.",
+    view_project_link: "Vedi progetto",
     projects_coming_soon: "Altri progetti in arrivo — resta sintonizzato!",
+    experience_heading: "Esperienza",
+    exp_railway_company: "DRM Ambala (Ferrovie del Nord)",
+    exp_railway_role: "Tirocinio di 15 giorni nel Dipartimento S & T",
+    exp_railway_date: "Maggio 2024",
+    exp_railway_description:
+      "Ha acquisito conoscenze sulle basi della segnalazione ferroviaria.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "Tirocinio di ricerca di 1 mese",
+    exp_nith_date: "Giugno - Luglio 2025",
+    exp_nith_description:
+      "Ha condotto ricerche sui modelli GAN e sul Deep Learning.",
     currently_learning_heading: "Attualmente in Apprendimento",
     learning_java: "Java",
     learning_datastructures: "Strutture Dati",
@@ -1260,6 +1744,7 @@ const translations = {
     nav_home: "Главная",
     nav_projects: "Проекты",
     nav_connect: "Связаться",
+    nav_poems_articles: "Стихи и статьи",
     hero_welcome: "ДОБРО ПОЖАЛОВАТЬ",
     hero_tagline: "Плетение мечт на цифровом станке.",
     profile_name: "Парт Сидху",
@@ -1295,8 +1780,23 @@ const translations = {
     project_stardetection_desc:
       "Обнаружение звезд на изображениях из коллекции Хаббла НАСА.",
     view_project_link: "Посмотреть проект",
+    project_portfolio_title: "Сайт личного портфолио",
+    project_portfolio_desc:
+      "Персональный веб-сайт, созданный «по наитию», демонстрирующий проекты, стихи и статьи, разработанный с использованием HTML, CSS и JavaScript, с адаптивным дизайном и многоязычной поддержкой.",
+    view_project_link: "Посмотреть проект",
     projects_coming_soon:
       "Скоро появятся новые проекты — следите за обновлениями!",
+    experience_heading: "Опыт",
+    exp_railway_company: "DRM Амбала (Северная железная дорога)",
+    exp_railway_role: "15-дневная стажировка в отделе S & T",
+    exp_railway_date: "Май 2024",
+    exp_railway_description:
+      "Получены знания об основах железнодорожной сигнализации.",
+    exp_nith_institute: "НИТ Хамирпур",
+    exp_nith_role: "1-месячная исследовательская стажировка",
+    exp_nith_date: "Июнь - Июль 2025",
+    exp_nith_description:
+      "Проведены исследования по моделям GAN и глубокому обучению.",
     currently_learning_heading: "В настоящее время изучаю",
     learning_java: "Java",
     learning_datastructures: "Структуры данных",
@@ -1309,6 +1809,7 @@ const translations = {
     nav_home: "Ana Sayfa",
     nav_projects: "Projeler",
     nav_connect: "Bağlan",
+    nav_poems_articles: "Şiirler ve Makaleler",
     hero_welcome: "HOŞ GELDİNİZ",
     hero_tagline: "Dijital Tezgahta Hayaller Dokunuyor.",
     profile_name: "Parth Sidhu",
@@ -1343,8 +1844,23 @@ const translations = {
     project_stardetection_desc:
       "NASA'nın Hubble koleksiyonundaki resimlerde yıldızları algılayın.",
     view_project_link: "Projeyi görüntüle",
+    project_portfolio_title: "Kişisel Portföy Web Sitesi",
+    project_portfolio_desc:
+      "Projeleri, şiirleri ve makaleleri sergileyen, HTML, CSS ve JavaScript ile oluşturulmuş, duyarlı tasarıma ve çoklu dil desteğine sahip, 'içgüdüsel kodlanmış' kişisel bir web sitesi.",
+    view_project_link: "Projeyi Görüntüle",
     projects_coming_soon:
       "Daha fazla proje yakında gelecek — bizi takipte kalın!",
+    experience_heading: "Deneyim",
+    exp_railway_company: "DRM Ambala (Kuzey Demiryolu)",
+    exp_railway_role: "S & T Departmanında 15 Günlük Staj",
+    exp_railway_date: "Mayıs 2024",
+    exp_railway_description:
+      "Demiryolu Sinyalizasyon Temelleri hakkında bilgi edindi.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "1 Aylık Araştırma Stajı",
+    exp_nith_date: "Haziran - Temmuz 2025",
+    exp_nith_description:
+      "GAN Modelleri ve Derin Öğrenme üzerine araştırma yaptı.",
     currently_learning_heading: "Şu Anda Öğreniyorum",
     learning_java: "Java",
     learning_datastructures: "Veri Yapıları",
@@ -1357,6 +1873,7 @@ const translations = {
     nav_home: "Home",
     nav_projects: "Projecten",
     nav_connect: "Verbinden",
+    nav_poems_articles: "Gedichten en artikelen",
     hero_welcome: "WELKOM",
     hero_tagline: "Dromen weven in het digitale weefgetouw.",
     profile_name: "Parth Sidhu",
@@ -1391,8 +1908,23 @@ const translations = {
     project_stardetection_desc:
       "Detecteer sterren in afbeeldingen uit NASA's Hubble-collectie.",
     view_project_link: "Bekijk project",
+    project_portfolio_title: "Persoonlijke Portfolio Website",
+    project_portfolio_desc:
+      "Een 'vibe-coded' persoonlijke website met projecten, gedichten en artikelen, gebouwd met HTML, CSS en JavaScript, voorzien van responsief ontwerp en meertalige ondersteuning.",
+    view_project_link: "Project bekijken",
     projects_coming_soon:
       "Meer projecten komen binnenkort — blijf op de hoogte!",
+    experience_heading: "Ervaring",
+    exp_railway_company: "DRM Ambala (Noordelijke Spoorwegen)",
+    exp_railway_role: "15 dagen stage bij de S & T afdeling",
+    exp_railway_date: "Mei 2024",
+    exp_railway_description:
+      "Inzichten verkregen in de basisprincipes van spoorwegsignalering.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "1 maand onderzoeksstage",
+    exp_nith_date: "Juni - Juli 2025",
+    exp_nith_description:
+      "Onderzoek gedaan naar GAN-modellen en Deep Learning.",
     currently_learning_heading: "Momenteel aan het Leren",
     learning_java: "Java",
     learning_datastructures: "Datastructuren",
@@ -1405,6 +1937,7 @@ const translations = {
     nav_home: "Hem",
     nav_projects: "Projekt",
     nav_connect: "Anslut",
+    nav_poems_articles: "Dikter och artiklar",
     hero_welcome: "VÄLKOMMEN",
     hero_tagline: "Väva drömmar i den digitala vävstolen.",
     profile_name: "Parth Sidhu",
@@ -1439,7 +1972,21 @@ const translations = {
     project_stardetection_desc:
       "Upptäck stjärnor i bilder från NASA:s Hubble-samling.",
     view_project_link: "Visa projekt",
+    project_portfolio_title: "Personlig Portföljwebbplats",
+    project_portfolio_desc:
+      "En 'vibe-kodad' personlig webbplats som visar upp projekt, dikter och artiklar, byggd med HTML, CSS och JavaScript, med responsiv design och flerspråkigt stöd.",
+    view_project_link: "Visa projekt",
     projects_coming_soon: "Fler projekt kommer snart — håll utkik!",
+    experience_heading: "Erfarenhet",
+    exp_railway_company: "DRM Ambala (Norra järnvägen)",
+    exp_railway_role: "15 dagars praktik inom S & T-avdelningen",
+    exp_railway_date: "Maj 2024",
+    exp_railway_description:
+      "Fick insikter i grunderna för järnvägssignalering.",
+    exp_nith_institute: "NIT Hamirpur",
+    exp_nith_role: "1 månads forskningspraktik",
+    exp_nith_date: "Juni - Juli 2025",
+    exp_nith_description: "Utfört forskning om GAN-modeller och djupinlärning.",
     currently_learning_heading: "Lär mig för närvarande",
     learning_java: "Java",
     learning_datastructures: "Datastrukturer",
@@ -1449,65 +1996,276 @@ const translations = {
   },
 };
 
-let currentLanguage = localStorage.getItem("portfolioLanguage") || "en";
-
-// Function to apply translations
+// --- Apply Translations ---
 function applyTranslations() {
   const elements = document.querySelectorAll("[data-i18n]");
-  elements.forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-    if (translations[currentLanguage] && translations[currentLanguage][key]) {
-      element.textContent = translations[currentLanguage][key];
-    } else if (translations["en"][key]) {
-      // Fallback to English if translation is missing
-      element.textContent = translations["en"][key];
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    // Prioritize specific script codes (e.g., pa-Arab) over generic ones (e.g., pa) if both exist
+    const translation =
+      translations[currentLanguage]?.[key] || translations.en[key];
+
+    if (!translation) return;
+
+    if (el.tagName === "TITLE") {
+      document.title = translation;
+    } else if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = translation;
+    } else {
+      el.textContent = translation;
     }
   });
 
-  // Update body class for font styling
   document.body.className = `lang-${currentLanguage}`;
-  document.getElementById("language-selector").value = currentLanguage;
+
+  // It's better to select the specific language selector for this page,
+  // or use the common class if it's genuinely common.
+  // The HTML currently uses 'language-selector' for the select element.
+  const selectors = document.querySelectorAll(
+    ".language-selector-common, #language-selector"
+  );
+  selectors.forEach((s) => {
+    if (s.tagName === "SELECT") {
+      // Only set value for select elements
+      s.value = currentLanguage;
+    }
+  });
 }
 
-// --- Event Listeners and Initial Load ---
+window.applyTranslations = applyTranslations; // Make it globally accessible
+
+// --- DOM Ready Handler ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Disable drag on images with class "profile-image"
+  // --- Language Selector Setup ---
+  const allLangSelectors = document.querySelectorAll(
+    ".language-selector-common, #language-selector-top"
+  );
+
+  allLangSelectors.forEach((selector) => {
+    if (window.currentLanguage) {
+      selector.value = window.currentLanguage;
+    }
+  });
+
+  allLangSelectors.forEach((selector) => {
+    selector.addEventListener("change", (event) => {
+      window.currentLanguage = event.target.value;
+      localStorage.setItem("portfolioLanguage", window.currentLanguage);
+      document.body.className = `lang-${window.currentLanguage}`;
+      if (typeof applyTranslations === "function") {
+        applyTranslations();
+      }
+
+      allLangSelectors.forEach((otherSelector) => {
+        if (otherSelector !== event.target) {
+          otherSelector.value = window.currentLanguage;
+        }
+      });
+    });
+  });
+
+  if (typeof applyTranslations === "function") {
+    applyTranslations();
+  }
+
+  // --- Navigation Toggle Logic ---
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinksList = document.querySelector(".navbar ul");
+
+  if (navToggle && navLinksList) {
+    navToggle.addEventListener("click", () => {
+      navToggle.classList.toggle("open");
+      navLinksList.classList.toggle("open");
+    });
+
+    const navLinks = navLinksList.querySelectorAll("li a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navLinksList.classList.contains("open")) {
+          navToggle.classList.remove("open");
+          navLinksList.classList.remove("open");
+        }
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const isClickInsideNavbar =
+        navToggle.contains(event.target) || navLinksList.contains(event.target);
+      if (!isClickInsideNavbar && navLinksList.classList.contains("open")) {
+        navToggle.classList.remove("open");
+        navLinksList.classList.remove("open");
+      }
+    });
+  }
+
+  // --- Poems & Articles Detail Page Logic ---
+  const urlParams = new URLSearchParams(window.location.search);
+  const contentId = urlParams.get("id");
+  const contentTitleElement = document.getElementById("content-title");
+  const contentBodyElement = document.getElementById("content-body");
+  const backButton = document.getElementById("backButton");
+
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      window.location.href = "poems-articles.html";
+    });
+  }
+
+  if (contentId && contentTitleElement && contentBodyElement) {
+    if (typeof portfolioContent !== "undefined") {
+      const item = portfolioContent.find((p) => p.id === contentId);
+
+      if (item) {
+        const displayTitle = item.title[item.language] || item.title.en;
+        const displayContent = item.content[item.language] || item.content.en;
+
+        document.title = `Parth Sidhu - ${displayTitle}`;
+        contentTitleElement.innerHTML = displayTitle;
+        contentBodyElement.innerHTML = displayContent;
+      } else {
+        contentTitleElement.innerHTML =
+          window.translations[window.currentLanguage]?.["content_not_found"] ||
+          window.translations.en["content_not_found"];
+        contentBodyElement.innerHTML = "";
+      }
+    } else {
+      contentTitleElement.innerHTML =
+        window.translations[window.currentLanguage]?.["loading_content"] ||
+        window.translations.en["loading_content"];
+      contentBodyElement.innerHTML = "";
+    }
+  }
+
+  // --- General DOM Modifications & Event Listeners ---
   const img = document.querySelector(".profile-image");
   if (img) {
     img.setAttribute("draggable", "false");
     img.setAttribute("oncontextmenu", "return false;");
   }
 
-  // Stagger section animations
   const sections = document.querySelectorAll("section");
   sections.forEach((section, index) => {
-    // Skip the first section (hero) as it has its own animation
     if (section.id !== "about") {
       section.style.setProperty("--section-delay", `${0.3 * index + 0.5}s`);
     }
   });
 
-  // Apply initial translations
-  applyTranslations();
+  // --- Education Carousel Initialization (IMPROVED with robust selection) ---
+  // Assign global variables to elements found AFTER DOMContentLoaded
+  slides = document.querySelectorAll(".education-slide");
+  dots = document.querySelectorAll(".dot");
+  educationCarouselElement = document.querySelector(".education-carousel");
 
-  // Initialize carousel
-  updateCarousel();
-  autoSlide();
+  if (educationCarouselElement && slides.length > 0 && dots.length > 0) {
+    updateCarousel();
+    autoSlide(); // Start auto-sliding
 
-  // Carousel touch/hover events
-  carousel.addEventListener("mouseenter", () => clearInterval(intervalId));
-  carousel.addEventListener("mouseleave", autoSlide);
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      goToSlide(parseInt(dot.dataset.index));
+    educationCarouselElement.addEventListener("mouseenter", () =>
+      clearInterval(intervalId)
+    );
+    educationCarouselElement.addEventListener("mouseleave", autoSlide);
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+      });
     });
-  });
 
-  // Language selector event listener
-  const langSelector = document.getElementById("language-selector");
-  langSelector.addEventListener("change", (event) => {
-    currentLanguage = event.target.value;
-    localStorage.setItem("portfolioLanguage", currentLanguage);
-    applyTranslations();
-  });
+    // Touch event handlers for Education Carousel - MOVED INSIDE DOMContentLoaded
+    educationCarouselElement.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
+
+    educationCarouselElement.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault(); // Prevent scrolling while swiping
+        touchEndX = e.touches[0].clientX;
+      },
+      { passive: false } // Use passive: false to allow preventDefault
+    );
+
+    educationCarouselElement.addEventListener("touchend", () => {
+      const swipeDistance = touchEndX - touchStartX;
+      if (swipeDistance > swipeThreshold) {
+        prevEducation();
+        resetAutoSlide();
+      } else if (swipeDistance < -swipeThreshold) {
+        nextEducation();
+        resetAutoSlide();
+      }
+      touchStartX = 0;
+      touchEndX = 0;
+    });
+  }
+
+  // --- Projects Carousel Logic (NEW) ---
+  const projectCarouselTrack = document.querySelector(
+    ".project-carousel-track"
+  );
+  const projectLeftArrow = document.querySelector(".project-arrow.left");
+  const projectRightArrow = document.querySelector(".project-arrow.right");
+  const projectCards = document.querySelectorAll(
+    ".project-carousel-track .project-card"
+  );
+
+  if (
+    projectCarouselTrack &&
+    projectCards.length > 0 &&
+    projectLeftArrow &&
+    projectRightArrow
+  ) {
+    const cardsPerView = 3; // Number of project cards visible at a time (adjust as needed for responsiveness)
+    let projectCurrentIndex = 0; // Index of the first visible card in the view
+
+    const firstProjectCard = projectCards[0];
+    const cardWidth = firstProjectCard.offsetWidth; // Actual rendered width of a card (includes padding/border)
+    const gap = parseFloat(getComputedStyle(projectCarouselTrack).gap || "0"); // Get gap from CSS
+
+    const slideDistance = cardWidth + gap; // Distance to slide for one card
+
+    // Function to update the projects carousel's position
+    function updateProjectCarouselPosition() {
+      projectCarouselTrack.style.transform = `translateX(-${
+        projectCurrentIndex * slideDistance
+      }px)`;
+
+      // Optional: Logic to hide/show arrows or manage disabled state if not infinite loop
+      // For basic linear loop:
+      projectLeftArrow.disabled = projectCurrentIndex === 0;
+      projectRightArrow.disabled =
+        projectCurrentIndex >= projectCards.length - cardsPerView;
+    }
+
+    // Function to slide to the next project
+    function slideNextProject() {
+      // Basic looping logic: if at the end, go to beginning
+      projectCurrentIndex = (projectCurrentIndex + 1) % projectCards.length;
+      updateProjectCarouselPosition();
+    }
+
+    // Function to slide to the previous project
+    function slidePrevProject() {
+      // Basic looping logic: if at beginning, go to end
+      projectCurrentIndex =
+        (projectCurrentIndex - 1 + projectCards.length) % projectCards.length;
+      updateProjectCarouselPosition();
+    }
+
+    // Attach event listeners to projects carousel arrows
+    projectRightArrow.addEventListener("click", slideNextProject);
+    projectLeftArrow.addEventListener("click", slidePrevProject);
+
+    // Initial position update for projects carousel
+    updateProjectCarouselPosition();
+
+    // Optional: Auto-slide for projects carousel
+    //let projectAutoSlideInterval = setInterval(slideNextProject, 5000);
+    //projectCarouselTrack.addEventListener("mouseenter", () =>
+    //clearInterval(projectAutoSlideInterval)
+    //);
+    //projectCarouselTrack.addEventListener(
+    //"mouseleave",
+    //() => (projectAutoSlideInterval = setInterval(slideNextProject, 5000))
+    //);
+  }
 });
