@@ -2198,74 +2198,125 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Projects Carousel Logic (NEW) ---
-  const projectCarouselTrack = document.querySelector(
-    ".project-carousel-track"
-  );
-  const projectLeftArrow = document.querySelector(".project-arrow.left");
-  const projectRightArrow = document.querySelector(".project-arrow.right");
-  const projectCards = document.querySelectorAll(
-    ".project-carousel-track .project-card"
-  );
+  // Define project carousel variables (ensure these selectors correctly target your elements)
+const projectCarouselTrack = document.querySelector(".project-carousel-track");
+const projectLeftArrow = document.querySelector(".project-arrow.left");
+const projectRightArrow = document.querySelector(".project-arrow.right");
+const projectCards = document.querySelectorAll(".project-carousel-track .project-card");
 
-  if (
-    projectCarouselTrack &&
-    projectCards.length > 0 &&
-    projectLeftArrow &&
-    projectRightArrow
-  ) {
-    const cardsPerView = 3; // Number of project cards visible at a time (adjust as needed for responsiveness)
-    let projectCurrentIndex = 0; // Index of the first visible card in the view
+let projectCurrentIndex = 0; // Index of the first visible card in the view
 
-    const firstProjectCard = projectCards[0];
-    const cardWidth = firstProjectCard.offsetWidth; // Actual rendered width of a card (includes padding/border)
-    const gap = parseFloat(getComputedStyle(projectCarouselTrack).gap || "0"); // Get gap from CSS
-
-    const slideDistance = cardWidth + gap; // Distance to slide for one card
-
-    // Function to update the projects carousel's position
-    function updateProjectCarouselPosition() {
-      projectCarouselTrack.style.transform = `translateX(-${
-        projectCurrentIndex * slideDistance
-      }px)`;
-
-      // Optional: Logic to hide/show arrows or manage disabled state if not infinite loop
-      // For basic linear loop:
-      projectLeftArrow.disabled = projectCurrentIndex === 0;
-      projectRightArrow.disabled =
-        projectCurrentIndex >= projectCards.length - cardsPerView;
-    }
-
-    // Function to slide to the next project
-    function slideNextProject() {
-      // Basic looping logic: if at the end, go to beginning
-      projectCurrentIndex = (projectCurrentIndex + 1) % projectCards.length;
-      updateProjectCarouselPosition();
-    }
-
-    // Function to slide to the previous project
-    function slidePrevProject() {
-      // Basic looping logic: if at beginning, go to end
-      projectCurrentIndex =
-        (projectCurrentIndex - 1 + projectCards.length) % projectCards.length;
-      updateProjectCarouselPosition();
-    }
-
-    // Attach event listeners to projects carousel arrows
-    projectRightArrow.addEventListener("click", slideNextProject);
-    projectLeftArrow.addEventListener("click", slidePrevProject);
-
-    // Initial position update for projects carousel
-    updateProjectCarouselPosition();
-
-    // Optional: Auto-slide for projects carousel
-    //let projectAutoSlideInterval = setInterval(slideNextProject, 5000);
-    //projectCarouselTrack.addEventListener("mouseenter", () =>
-    //clearInterval(projectAutoSlideInterval)
-    //);
-    //projectCarouselTrack.addEventListener(
-    //"mouseleave",
-    //() => (projectAutoSlideInterval = setInterval(slideNextProject, 5000))
-    //);
+// Function to dynamically get the number of cards visible based on screen size
+function getProjectCardsPerView() {
+  // Adjust this breakpoint (768px) if your CSS media query for mobile layout is different
+  if (window.innerWidth <= 768) {
+    return 1; // On mobile, show 1 card per view
+  } else {
+    return 3; // On desktop, show 3 cards per view
   }
-});
+}
+
+// Function to update the projects carousel's position and arrow states
+function updateProjectCarouselPosition() {
+  const cardsPerView = getProjectCardsPerView(); // Get the dynamically determined cardsPerView
+
+  // Recalculate slideDistance dynamically in case card sizes or gaps change responsively via CSS
+  const firstProjectCard = projectCards[0];
+  if (!firstProjectCard) return; // Guard against no project cards
+  const cardWidth = firstProjectCard.offsetWidth;
+  // Safely get gap from CSS computed style
+  const gap = parseFloat(getComputedStyle(projectCarouselTrack).gap || "0");
+  const slideDistance = cardWidth + gap;
+
+  // Adjust projectCurrentIndex if it falls outside valid bounds after cardsPerView changes
+  // This prevents it from being stuck at an invalid index (e.g., if you switch from mobile to desktop
+  // and the current index is now "too far" for the wider view).
+  projectCurrentIndex = Math.min(
+    projectCurrentIndex,
+    projectCards.length - cardsPerView
+  );
+  projectCurrentIndex = Math.max(0, projectCurrentIndex); // Ensure it's never less than 0
+
+  // Apply the transform to position the carousel
+  projectCarouselTrack.style.transform = `translateX(-${projectCurrentIndex * slideDistance}px)`;
+
+  // Update the disabled state of the arrows based on the current index and dynamic cardsPerView
+  if (projectLeftArrow && projectRightArrow) { // Ensure arrows exist before attempting to disable
+      projectLeftArrow.disabled = projectCurrentIndex === 0;
+      // The right arrow is disabled if the current index plus the number of visible cards
+      // reaches or exceeds the total number of projects.
+      projectRightArrow.disabled = (projectCurrentIndex + cardsPerView) >= projectCards.length;
+  }
+}
+
+// Function to slide to the next project
+function slideNextProject() {
+  const cardsPerView = getProjectCardsPerView();
+  // Calculate the maximum allowed index to ensure the last set of cards is fully visible
+  const maxIndex = projectCards.length - cardsPerView;
+
+  // Only move if we are not at the end
+  if (projectCurrentIndex < maxIndex) {
+    // Increment by 1 to allow seeing "the other two" on mobile, scrolling one by one.
+    // If you want to jump by 'cardsPerView' at a time, change '1' to 'cardsPerView'.
+    projectCurrentIndex++;
+    updateProjectCarouselPosition();
+  }
+}
+
+// Function to slide to the previous project
+function slidePrevProject() {
+  // Only move if we are not at the beginning
+  if (projectCurrentIndex > 0) {
+    projectCurrentIndex--;
+    updateProjectCarouselPosition();
+  }
+}
+
+// --- Initial Setup and Event Listeners ---
+// Ensure the necessary elements exist before proceeding with carousel logic
+if (
+  projectCarouselTrack &&
+  projectCards.length > 0 &&
+  projectLeftArrow &&
+  projectRightArrow
+) {
+  // Attach event listeners to projects carousel arrows
+  projectRightArrow.addEventListener("click", slideNextProject);
+  projectLeftArrow.addEventListener("click", slidePrevProject);
+
+  // Initial position update for projects carousel on page load
+  updateProjectCarouselPosition();
+
+  // Add a resize listener to update carousel position and arrow states
+  // This is crucial for responsiveness if cardsPerView changes when resizing the window
+  // (e.g., rotating a mobile device or resizing a browser window on desktop).
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateProjectCarouselPosition, 250); // Debounce for performance
+  });
+
+  // Optional: Auto-slide for projects carousel (uncomment and adjust if desired)
+  // let projectAutoSlideInterval;
+  // function startProjectAutoSlide() {
+  //   projectAutoSlideInterval = setInterval(() => {
+  //     const cardsPerView = getProjectCardsPerView();
+  //     const maxIndex = projectCards.length - cardsPerView;
+  //     if (projectCurrentIndex < maxIndex) {
+  //       slideNextProject();
+  //     } else {
+  //       // If at the end during auto-slide, loop back to the beginning
+  //       projectCurrentIndex = 0;
+  //       updateProjectCarouselPosition();
+  //     }
+  //   }, 5000); // Adjust auto-slide interval (e.g., 5000ms = 5 seconds)
+  // }
+  // startProjectAutoSlide(); // Start auto-slide on page load
+
+  // // Pause/resume auto-slide on mouse enter/leave for accessibility
+  // projectCarouselTrack.addEventListener("mouseenter", () =>
+  //   clearInterval(projectAutoSlideInterval)
+  // );
+  // projectCarouselTrack.addEventListener("mouseleave", startProjectAutoSlide);
+}
