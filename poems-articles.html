@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Parth Sidhu's Poems and Articles collection."
+    />
+    <title data-i18n="page_title_poems">Parth Sidhu - Poems & Articles</title>
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Sidhu - Portfolio" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="https://fontmeme.com/permalink/250702/9a913a926a1115f824a6584095d15183.png"
+            alt="PARTH'S CORNER"
+            border="0"
+          />
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+        <ul>
+          <li><a href="index.html#about" data-i18n="nav_home">Home</a></li>
+          <li>
+            <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+          </li>
+          <li>
+            <a href="index.html#connect" data-i18n="nav_connect">Connect</a>
+          </li>
+          <li>
+            <a href="poems-articles.html" data-i18n="nav_poems_articles"
+              >Poems & Articles</a
+            >
+          </li>
+          <li>
+            <select
+              id="language-selector-top"
+              class="language-selector-common language-selector-nav"
+            >
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+              <option value="pa">ਪੰਜਾਬੀ</option>
+              <option value="pa-Arab">پنجابی</option>
+              <option value="ur">اردو</option>
+              <option value="gu">ગુજરાતી</option>
+              <option value="or">ଓଡ଼ିଆ</option>
+              <option value="bn">বাংলা</option>
+              <option value="mr">मराठी</option>
+              <option value="ta">தமிழ்</option>
+              <option value="te">తెలుగు</option>
+              <option value="ml">മലയാളം</option>
+              <option value="kn">ಕನ್ನಡ</option>
+              <option value="sd">سنڌي</option>
+              <option value="zh-Hans">简体中文</option>
+              <option value="zh-Hant">繁體中文</option>
+              <option value="ko">한국어</option>
+              <option value="ja">日本語</option>
+              <option value="ar">العربية</option>
+              <option value="fa">فارسی</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="pt">Português</option>
+              <option value="it">Italiano</option>
+              <option value="ru">Русский</option>
+              <option value="tr">Türkçe</option>
+              <option value="nl">Nederlands</option>
+              <option value="sv">Svenska</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="poems-articles-list" class="section">
+        <h2 data-i18n="section_poems_articles_title">Poems & Articles</h2>
+        <p class="intro-text" data-i18n="poetry_intro_text">
+          Welcome to my digital sanctuary of thoughts and emotions. Here, I
+          share a collection of poems and articles, each a whisper from my soul
+          or a reflection of the world through my eyes.
+        </p>
+        <div id="content-list">
+          <p data-i18n="loading_content">Loading content...</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="language-selector-container">
+      <select
+        id="language-selector"
+        class="language-selector-common language-selector"
+      >
+        <option value="en">English</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="pa">ਪੰਜਾਬੀ (Punjabi - Gurmukhi)</option>
+        <option value="pa-Arab">پنجابی (Punjabi - Shahmukhi)</option>
+        <option value="ur">اردو (Urdu)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="ml">മലയാളം (Malayalam)</option>
+        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+        <option value="sd">سنڌي (Sindhi)</option>
+        <option value="zh-Hans">简体中文 (Simplified Chinese)</option>
+        <option value="zh-Hant">繁體中文 (Traditional Chinese)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="fa">فارسی (Persian)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="it">Italiano (Italian)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="tr">Türkçe (Turkish)</option>
+        <option value="nl">Nederlands (Dutch)</option>
+      </select>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2025 Parth Sidhu. All rights reserved. Made with ❤️ by Parth
+        Sidhu.
+      </p>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="script_poems_articles.js"></script>
+  </body>
+</html>
