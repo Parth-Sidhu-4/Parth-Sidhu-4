@@ -581,7 +581,7 @@ h3 {
 .education-carousel {
   position: relative;
   overflow: hidden;
-  height: 200px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1641,7 +1641,7 @@ footer {
 .experience-carousel {
   position: relative;
   overflow: hidden;
-  height: 250px; /* <--- Change this from 200px to 250px (or slightly more) */
+  height: 450px; /
   display: flex;
   align-items: center;
   justify-content: center;
