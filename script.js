@@ -875,7 +875,7 @@ window.translations = {
     nav_home: "ഹോം",
     nav_projects: "പ്രോജക്റ്റുകൾ",
     nav_connect: "ബന്ധപ്പെടുക",
-    nav_poems_articles: "കവിതകളും ലേഖനങ്ങളും",
+    nav_poems_articles: "കവിത / ലേഖനം",
     hero_welcome: "സ്വാഗതം",
     hero_tagline: "ഡിജിറ്റൽ തറിയിൽ സ്വപ്നങ്ങൾ നെയ്യുന്നു.",
     profile_name: "പാർത്ഥ് സിദ്ദു",
