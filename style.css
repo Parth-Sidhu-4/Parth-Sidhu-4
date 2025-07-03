@@ -1749,3 +1749,6 @@ footer {
   margin-bottom: 10px;
   border-radius: 8px; /* Assuming similar style as education logo */
 }
+.content-abstract {
+  white-space: pre-line; /* collapses extra spaces but keeps \n as <br> */
+}
