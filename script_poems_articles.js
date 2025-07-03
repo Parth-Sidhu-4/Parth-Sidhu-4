@@ -165,7 +165,7 @@ window.translations = {
     nav_home: "ഹോം",
     nav_projects: "പ്രോജക്റ്റുകൾ",
     nav_connect: "ബന്ധപ്പെടുക",
-    nav_poems_articles: "കവിതകളും ലേഖനങ്ങളും",
+    nav_poems_articles: "കവിത / ലേഖനം",
     page_title_poems: "പാർത്ഥ് സിധു - കവിതകളും ലേഖനങ്ങളും",
     section_poems_articles_title: "കവിതകളും ലേഖനങ്ങളും",
     loading_content: "ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നു...",
