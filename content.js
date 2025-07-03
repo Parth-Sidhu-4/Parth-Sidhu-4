@@ -9,7 +9,7 @@ const portfolioContent = [
       en: "Poem - Lost Whispers of Hope",
     },
     abstract: {
-      en: "A poignant exploration of lingering echoes, untold truths, and the quiet sorrow of unspoken farewells, capturing the essence of what remains when hope fades.",
+      en: "A poignant exploration of lingering echoes, untold truths, and the quiet sorrow of unspoken farewells, capturing the essence of what remains when hope fades. \nNarrator: Shreya Mohanty",
     },
     language: "en", // Original language of the primary content
     type: "poem",
