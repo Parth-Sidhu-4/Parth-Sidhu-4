@@ -2038,7 +2038,7 @@ window.applyTranslations = applyTranslations; // Make it globally accessible
 document.addEventListener("DOMContentLoaded", () => {
   // --- Language Selector Setup ---
   const allLangSelectors = document.querySelectorAll(
-    ".language-selector-common, #language-selector-top"
+    ".language-selector-common, #language-selector"
   );
 
   allLangSelectors.forEach((selector) => {
