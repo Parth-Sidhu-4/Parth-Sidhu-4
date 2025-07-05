@@ -105,6 +105,20 @@ window.translations = {
     back_to_list: "କବିତା ଏବଂ ପ୍ରବନ୍ଧକୁ ଫେରନ୍ତୁ",
     content_not_found: "କୌଣସି ବିଷୟବସ୍ତୁ ମିଳିଲା ନାହିଁ।",
   },
+  bj: {
+    nav_home: "घर",
+    nav_projects: "परियोजना",
+    nav_connect: "जोड़े",
+    nav_poems_articles: "कविता आ लेख",
+    page_title_poems: "पार्थ सिद्धू - कविता आ लेख",
+    section_poems_articles_title: "कविता आ लेख",
+    loading_content: "सामग्री लोड होत बा...",
+    no_content_found: "कवनो सामग्री ना मिलल.",
+    poetry_intro_text:
+      "ई कोना हमार विचार आ भावना के छोट स दुनिया ह, जहाँ हम आपन लिखल कविता आ लेख शेयर करेलीं. कुछ लाइन दिल से निकसल बा, त कुछ दुनिया के देखल-सुनल बातन पर. लेखन हमरा ला खाली शौक ना, एगो तरीका बा जुड़ला, बोले आ मन के बात कहे के. आशा बा रउरा के ई शब्द आपन लागी.",
+    back_to_list: "फिर से कविता आ लेख पर जाईं",
+    content_not_found: "सामग्री ना मिलल.",
+  },
   bn: {
     nav_home: "হোম",
     nav_projects: "প্রজেক্টস",
@@ -398,6 +412,20 @@ window.translations = {
       "Welkom in mijn digitale toevluchtsoord van gedachten en emoties. Hier deel ik een verzameling gedichten en artikelen, elk een fluistering van mijn ziel of een weerspiegeling van de wereld door mijn ogen. Schrijven is voor mij niet zomaar een hobby, maar een diepgaande manier om te verbinden, uit te drukken en de diepten van menselijke ervaring te verkennen. Ik hoop dat deze woorden bij u net zo resoneren als bij mij.",
     back_to_list: "Terug naar Gedichten & Artikelen",
     content_not_found: "Geen inhoud gevonden.",
+  },
+  sv: {
+    nav_home: "Hem",
+    nav_projects: "Projekt",
+    nav_connect: "Anslut",
+    nav_poems_articles: "Dikter & Artiklar",
+    page_title_poems: "Parth Sidhu - Dikter & Artiklar",
+    section_poems_articles_title: "Dikter & Artiklar",
+    loading_content: "Laddar innehåll...",
+    no_content_found: "Inget innehåll hittades.",
+    poetry_intro_text:
+      "Välkommen till min digitala fristad för tankar och känslor. Här delar jag en samling dikter och artiklar, var och en en viskning från min själ eller en reflektion av världen genom mina ögon. Att skriva är för mig inte bara en hobby utan ett djupt sätt att koppla samman, att uttrycka sig och att utforska djupet av den mänskliga upplevelsen. Jag hoppas att dessa ord resonerar med dig lika mycket som de gör med mig.",
+    back_to_list: "Tillbaka till Dikter & Artiklar",
+    content_not_found: "Innehåll hittades inte.",
   },
 };
 
