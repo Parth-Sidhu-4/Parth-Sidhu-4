@@ -27,14 +27,14 @@ function updateCarousel() {
   }
 }
 
-function nextEducation() {
+function next() {
   if (slides && slides.length > 0) {
     currentSlide = (currentSlide + 1) % slides.length;
     updateCarousel();
   }
 }
 
-function prevEducation() {
+function prev() {
   if (slides && slides.length > 0) {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateCarousel();
@@ -53,7 +53,7 @@ function autoSlide() {
   clearInterval(intervalId); // Clear any existing interval before setting a new one
   if (slides && slides.length > 0) {
     intervalId = setInterval(() => {
-      nextEducation();
+      next();
     }, 5000); // Slide every 5 seconds
   }
 }
@@ -2210,7 +2210,14 @@ document.addEventListener("DOMContentLoaded", () => {
       section.style.setProperty("--section-delay", `${0.3 * index + 0.5}s`);
     }
   });
-
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then((reg) => console.log("SW registered ✅", reg))
+        .catch((err) => console.error("SW registration failed ❌", err));
+    });
+  }
   // --- Education Carousel Initialization (IMPROVED with robust selection) ---
   // Assign global variables to elements found AFTER DOMContentLoaded
   slides = document.querySelectorAll(".education-slide");
