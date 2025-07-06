@@ -84,6 +84,32 @@
       button:hover {
         background: #666;
       }
+      .retry-btn {
+        margin-top: 1.5rem;
+        padding: 0.65rem 1.6rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        color: #ffffff; /* keep text white in all languages */
+        background: #e50914; /* Netflix red */
+        cursor: pointer;
+        transition: background-color 0.25s, box-shadow 0.25s, transform 0.15s;
+      }
+
+      /* brighten on hover / focus */
+      .retry-btn:hover,
+      .retry-btn:focus {
+        background: #ff0b1d; /* lighter, punchier red */
+        box-shadow: 0 0 10px 2px #ff0b1d66; /* faint red glow */
+      }
+
+      /* press‑in on active/click */
+      .retry-btn:active {
+        background: #ff2633;
+        transform: scale(0.97);
+        box-shadow: 0 0 6px 2px #ff263366;
+      }
     </style>
   </head>
   <body>
@@ -98,7 +124,13 @@
       "Even silence speaks — when the network sleeps."
     </div>
 
-    <button onclick="location.reload()" data-i18n="offline_retry">Retry</button>
+    <button
+      class="retry-btn"
+      onclick="location.reload()"
+      data-i18n="offline_retry"
+    >
+      Try Again
+    </button>
 
     <!-- 🔗 Your main script with the translations object -->
     <script src="offline.js"></script>
