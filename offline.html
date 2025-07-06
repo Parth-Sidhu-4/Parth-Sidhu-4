@@ -147,5 +147,20 @@
         }
       });
     </script>
+    <script>
+      function goHomeIfOnline() {
+        if (navigator.onLine) {
+          // replace() avoids putting offline.html in the history stack
+          window.location.replace("./");          // root of your site
+        }
+      }
+    
+      // 1) run the check as soon as offline.html loads
+      goHomeIfOnline();
+    
+      // 2) also listen for the connection coming back while the page is open
+      window.addEventListener("online", goHomeIfOnline);
+    </script>
+
   </body>
 </html>
