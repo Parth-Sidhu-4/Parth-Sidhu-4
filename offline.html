@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="offline_title">Offline&nbsp;– Parth Sidhu</title>
+
+    <!-- Font & basic dark styling -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0c0c;
+        --fg: #eaeaea;
+        --sub: #bbbbbb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin: 1rem 0 0.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        color: var(--sub);
+        margin: 0 1rem 2rem;
+      }
+      .quote {
+        font-style: italic;
+        font-size: 0.95rem;
+        color: #888;
+      }
+      .feather {
+        font-size: 3rem;
+        opacity: 0.3;
+        animation: float 2.5s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      button {
+        padding: 0.6rem 1.4rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background: #444;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+      button:hover {
+        background: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="feather">🪶</div>
+
+    <h1 data-i18n="offline_heading">You're Offline</h1>
+    <p data-i18n="offline_para">
+      Parth's Digital Loom is resting… Reconnect to keep exploring.
+    </p>
+
+    <div class="quote" data-i18n="offline_quote">
+      "Even silence speaks — when the network sleeps."
+    </div>
+
+    <button onclick="location.reload()" data-i18n="offline_retry">Retry</button>
+
+    <!-- 🔗 Your main script with the translations object -->
+    <script src="offline.js"></script>
+
+    <!-- Re‑apply translations once script.js is loaded -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ensure currentLanguage is set from storage or default
+        window.currentLanguage =
+          localStorage.getItem("portfolioLanguage") || "en";
+
+        if (typeof applyTranslations === "function") {
+          applyTranslations(); // refresh text nodes for the stored language
+        }
+      });
+    </script>
+  </body>
+</html>
