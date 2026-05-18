@@ -198,9 +198,9 @@ window.translations = {
       "ECE student | AI & Software Dev Enthusiast | Cinematic Mindset",
     about_me_heading: "About Me",
     about_me_para1:
-      "Surrounded by the serene hills and tall Deodar trees of Shimla, I’ve learned to appreciate both simplicity and depth. This balance shapes how I approach technology — thoughtfully, creatively, and with steady focus.",
+      "Growing up amidst the quiet hills and Deodar forests of Shimla shaped the way I think \u2014 balancing curiosity with calm observation, and creativity with structure.",
     about_me_para2:
-      "I believe meaningful solutions come from combining technical skills with clear thinking and a dash of curiosity. My goal is to build projects that are practical, innovative, and make a positive difference.",
+      "I\u2019m a final year Electronics and Communication Engineering student at Gati Shakti Vishwavidyalaya, interested in intelligent systems, applied AI, simulation, and computational engineering, with a focus on building practical and thoughtfully engineered solutions.",
     education_heading: "Education",
     edu_gsv_degree:
       "B. Tech in Electronics and Communication Engineering (ECE)",
@@ -218,7 +218,14 @@ window.translations = {
     skill_java_basic: "Basic Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Machine Learning",
     projects_heading: "Projects",
+    project_demand_title: "Hyperlocal Demand Prediction",
+    project_demand_desc: "A lightweight AI pipeline for fast & accurate quick-commerce demand prediction, replacing heavy models.",
+    project_plant_title: "Plant Disease IoT Monitor",
+    project_plant_desc: "An end-to-end TinyML pipeline on ESP32-CAM detecting plant diseases using a custom 18KB CNN.",
+    project_robot_title: "ROS 2 Autonomous Robot",
+    project_robot_desc: "A mathematically modeled skid-steer robot navigating autonomously via closed-form kinematics in ROS 2 & Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc: "Detect faces in images and videos using OpenCV.",
     project_stardetection_title: "Star-Detection",
@@ -246,6 +253,8 @@ window.translations = {
     learning_datastructures: "Data Structures",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antenna and Wave Propagation",
+    learning_cuda: "Parallel Computing (CUDA)",
     connect_heading: "Connect",
   },
   hi: {
@@ -261,9 +270,9 @@ window.translations = {
       "ईसीई छात्र | एआई और सॉफ्टवेयर डेव उत्साही | सिनेमाई मानसिकता",
     about_me_heading: "मेरे बारे में",
     about_me_para1:
-      "शिमला की शांत पहाड़ियों और ऊंचे देवदार के पेड़ों से घिरा, मैंने सादगी और गहराई दोनों की सराहना करना सीखा है। यह संतुलन मेरे प्रौद्योगिकी के दृष्टिकोण को आकार देता है — विचारपूर्वक, रचनात्मक रूप से और स्थिर ध्यान के साथ।",
+      "\u0936\u093f\u092e\u0932\u093e \u0915\u0940 \u0936\u093e\u0902\u0924 \u092a\u0939\u093e\u0921\u093c\u093f\u092f\u094b\u0902 \u0914\u0930 \u0926\u0947\u0935\u0926\u093e\u0930 \u0915\u0947 \u091c\u0902\u0917\u0932\u094b\u0902 \u0915\u0947 \u092c\u0940\u091a \u092a\u0932\u0947-\u092c\u0922\u093c\u0947 \u0939\u094b\u0928\u0947 \u0928\u0947 \u092e\u0947\u0930\u0947 \u0938\u094b\u091a\u0928\u0947 \u0915\u0947 \u0924\u0930\u0940\u0915\u0947 \u0915\u094b \u0906\u0915\u093e\u0930 \u0926\u093f\u092f\u093e \u0939\u0948 \u2014 \u0936\u093e\u0902\u0924 \u0905\u0935\u0932\u094b\u0915\u0928 \u0915\u0947 \u0938\u093e\u0925 \u091c\u093f\u091c\u094d\u091e\u093e\u0938\u093e, \u0914\u0930 \u0938\u0902\u0930\u091a\u0928\u093e \u0915\u0947 \u0938\u093e\u0925 \u0930\u091a\u0928\u093e\u0924\u094d\u092e\u0915\u0924\u093e \u0915\u094b \u0938\u0902\u0924\u0941\u0932\u093f\u0924 \u0915\u0930\u0928\u093e\u0964",
     about_me_para2:
-      "मेरा मानना ​​है कि सार्थक समाधान तकनीकी कौशल को स्पष्ट सोच और थोड़ी जिज्ञासा के साथ जोड़ने से आते हैं। मेरा लक्ष्य ऐसी परियोजनाएं बनाना है जो व्यावहारिक, नवीन और सकारात्मक बदलाव लाएं।",
+      "\u092e\u0948\u0902 \u0917\u0924\u093f \u0936\u0915\u094d\u0924\u093f \u0935\u093f\u0936\u094d\u0935\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f \u092e\u0947\u0902 \u0907\u0932\u0947\u0915\u094d\u091f\u094d\u0930\u0949\u0928\u093f\u0915\u094d\u0938 \u0914\u0930 \u0938\u0902\u091a\u093e\u0930 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u0915\u093e \u0905\u0902\u0924\u093f\u092e \u0935\u0930\u094d\u0937 \u0915\u093e \u091b\u093e\u0924\u094d\u0930 \u0939\u0942\u0901, \u091c\u093f\u0938\u0915\u0940 \u0930\u0941\u091a\u093f \u092c\u0941\u0926\u094d\u0927\u093f\u092e\u093e\u0928 \u092a\u094d\u0930\u0923\u093e\u0932\u093f\u092f\u094b\u0902, \u090f\u092a\u094d\u0932\u093e\u0907\u0921 \u090f\u0906\u0908, \u0938\u093f\u092e\u0941\u0932\u0947\u0936\u0928 \u0914\u0930 \u0915\u092e\u094d\u092a\u094d\u092f\u0942\u091f\u0947\u0936\u0928\u0932 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u092e\u0947\u0902 \u0939\u0948, \u0914\u0930 \u092e\u0947\u0930\u093e \u0927\u094d\u092f\u093e\u0928 \u0935\u094d\u092f\u093e\u0935\u0939\u093e\u0930\u093f\u0915 \u0914\u0930 \u0935\u093f\u091a\u093e\u0930\u0936\u0940\u0932 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u0938\u092e\u093e\u0927\u093e\u0928 \u092c\u0928\u093e\u0928\u0947 \u092a\u0930 \u0915\u0947\u0902\u0926\u094d\u0930\u093f\u0924 \u0939\u0948\u0964",
     education_heading: "शिक्षा",
     edu_gsv_degree: "इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग (ईसीई) में बी. टेक",
     edu_gsv_institute: "गति शक्ति विश्वविद्यालय, वडोदरा",
@@ -280,7 +289,14 @@ window.translations = {
     skill_java_basic: "बेसिक जावा",
     skill_ubuntu: "उबंटू",
     skill_git: "गिट",
+    skill_ml: "मशीन लर्निंग (Machine Learning)",
     projects_heading: "परियोजनाएं",
+    project_demand_title: "हाइपरलोकल डिमांड प्रेडिक्शन",
+    project_demand_desc: "तेज और सटीक क्विक-कॉमर्स डिमांड प्रेडिक्शन के लिए एक हल्का एआई (AI) पाइपलाइन।",
+    project_plant_title: "प्लांट डिसीज IoT मॉनिटर",
+    project_plant_desc: "कस्टम 18KB CNN का उपयोग करके पौधों की बीमारियों का पता लगाने वाला ESP32-CAM पर एक एंड-टू-एंड TinyML पाइपलाइन।",
+    project_robot_title: "ROS 2 ऑटोनॉमस रोबोट",
+    project_robot_desc: "ROS 2 और Gazebo में क्लोज्ड-फॉर्म किनेमेटिक्स के माध्यम से स्वायत्त रूप से नेविगेट करने वाला गणितीय रूप से मॉडल किया गया रोबोट।",
     project_facevision_title: "फेस-विजन",
     project_facevision_desc:
       "ओपनसीवी का उपयोग करके छवियों और वीडियो में चेहरों का पता लगाएं।",
@@ -308,6 +324,8 @@ window.translations = {
     learning_datastructures: "डेटा स्ट्रक्चर्स",
     learning_deep_learning: "डीप लर्निंग",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "एंटीना और वेव प्रोपेगेशन",
+    learning_cuda: "पैरेलल कंप्यूटिंग (CUDA)",
     connect_heading: "जुड़े",
   },
   pa: {
@@ -322,9 +340,9 @@ window.translations = {
     profile_tagline: "ਈਸੀਈ ਵਿਦਿਆਰਥੀ | ਏਆਈ ਉਤਸ਼ਾਹੀ | ਕਹਾਣੀ-ਸੰਚਾਲਿਤ ਦੇਵ",
     about_me_heading: "ਮੇਰੇ ਬਾਰੇ",
     about_me_para1:
-      "ਸ਼ਿਮਲਾ ਦੀਆਂ ਸ਼ਾਂਤ ਪਹਾੜੀਆਂ ਤੇ ਉੱਚੇ ਦੇਵਦਾਰ ਦੇ ਰੁੱਖਾਂ ਨਾਲ ਘਿਰਿਆ, ਮੈਂ ਸਾਦਗੀ ਅਤੇ ਡੂੰਘਾਈ ਦੋਵਾਂ ਦੀ ਕਦਰ ਕਰਨਾ ਸਿੱਖਿਆ ਹੈ। ਇਹ ਸੰਤੁਲਨ ਤਕਨਾਲੋਜੀ ਪ੍ਰਤੀ ਮੇਰੇ ਪਹੁੰਚ ਨੂੰ ਆਕਾਰ ਦਿੰਦਾ ਹੈ — ਸੋਚ-ਸਮਝ ਕੇ, ਰਚਨਾਤਮਕ ਤੌਰ 'ਤੇ ਅਤੇ ਸਥਿਰ ਫੋਕਸ ਨਾਲ।",
+      "\u0a38\u0a3c\u0a3f\u0a2e\u0a32\u0a3e \u0a26\u0a40\u0a06\u0a02 \u0a38\u0a3c\u0a3e\u0a02\u0a24 \u0a2a\u0a39\u0a3e\u0a5c\u0a40\u0a06\u0a02 \u0a05\u0a24\u0a47 \u0a26\u0a47\u0a35\u0a26\u0a3e\u0a30 \u0a26\u0a47 \u0a1c\u0a70\u0a17\u0a32\u0a3e\u0a02 \u0a35\u0a3f\u0a71\u0a1a \u0a2a\u0a32\u0a23 \u0a28\u0a47 \u0a2e\u0a47\u0a30\u0a47 \u0a38\u0a4b\u0a1a\u0a23 \u0a26\u0a47 \u0a24\u0a30\u0a40\u0a15\u0a47 \u0a28\u0a42\u0a70 \u0a06\u0a15\u0a3e\u0a30 \u0a26\u0a3f\u0a71\u0a24\u0a3e \u0a39\u0a48 \u2014 \u0a38\u0a3c\u0a3e\u0a02\u0a24 \u0a28\u0a3f\u0a30\u0a40\u0a16\u0a23 \u0a28\u0a3e\u0a32 \u0a09\u0a24\u0a38\u0a41\u0a15\u0a24\u0a3e, \u0a05\u0a24\u0a47 \u0a22\u0a3e\u0a02\u0a1a\u0a47 \u0a28\u0a3e\u0a32 \u0a30\u0a1a\u0a28\u0a3e\u0a24\u0a2e\u0a15\u0a24\u0a3e \u0a26\u0a3e \u0a38\u0a70\u0a24\u0a41\u0a32\u0a28 \u0a15\u0a30\u0a28\u0a3e\u0964",
     about_me_para2:
-      "ਮੇਰਾ ਮੰਨਣਾ ਹੈ ਕਿ ਸਾਰਥਕ ਹੱਲ ਤਕਨੀਕੀ ਹੁਨਰਾਂ ਨੂੰ ਸਪੱਸ਼ਟ ਸੋਚ ਅਤੇ ਥੋੜ੍ਹੀ ਜਿਹੀ ਉਤਸੁਕਤਾ ਨਾਲ ਜੋੜਨ ਤੋਂ ਆਉਂਦੇ ਹਨ। ਮੇਰਾ ਟੀਚਾ ਅਜਿਹੇ ਪ੍ਰੋਜੈਕਟ ਬਣਾਉਣਾ ਹੈ ਜੋ ਵਿਹਾਰਕ, ਨਵੀਨਤਾਕਾਰੀ ਅਤੇ ਸਕਾਰਾਤਮਕ ਫਰਕ ਪਾਉਂਦੇ ਹਨ।",
+      "\u0a2e\u0a48\u0a02 \u0a17\u0a24\u0a40 \u0a38\u0a3c\u0a15\u0a24\u0a40 \u0a35\u0a3f\u0a38\u0a3c\u0a35\u0a35\u0a3f\u0a26\u0a3f\u0a06\u0a32\u0a3f\u0a06 \u0a35\u0a3f\u0a71\u0a1a \u0a07\u0a32\u0a48\u0a15\u0a1f\u0a4d\u0a30\u0a4b\u0a28\u0a3f\u0a15\u0a38 \u0a05\u0a24\u0a47 \u0a38\u0a70\u0a1a\u0a3e\u0a30 \u0a07\u0a70\u0a1c\u0a40\u0a28\u0a40\u0a05\u0a30\u0a3f\u0a70\u0a17 \u0a26\u0a3e \u0a05\u0a70\u0a24\u0a3f\u0a2e \u0a38\u0a3e\u0a32 \u0a26\u0a3e \u0a35\u0a3f\u0a26\u0a3f\u0a06\u0a30\u0a25\u0a40 \u0a39\u0a3e\u0a02, \u0a1c\u0a3f\u0a38\u0a26\u0a40 \u0a26\u0a3f\u0a32\u0a1a\u0a38\u0a2a\u0a40 \u0a2c\u0a41\u0a71\u0a27\u0a40\u0a2e\u0a3e\u0a28 \u0a2a\u0a4d\u0a30\u0a23\u0a3e\u0a32\u0a40\u0a06\u0a02, \u0a05\u0a2a\u0a32\u0a3e\u0a08\u0a21 \u0a0f\u0a06\u0a08, \u0a38\u0a3f\u0a2e\u0a42\u0a32\u0a47\u0a38\u0a3c\u0a28 \u0a05\u0a24\u0a47 \u0a15\u0a70\u0a2a\u0a3f\u0a0a\u0a1f\u0a47\u0a38\u0a3c\u0a28\u0a32 \u0a07\u0a70\u0a1c\u0a40\u0a28\u0a40\u0a05\u0a30\u0a3f\u0a70\u0a17 \u0a35\u0a3f\u0a71\u0a1a \u0a39\u0a48, \u0a05\u0a24\u0a47 \u0a2e\u0a47\u0a30\u0a3e \u0a27\u0a3f\u0a06\u0a28 \u0a35\u0a3f\u0a35\u0a39\u0a3e\u0a30\u0a15 \u0a05\u0a24\u0a47 \u0a38\u0a4b\u0a1a-\u0a38\u0a2e\u0a1d \u0a15\u0a47 \u0a07\u0a70\u0a1c\u0a40\u0a28\u0a40\u0a05\u0a30 \u0a15\u0a40\u0a24\u0a47 \u0a39\u0a71\u0a32 \u0a2c\u0a23\u0a3e\u0a09\u0a23 '\u0a24\u0a47 \u0a15\u0a47\u0a02\u0a26\u0a4d\u0a30\u0a3f\u0a24 \u0a39\u0a48\u0964",
     education_heading: "ਸਿੱਖਿਆ",
     edu_gsv_degree: "ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ (ਈਸੀਈ) ਵਿੱਚ ਬੀ. ਟੈਕ",
     edu_gsv_institute: "ਗਤੀ ਸ਼ਕਤੀ ਵਿਸ਼ਵਵਿਦਿਆਲਿਆ, ਵਡੋਦਰਾ",
@@ -341,7 +359,14 @@ window.translations = {
     skill_java_basic: "ਬੇਸਿਕ ਜਾਵਾ",
     skill_ubuntu: "ਉਬੰਤੂ",
     skill_git: "ਗਿੱਟ",
+    skill_ml: "ਮਸ਼ੀਨ ਲਰਨਿੰਗ (Machine Learning)",
     projects_heading: "ਪ੍ਰੋਜੈਕਟ",
+    project_demand_title: "ਹਾਇਪਰਲੋਕਲ ਡਿਮਾਂਡ ਪ੍ਰੀਡਿਕਸ਼ਨ",
+    project_demand_desc: "ਤੇਜ਼ ਅਤੇ ਸਹੀ ਕੁਇੱਕ-ਕਾਮਰਸ ਡਿਮਾਂਡ ਪ੍ਰੀਡਿਕਸ਼ਨ ਲਈ ਇੱਕ ਹਲਕਾ AI ਪਾਈਪਲਾਈਨ।",
+    project_plant_title: "ਪਲਾਂਟ ਡਿਜ਼ੀਜ਼ IoT ਮਾਨੀਟਰ",
+    project_plant_desc: "ਕਸਟਮ 18KB CNN ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪੌਦਿਆਂ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਾਲਾ ESP32-CAM 'ਤੇ ਇੱਕ TinyML ਪਾਈਪਲਾਈਨ।",
+    project_robot_title: "ROS 2 ਆਟੋਨੋਮਸ ਰੋਬੋਟ",
+    project_robot_desc: "ROS 2 ਅਤੇ Gazebo ਵਿੱਚ ਆਟੋਨੋਮਸ ਨੇਵੀਗੇਟ ਕਰਨ ਵਾਲਾ ਇੱਕ ਗਣਿਤਕ ਮਾਡਲ ਵਾਲਾ ਰੋਬੋਟ।",
     project_facevision_title: "ਫੇਸ-ਵਿਜ਼ਨ",
     project_facevision_desc:
       "ਓਪਨਸੀਵੀ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਚਿੱਤਰਾਂ ਅਤੇ ਵੀਡੀਓਜ਼ ਵਿੱਚ ਚਿਹਰਿਆਂ ਦਾ ਪਤਾ ਲਗਾਓ।",
@@ -369,6 +394,8 @@ window.translations = {
     learning_datastructures: "ਡਾਟਾ ਸਟ੍ਰਕਚਰ",
     learning_deep_learning: "ਡੂੰਘੀ ਸਿਖਲਾਈ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "ਐਂਟੀਨਾ ਅਤੇ ਵੇਵ ਪ੍ਰੋਪੇਗੇਸ਼ਨ",
+    learning_cuda: "ਪੈਰਲਲ ਕੰਪਿਊਟਿੰਗ (CUDA)",
     connect_heading: "ਜੁੜੋ",
   },
   "pa-Arab": {
@@ -384,9 +411,9 @@ window.translations = {
       "ای سی ای طالب علم | اے آئی اور سافٹ ویئر ڈویلپمنٹ دا شوقین | سنیما کی ذہنیت",
     about_me_heading: "میرے بارے میں",
     about_me_para1:
-      "شملہ دی پُرسکون پہاڑیاں تے اُچے دیودار دے درختاں نال گھرا ہویا، میں سادگی تے گہرائی دوناں دی تعریف کرنا سِکھیا اے۔ ایہ توازن ٹیکنالوجی دے بارے وچ میری سوچ نو‏‏ں تشکیل دیندا ہے — سوچ سمجھ کے، تخلیقی انداز وچ تے مستحکم توجہ دے نال۔",
+      "\u0634\u0645\u0644\u06c1 \u06a9\u06cc \u067e\u0631\u0633\u06a9\u0648\u0646 \u067e\u06c1\u0627\u0691\u06cc\u0648\u06ba \u0627\u0648\u0631 \u062f\u06cc\u0648\u062f\u0627\u0631 \u06a9\u06d2 \u062c\u0646\u06af\u0644\u0627\u062a \u0645\u06cc\u06ba \u067e\u0631\u0648\u0631\u0634 \u067e\u0627\u0646\u06d2 \u0646\u06d2 \u0645\u06cc\u0631\u06d2 \u0633\u0648\u0686\u0646\u06d2 \u06a9\u06d2 \u0627\u0646\u062f\u0627\u0632 \u06a9\u0648 \u062a\u0634\u06a9\u06cc\u0644 \u062f\u06cc\u0627 \u06c1\u06d2 \u2014 \u067e\u0631\u0633\u06a9\u0648\u0646 \u0645\u0634\u0627\u06c1\u062f\u06d2 \u06a9\u06d2 \u0633\u0627\u062a\u06be \u062a\u062c\u0633\u0633\u060c \u0627\u0648\u0631 \u0633\u0627\u062e\u062a \u06a9\u06d2 \u0633\u0627\u062a\u06be \u062a\u062e\u0644\u06cc\u0642\u06cc \u0635\u0644\u0627\u062d\u06cc\u062a\u0648\u06ba \u06a9\u0627 \u062a\u0648\u0627\u0632\u0646 \u0628\u0631\u0642\u0631\u0627\u0631 \u0631\u06a9\u06be\u0646\u0627\u06d4",
     about_me_para2:
-      "میرا ماننا ہے کہ بامعنی حل تکنیکی مہارتوں نو‏‏ں واضح سوچ تے تھوڑی سی تجسس دے نال جوڑن تو‏ں حاصل ہوندے نيں۔ میرا مقصد ایہو جے منصوبے بنانا ہے جو عملی، اختراعی تے مثبت فرق پیدا کرن۔",
+      "\u0645\u06cc\u06ba \u06af\u062a\u06cc \u0634\u06a9\u062a\u06cc \u0648\u0634\u0648 \u0648\u062f\u06cc\u0627\u0644\u06cc\u06c1 \u0645\u06cc\u06ba \u0627\u0644\u06cc\u06a9\u0679\u0631\u0627\u0646\u06a9\u0633 \u0627\u0648\u0631 \u06a9\u0645\u06cc\u0648\u0646\u06cc\u06a9\u06cc\u0634\u0646 \u0627\u0646\u062c\u06cc\u0646\u0626\u0631\u0646\u06af \u06a9\u0627 \u0641\u0627\u0626\u0646\u0644 \u0627\u06cc\u0626\u0631 \u06a9\u0627 \u0637\u0627\u0644\u0628\u0639\u0644\u0645 \u06c1\u0648\u06ba\u060c \u062c\u0633 \u06a9\u06cc \u062f\u0644\u0686\u0633\u067e\u06cc \u0630\u06c1\u06cc\u0646 \u0633\u0633\u0679\u0645\u0632\u060c \u0627\u067e\u0644\u0627\u0626\u06cc\u0688 \u0627\u06d2 \u0622\u0626\u06cc\u060c \u0633\u0645\u0648\u0644\u06cc\u0634\u0646 \u0627\u0648\u0631 \u06a9\u0645\u067e\u06cc\u0648\u0679\u06cc\u0634\u0646\u0644 \u0627\u0646\u062c\u06cc\u0646\u0626\u0631\u0646\u06af \u0645\u06cc\u06ba \u06c1\u06d2\u060c \u0627\u0648\u0631 \u0645\u06cc\u0631\u0627 \u0641\u0648\u06a9\u0633 \u0639\u0645\u0644\u06cc \u0627\u0648\u0631 \u0633\u0648\u0686 \u0633\u0645\u062c\u06be \u06a9\u0631 \u062a\u06cc\u0627\u0631 \u06a9\u0631\u062f\u06c1 \u062d\u0644 \u0628\u0646\u0627\u0646\u06d2 \u067e\u0631 \u06c1\u06d2\u06d4",
     education_heading: "تعلیم",
     edu_gsv_degree: "بی ٹیک (الیکٹرانکس اینڈ کمیونیکیشن انجینئرنگ)",
     edu_gsv_institute: "گتی شکتی وشو ودیالیہ، وڈودرا",
@@ -403,7 +430,14 @@ window.translations = {
     skill_java_basic: "بنیادی جاوا",
     skill_ubuntu: "اوبنٹو",
     skill_git: "گٹ",
+    skill_ml: "مشین لرننگ",
     projects_heading: "پروجیکٹس",
+    project_demand_title: "ہائپر لوکل ڈیمانڈ پریڈکشن",
+    project_demand_desc: "تیز اور درست کوئیک کامرس ڈیمانڈ پریڈکشن کے لیے ایک ہلکا AI پائپ لائن۔",
+    project_plant_title: "پلانٹ ڈیزیز IoT مانیٹر",
+    project_plant_desc: "کسٹم 18KB CNN کا استعمال کرتے ہوئے پودوں کی بیماریوں کا پتہ لگانے والا ESP32-CAM پر ایک TinyML پائپ لائن۔",
+    project_robot_title: "ROS 2 خود مختار روبوٹ",
+    project_robot_desc: "ROS 2 اور Gazebo میں خود مختار طور پر نیویگیٹ کرنے والا ایک ریاضیاتی ماڈل والا روبوٹ۔",
     project_facevision_title: "فیس ویژن",
     project_facevision_desc:
       "اوپن سی وی دا استعمال کردے ہوئے تصاویر تے ویڈیوز وچ چہریاں دا پتہ لاؤ۔",
@@ -430,6 +464,8 @@ window.translations = {
     learning_datastructures: "ڈیٹا سٹرکچرز",
     learning_deep_learning: "ڈیپ لرننگ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "اینٹینا اور ویو پروپیگیشن",
+    learning_cuda: "پیرالل کمپیوٹنگ (CUDA)",
     connect_heading: "رابطہ",
   },
   ur: {
@@ -445,9 +481,9 @@ window.translations = {
       "ای سی ای طالب علم | اے آئی اور سافٹ ویئر ڈویلپمنٹ کا شوقین | سنیما کی ذہنیت",
     about_me_heading: "میرے بارے میں",
     about_me_para1:
-      "شملہ کی پُرسکون پہاڑیوں اور اونچے دیودار کے درختوں سے گھرا ہوا، میں نے سادگی اور گہرائی دونوں کی تعریف کرنا سیکھا ہے۔ یہ توازن ٹیکنالوجی کے تئیں میرے نقطہ نظر کو تشکیل دیتا ہے — سوچ سمجھ کر، تخلیقی انداز میں اور مستحکم توجہ کے ساتھ۔",
+      "\u0634\u0645\u0644\u06c1 \u06a9\u06cc \u067e\u0631\u0633\u06a9\u0648\u0646 \u067e\u06c1\u0627\u0691\u06cc\u0648\u06ba \u0627\u0648\u0631 \u062f\u06cc\u0648\u062f\u0627\u0631 \u06a9\u06d2 \u062c\u0646\u06af\u0644\u0627\u062a \u0645\u06cc\u06ba \u067e\u0631\u0648\u0631\u0634 \u067e\u0627\u0646\u06d2 \u0646\u06d2 \u0645\u06cc\u0631\u06d2 \u0633\u0648\u0686\u0646\u06d2 \u06a9\u06d2 \u0627\u0646\u062f\u0627\u0632 \u06a9\u0648 \u062a\u0634\u06a9\u06cc\u0644 \u062f\u06cc\u0627 \u06c1\u06d2 \u2014 \u067e\u0631\u0633\u06a9\u0648\u0646 \u0645\u0634\u0627\u06c1\u062f\u06d2 \u06a9\u06d2 \u0633\u0627\u062a\u06be \u062a\u062c\u0633\u0633\u060c \u0627\u0648\u0631 \u0633\u0627\u062e\u062a \u06a9\u06d2 \u0633\u0627\u062a\u06be \u062a\u062e\u0644\u06cc\u0642\u06cc \u0635\u0644\u0627\u062d\u06cc\u062a\u0648\u06ba \u06a9\u0627 \u062a\u0648\u0627\u0632\u0646 \u0628\u0631\u0642\u0631\u0627\u0631 \u0631\u06a9\u06be\u0646\u0627\u06d4",
     about_me_para2:
-      "میرا ماننا ہے کہ بامعنی حل تکنیکی مہارتوں کو واضح سوچ اور تھوڑی سی تجسس کے ساتھ جوڑنے سے حاصل ہوتے ہیں۔ میرا مقصد ایسے منصوبے بنانا ہے جو عملی، اختراعی اور مثبت فرق پیدا کریں۔",
+      "\u0645\u06cc\u06ba \u06af\u062a\u06cc \u0634\u06a9\u062a\u06cc \u0648\u0634\u0648 \u0648\u062f\u06cc\u0627\u0644\u06cc\u06c1 \u0645\u06cc\u06ba \u0627\u0644\u06cc\u06a9\u0679\u0631\u0627\u0646\u06a9\u0633 \u0627\u0648\u0631 \u06a9\u0645\u06cc\u0648\u0646\u06cc\u06a9\u06cc\u0634\u0646 \u0627\u0646\u062c\u06cc\u0646\u0626\u0631\u0646\u06af \u06a9\u0627 \u0641\u0627\u0626\u0646\u0644 \u0627\u06cc\u0626\u0631 \u06a9\u0627 \u0637\u0627\u0644\u0628\u0639\u0644\u0645 \u06c1\u0648\u06ba\u060c \u062c\u0633 \u06a9\u06cc \u062f\u0644\u0686\u0633\u067e\u06cc \u0630\u06c1\u06cc\u0646 \u0633\u0633\u0679\u0645\u0632\u060c \u0627\u067e\u0644\u0627\u0626\u06cc\u0688 \u0627\u06d2 \u0622\u0626\u06cc\u060c \u0633\u0645\u0648\u0644\u06cc\u0634\u0646 \u0627\u0648\u0631 \u06a9\u0645\u067e\u06cc\u0648\u0679\u06cc\u0634\u0646\u0644 \u0627\u0646\u062c\u06cc\u0646\u0626\u0631\u0646\u06af \u0645\u06cc\u06ba \u06c1\u06d2\u060c \u0627\u0648\u0631 \u0645\u06cc\u0631\u0627 \u0641\u0648\u06a9\u0633 \u0639\u0645\u0644\u06cc \u0627\u0648\u0631 \u0633\u0648\u0686 \u0633\u0645\u062c\u06be \u06a9\u0631 \u062a\u06cc\u0627\u0631 \u06a9\u0631\u062f\u06c1 \u062d\u0644 \u0628\u0646\u0627\u0646\u06d2 \u067e\u0631 \u06c1\u06d2\u06d4",
     education_heading: "تعلیم",
     edu_gsv_degree: "بی ٹیک (الیکٹرانکس اینڈ کمیونیکیشن انجینئرنگ)",
     edu_gsv_institute: "گتی شکتی وشو ودیالیہ، وڈودرا",
@@ -464,7 +500,14 @@ window.translations = {
     skill_java_basic: "بنیادی جاوا",
     skill_ubuntu: "اوبنٹو",
     skill_git: "گٹ",
+    skill_ml: "مشین لرننگ",
     projects_heading: "پروجیکٹس",
+    project_demand_title: "ہائپر لوکل ڈیمانڈ پریڈکشن",
+    project_demand_desc: "تیز اور درست کوئیک کامرس ڈیمانڈ پریڈکشن کے لیے ایک ہلکا AI پائپ لائن۔",
+    project_plant_title: "پلانٹ ڈیزیز IoT مانیٹر",
+    project_plant_desc: "کسٹم 18KB CNN کا استعمال کرتے ہوئے پودوں کی بیماریوں کا پتہ لگانے والا ESP32-CAM پر ایک TinyML پائپ لائن۔",
+    project_robot_title: "ROS 2 خود مختار روبوٹ",
+    project_robot_desc: "ROS 2 اور Gazebo میں خود مختار طور پر نیویگیٹ کرنے والا ایک ریاضیاتی ماڈل والا روبوٹ۔",
     project_facevision_title: "فیس ویژن",
     project_facevision_desc:
       "اوپن سی وی کا استعمال کرتے ہوئے تصاویر اور ویڈیوز میں چہروں کا پتہ لگائیں۔",
@@ -492,6 +535,8 @@ window.translations = {
     learning_datastructures: "ڈیٹا سٹرکچرز",
     learning_deep_learning: "ڈیپ لرننگ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "اینٹینا اور ویو پروپیگیشن",
+    learning_cuda: "پیرالل کمپیوٹنگ (CUDA)",
     connect_heading: "رابطہ",
   },
   gu: {
@@ -506,9 +551,9 @@ window.translations = {
     profile_tagline: "ECE વિદ્યાર્થી | AI ઉત્સાહી | વાર્તા-આધારિત દેવ",
     about_me_heading: "મારા વિશે",
     about_me_para1:
-      "શિમલાની શાંત ટેકરીઓ અને ઊંચા દેવદારના વૃક્ષોથી ઘેરાયેલા, મેં સાદગી અને ઊંડાણ બંનેની કદર કરવાનું શીખ્યું છે. આ સંતુલન હું ટેકનોલોજીનો સંપર્ક કેવી રીતે કરું છું તે આકાર આપે છે — વિચારપૂર્વક, સર્જનાત્મક રીતે અને સ્થિર ધ્યાન સાથે.",
+      "\u0ab6\u0abf\u0aae\u0ab2\u0abe\u0aa8\u0ac0 \u0ab6\u0abe\u0a82\u0aa4 \u0a9f\u0ac7\u0a95\u0ab0\u0ac0\u0a93 \u0a85\u0aa8\u0ac7 \u0aa6\u0ac7\u0ab5\u0aa6\u0abe\u0ab0\u0aa8\u0abe \u0a9c\u0a82\u0a97\u0ab2\u0acb \u0ab5\u0a9a\u0acd\u0a9a\u0ac7 \u0a89\u0a9b\u0ab0\u0acd\u0aaf\u0abe \u0ab9\u0acb\u0ab5\u0abe\u0aa5\u0ac0 \u0aae\u0abe\u0ab0\u0ac0 \u0ab5\u0abf\u0a9a\u0abe\u0ab0\u0ab5\u0abe\u0aa8\u0ac0 \u0ab0\u0ac0\u0aa4 \u0a98\u0aa1\u0abe\u0a88 \u0a9b\u0ac7 \u2014 \u0ab6\u0abe\u0a82\u0aa4 \u0a85\u0ab5\u0ab2\u0acb\u0a95\u0aa8 \u0ab8\u0abe\u0aa5\u0ac7 \u0a9c\u0abf\u0a9c\u0acd\u0a9e\u0abe\u0ab8\u0abe, \u0a85\u0aa8\u0ac7 \u0aae\u0abe\u0ab3\u0a96\u0abe \u0ab8\u0abe\u0aa5\u0ac7 \u0ab8\u0ab0\u0acd\u0a9c\u0aa8\u0abe\u0aa4\u0acd\u0aae\u0a95\u0aa4\u0abe\u0aa8\u0ac7 \u0ab8\u0a82\u0aa4\u0ac1\u0ab2\u0abf\u0aa4 \u0a95\u0ab0\u0ab5\u0ac0.",
     about_me_para2:
-      "હું માનું છું કે અર્થપૂર્ણ ઉકેલો તકનીકી કુશળતાને સ્પષ્ટ વિચાર અને જિજ્ઞાસાના થોડા સ્પર્શ સાથે જોડવાથી આવે છે. મારો ધ્યેય એવા પ્રોજેક્ટ્સ બનાવવાનો છે જે વ્યવહારુ, નવીન અને સકારાત્મક તફાવત લાવે.",
+      "\u0ab9\u0ac1\u0a82 \u0a97\u0aa4\u0abf \u0ab6\u0a95\u0acd\u0aa4\u0abf \u0ab5\u0abf\u0ab6\u0acd\u0ab5\u0ab5\u0abf\u0aa6\u0acd\u0aaf\u0abe\u0ab2\u0aaf\u0aae\u0abe\u0a82 \u0a88\u0ab2\u0ac7\u0a95\u0acd\u0a9f\u0acd\u0ab0\u0acb\u0aa8\u0abf\u0a95\u0acd\u0ab8 \u0a85\u0aa8\u0ac7 \u0a95\u0acb\u0aae\u0acd\u0aaf\u0ac1\u0aa8\u0abf\u0a95\u0ac7\u0ab6\u0aa8 \u0a8f\u0aa8\u0acd\u0a9c\u0abf\u0aa8\u0abf\u0aaf\u0ab0\u0abf\u0a82\u0a97\u0aa8\u0acb \u0a85\u0a82\u0aa4\u0abf\u0aae \u0ab5\u0ab0\u0acd\u0ab7\u0aa8\u0acb \u0ab5\u0abf\u0aa6\u0acd\u0aaf\u0abe\u0ab0\u0acd\u0aa5\u0ac0 \u0a9b\u0ac1\u0a82, \u0a9c\u0ac7\u0aa8\u0ac7 \u0a88\u0aa8\u0acd\u0a9f\u0ac7\u0ab2\u0abf\u0a9c\u0aa8\u0acd\u0a9f \u0ab8\u0abf\u0ab8\u0acd\u0a9f\u0aae\u0acd\u0ab8, \u0a8f\u0aaa\u0acd\u0ab2\u0abe\u0a88\u0aa1 \u0a8f\u0a86\u0a88, \u0ab8\u0abf\u0aae\u0acd\u0aaf\u0ac1\u0ab2\u0ac7\u0ab6\u0aa8 \u0a85\u0aa8\u0ac7 \u0a95\u0aae\u0acd\u0aaa\u0acd\u0aaf\u0ac1\u0a9f\u0ac7\u0ab6\u0aa8\u0ab2 \u0a8f\u0aa8\u0acd\u0a9c\u0abf\u0aa8\u0abf\u0aaf\u0ab0\u0abf\u0a82\u0a97\u0aae\u0abe\u0a82 \u0ab0\u0ab8 \u0a9b\u0ac7, \u0a85\u0aa8\u0ac7 \u0aae\u0abe\u0ab0\u0ac1\u0a82 \u0aa7\u0acd\u0aaf\u0abe\u0aa8 \u0ab5\u0acd\u0aaf\u0ab5\u0ab9\u0abe\u0ab0\u0ac1 \u0a85\u0aa8\u0ac7 \u0ab5\u0abf\u0a9a\u0abe\u0ab0\u0aaa\u0ac2\u0ab0\u0acd\u0ab5\u0a95 \u0a8f\u0aa8\u0acd\u0a9c\u0abf\u0aa8\u0abf\u0aaf\u0ab0 \u0a95\u0ab0\u0ac7\u0ab2\u0abe \u0a89\u0a95\u0ac7\u0ab2\u0acb \u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe \u0aaa\u0ab0 \u0a95\u0ac7\u0aa8\u0acd\u0aa6\u0acd\u0ab0\u0abf\u0aa4 \u0a9b\u0ac7.",
     education_heading: "શિક્ષણ",
     edu_gsv_degree:
       "ઇલેક્ટ્રોનિક્સ અને કમ્યુનિકેશન એન્જિનિયરિંગ (ECE) માં બી. ટેક",
@@ -526,7 +571,14 @@ window.translations = {
     skill_java_basic: "બેઝિક જાવા",
     skill_ubuntu: "ઉબુન્ટુ",
     skill_git: "ગિટ",
+    skill_ml: "મશીન લર્નિંગ",
     projects_heading: "પ્રોજેક્ટ્સ",
+    project_demand_title: "હાઇપરલોકલ ડિમાન્ડ પ્રેડિક્શન",
+    project_demand_desc: "ઝડપી અને સચોટ ક્વિક-કોમર્સ ડિમાન્ડ પ્રેડિક્શન માટે હલકી AI પાઇપલાઇન.",
+    project_plant_title: "પ્લાન્ટ ડિસીઝ IoT મોનિટર",
+    project_plant_desc: "કસ્ટમ 18KB CNN નો ઉપયોગ કરીને છોડના રોગો શોધવા માટે ESP32-CAM પર TinyML પાઇપલાઇન.",
+    project_robot_title: "ROS 2 ઓટોનોમસ રોબોટ",
+    project_robot_desc: "ROS 2 અને Gazebo માં સ્વાયત્ત રીતે નેવિગેટ કરતો ગાણિતિક રીતે મોડલ કરેલ રોબોટ.",
     project_facevision_title: "ફેસ-વિઝન",
     project_facevision_desc:
       "OpenCV નો ઉપયોગ કરીને છબીઓ અને વિડિઓઝમાં ચહેરાઓ શોધો.",
@@ -553,6 +605,8 @@ window.translations = {
     learning_datastructures: "ડેટા સ્ટ્રક્ચર્સ",
     learning_deep_learning: "ડીપ લર્નિંગ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "એન્ટેના અને વેવ પ્રોપેગેશન",
+    learning_cuda: "પેરેલલ કમ્પ્યુટિંગ (CUDA)",
     connect_heading: "જોડાઓ",
   },
   or: {
@@ -568,9 +622,9 @@ window.translations = {
       "ECE ଛାତ୍ର | AI ଓ ସଫ୍ଟୱେର୍ ଦେବ ଉତ୍ସାହୀ | ସିନେମାଟିକ୍ ମାନସିକତା",
     about_me_heading: "ମୋ ବିଷୟରେ",
     about_me_para1:
-      "ଶିମଲାର ଶାନ୍ତ ପାହାଡ଼ ଏବଂ ଉଚ୍ଚ ଦେଓଦାର ବୃକ୍ଷରେ ଘେରି ରହି, ମୁଁ ସରଳତା ଏବଂ ଗଭୀରତା ଉଭୟକୁ ପ୍ରଶଂସା କରିବା ଶିଖିଛି। ଏହି ସନ୍ତୁଳନ ମୋର ପ୍ରଯୁକ୍ତି ପ୍ରତି ଦୃଷ୍ଟିକୋଣକୁ ଗଢିଥାଏ — ଚିନ୍ତାଶୀଳ, ସୃଜନଶୀଳ ଏବଂ ସ୍ଥିର ଧ୍ୟାନ ସହିତ।",
+      "\u0b36\u0b3f\u0b2e\u0b32\u0b3e\u0b30 \u0b36\u0b3e\u0b28\u0b4d\u0b24 \u0b2a\u0b3e\u0b39\u0b3e\u0b21 \u0b0f\u0b2c\u0b02 \u0b26\u0b47\u0b13\u0b26\u0b3e\u0b30 \u0b1c\u0b19\u0b4d\u0b17\u0b32 \u0b2e\u0b27\u0b4d\u0b5f\u0b30\u0b47 \u0b2c\u0b22\u0b3f\u0b2c\u0b3e \u0b2e\u0b4b\u0b30 \u0b1a\u0b3f\u0b28\u0b4d\u0b24\u0b3e\u0b27\u0b3e\u0b30\u0b3e\u0b15\u0b41 \u0b06\u0b15\u0b3e\u0b30 \u0b26\u0b47\u0b07\u0b1b\u0b3f - \u0b36\u0b3e\u0b28\u0b4d\u0b24 \u0b2a\u0b30\u0b4d\u0b2f\u0b4d\u0b5f\u0b2c\u0b47\u0b15\u0b4d\u0b37\u0b23 \u0b38\u0b39\u0b3f\u0b24 \u0b15\u0b4c\u0b24\u0b41\u0b39\u0b33, \u0b0f\u0b2c\u0b02 \u0b38\u0b02\u0b30\u0b1a\u0b28\u0b3e \u0b38\u0b39\u0b3f\u0b24 \u0b38\u0b43\u0b1c\u0b28\u0b36\u0b40\u0b33\u0b24\u0b3e\u0b15\u0b41 \u0b38\u0b28\u0b4d\u0b24\u0b41\u0b33\u0b3f\u0b24 \u0b15\u0b30\u0b3f\u0b2c\u0b3e |",
     about_me_para2:
-      "ମୁଁ ବିଶ୍ୱାସ କରେ ଯେ ଅର୍ଥପୂର୍ଣ୍ଣ ସମାଧାନ ବୈଷୟିକ ଦକ୍ଷତାକୁ ସ୍ପଷ୍ଟ ଚିନ୍ତାଧାରା ଏବଂ ଟିକିଏ କୌତୁହଳ ସହିତ ମିଶାଇବାରୁ ଆସିଥାଏ। ମୋର ଲକ୍ଷ୍ୟ ହେଉଛି ବ୍ୟବହାରିକ, ଅଭିନବ ଏବଂ ସକାରାତ୍ମକ ପରିବର୍ତ୍ତନ ଆଣୁଥିବା ପ୍ରୋଜେକ୍ଟଗୁଡିକ ନିର୍ମାଣ କରିବା।",
+      "\u0b2e\u0b41\u0b01 \u0b17\u0b24\u0b3f \u0b36\u0b15\u0b4d\u0b24\u0b3f \u0b2c\u0b3f\u0b36\u0b4d\u0b71\u0b2c\u0b3f\u0b26\u0b4d\u0b5f\u0b3e\u0b33\u0b5f\u0b30\u0b47 \u0b07\u0b32\u0b47\u0b15\u0b4d\u0b1f\u0b4d\u0b30\u0b4b\u0b28\u0b3f\u0b15\u0b4d\u0b38 \u0b0f\u0b2c\u0b02 \u0b15\u0b2e\u0b4d\u0b5f\u0b41\u0b28\u0b3f\u0b15\u0b47\u0b38\u0b28\u0b4d \u0b07\u0b1e\u0b4d\u0b1c\u0b3f\u0b28\u0b3f\u0b5f\u0b30\u0b3f\u0b02\u0b30 \u0b36\u0b47\u0b37 \u0b2c\u0b30\u0b4d\u0b37\u0b30 \u0b1b\u0b3e\u0b24\u0b4d\u0b30, \u0b07\u0b23\u0b4d\u0b1f\u0b47\u0b32\u0b3f\u0b1c\u0b47\u0b23\u0b4d\u0b1f \u0b38\u0b3f\u0b37\u0b4d\u0b1f\u0b2e\u0b4d, \u0b06\u0b2a\u0b4d\u0b32\u0b3e\u0b0f\u0b21\u0b4d \u0b0f\u0b06\u0b07, \u0b38\u0b3f\u0b2e\u0b41\u0b32\u0b47\u0b38\u0b28\u0b4d \u0b0f\u0b2c\u0b02 \u0b15\u0b2e\u0b4d\u0b2a\u0b4d\u0b5f\u0b41\u0b1f\u0b47\u0b38\u0b28\u0b3e\u0b32\u0b4d \u0b07\u0b1e\u0b4d\u0b1c\u0b3f\u0b28\u0b3f\u0b5f\u0b30\u0b3f\u0b02\u0b30\u0b47 \u0b06\u0b17\u0b4d\u0b30\u0b39\u0b40, \u0b2c\u0b4d\u0b5f\u0b2c\u0b39\u0b3e\u0b30\u0b3f\u0b15 \u0b0f\u0b2c\u0b02 \u0b1a\u0b3f\u0b28\u0b4d\u0b24\u0b3e\u0b2e\u0b42\u0b33\u0b15 \u0b38\u0b2e\u0b3e\u0b27\u0b3e\u0b28 \u0b28\u0b3f\u0b30\u0b4d\u0b2e\u0b3e\u0b23 \u0b09\u0b2a\u0b30\u0b47 \u0b27\u0b4d\u0b5f\u0b3e\u0b28 \u0b26\u0b47\u0b07\u0b25\u0b3e\u0b0f |",
     education_heading: "ଶିକ୍ଷା",
     edu_gsv_degree: "ଇଲେକ୍ଟ୍ରୋନିକ୍ସ ଏବଂ ଯୋଗାଯୋଗ ଇଞ୍ଜିନିୟରିଂ (ECE) ରେ ବି. ଟେକ୍",
     edu_gsv_institute: "ଗତି ଶକ୍ତି ବିଶ୍ୱବିଦ୍ୟାଳୟ, ବରୋଦା",
@@ -587,7 +641,14 @@ window.translations = {
     skill_java_basic: "ମୌଳିକ ଜାଭା",
     skill_ubuntu: "ଉବୁଣ୍ଟୁ",
     skill_git: "ଗିଟ୍",
+    skill_ml: "ମେସିନ୍ ଲର୍ଣ୍ଣିଂ",
     projects_heading: "ପ୍ରୋଜେକ୍ଟଗୁଡିକ",
+    project_demand_title: "ହାଇପରଲୋକାଲ୍ ଡିମାଣ୍ଡ୍ ପ୍ରେଡିକ୍ସନ୍",
+    project_demand_desc: "ଦ୍ରୁତ ଏବଂ ସଠିକ୍ କୁଇକ୍-କମର୍ସ ଡିମାଣ୍ଡ ପ୍ରେଡିକ୍ସନ୍ ପାଇଁ ଏକ ହାଲୁକା AI ପାଇପଲାଇନ୍ |",
+    project_plant_title: "ପ୍ଲାଣ୍ଟ ଡିଜିଜ୍ IoT ମନିଟର୍",
+    project_plant_desc: "କଷ୍ଟମ୍ 18KB CNN ବ୍ୟବହାର କରି ଉଦ୍ଭିଦ ରୋଗ ଚିହ୍ନଟ କରୁଥିବା ESP32-CAM ରେ ଏକ TinyML ପାଇପଲାଇନ୍ |",
+    project_robot_title: "ROS 2 ଅଟୋନୋମସ୍ ରୋବଟ୍",
+    project_robot_desc: "ROS 2 ଏବଂ Gazebo ରେ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ନେଭିଗେଟ୍ କରୁଥିବା ଏକ ଗାଣିତିକ ରୋବଟ୍ |",
     project_facevision_title: "ଫେସ୍-ଭିଜନ୍",
     project_facevision_desc:
       "OpenCV ବ୍ୟବହାର କରି ଚିତ୍ର ଏବଂ ଭିଡିଓରେ ଚେହେରା ଚିହ୍ନଟ କରନ୍ତୁ।",
@@ -614,6 +675,8 @@ window.translations = {
     learning_datastructures: "ଡାଟା ଷ୍ଟ୍ରକ୍ଚର",
     learning_deep_learning: "ଡିପ୍ ଲର୍ନିଂ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "ଆଣ୍ଟେନା ଏବଂ ୱେଭ୍ ପ୍ରୋପେଗେସନ୍",
+    learning_cuda: "ପାରାଲାଲ୍ କମ୍ପ୍ୟୁଟିଂ (CUDA)",
     connect_heading: "ସଂଯୋଗ",
   },
    bj: {
@@ -629,9 +692,9 @@ window.translations = {
       "ईसीई के छात्र | एआई आ सॉफ्टवेयर डेव उत्साही | सिनेमाई मानसिकता",
     about_me_heading: "मोहरा के बारे में",
     about_me_para1:
-      "शिमला के शांत पहाड़ी आ ऊँच देवदार के पेड़ से घेरल, हम सादगी आ गहराई दुनों के सराहना सीखले बानी. ई संतुलन बतावेला कि हम तकनीक के कइसे देखेनीं — सोच-समझ के, रचनात्मक रूप से, आ लगातार ध्यान से.",
+      "\u0936\u093f\u092e\u0932\u093e \u0915\u0947 \u0936\u093e\u0902\u0924 \u092a\u0939\u093e\u0921\u093c\u0940 \u0906 \u0926\u0947\u0935\u0926\u093e\u0930 \u0915\u0947 \u091c\u0902\u0917\u0932 \u0915\u0947 \u092c\u0940\u091a \u092a\u0932\u0947-\u092c\u0922\u093c\u0947 \u0938\u0947 \u0939\u092e\u093e\u0930 \u0938\u094b\u091a\u0947 \u0915\u0947 \u0924\u0930\u0940\u0915\u093e \u0915\u0947 \u0906\u0915\u093e\u0930 \u092e\u093f\u0932\u0932 \u092c\u093e \u2014 \u0936\u093e\u0902\u0924 \u0905\u0935\u0932\u094b\u0915\u0928 \u0915\u0947 \u0938\u093e\u0925\u0947 \u091c\u093f\u091c\u094d\u091e\u093e\u0938\u093e, \u0906 \u0938\u0902\u0930\u091a\u0928\u093e \u0915\u0947 \u0938\u093e\u0925\u0947 \u0930\u091a\u0928\u093e\u0924\u094d\u092e\u0915\u0924\u093e \u0915\u0947 \u0938\u0902\u0924\u0941\u0932\u093f\u0924 \u0915\u0907\u0932\u0964",
     about_me_para2:
-      "हमरा विश्वास बा कि सार्थक समाधान तकनीकी कौशल के स्पष्ट सोच आ कुछ जिज्ञासा के साथ जोड़ के मिलेला. हमार लक्ष्य अइसन परियोजना बनावल बा जवन व्यावहारिक, अभिनव, आ सकारात्मक बदलाव ले आवे.",
+      "\u0939\u092e \u0917\u0924\u093f \u0936\u0915\u094d\u0924\u093f \u0935\u093f\u0936\u094d\u0935\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f \u092e\u0947\u0902 \u0907\u0932\u0947\u0915\u094d\u091f\u094d\u0930\u0949\u0928\u093f\u0915\u094d\u0938 \u0906 \u0938\u0902\u091a\u093e\u0930 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u0915\u0947 \u0905\u0902\u0924\u093f\u092e \u0935\u0930\u094d\u0937 \u0915\u0947 \u091b\u093e\u0924\u094d\u0930 \u092c\u093e\u0928\u0940, \u091c\u0947\u0915\u0930 \u0930\u0941\u091a\u093f \u092c\u0941\u0926\u094d\u0927\u093f\u092e\u093e\u0928 \u092a\u094d\u0930\u0923\u093e\u0932\u0940, \u090f\u092a\u094d\u0932\u093e\u0907\u0921 \u090f\u0906\u0908, \u0938\u093f\u092e\u0941\u0932\u0947\u0936\u0928 \u0906 \u0915\u092e\u094d\u092a\u094d\u092f\u0942\u091f\u0947\u0936\u0928\u0932 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u092e\u0947\u0902 \u092c\u093e, \u0906 \u0939\u092e\u093e\u0930 \u0927\u094d\u092f\u093e\u0928 \u0935\u094d\u092f\u093e\u0935\u0939\u093e\u0930\u093f\u0915 \u0906 \u0935\u093f\u091a\u093e\u0930\u0936\u0940\u0932 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u093f\u0902\u0917 \u0938\u092e\u093e\u0927\u093e\u0928 \u092c\u0928\u093e\u0935\u0947 \u092a\u0930 \u0915\u0947\u0902\u0926\u094d\u0930\u093f\u0924 \u092c\u093e\u0964",
     education_heading: "शिक्षा",
     edu_gsv_degree: "इलेक्ट्रॉनिक्स आ संचार इंजीनियरिंग (ईसीई) में बी. टेक",
     edu_gsv_institute: "गति शक्ति विश्वविद्यालय, वडोदरा",
@@ -648,7 +711,14 @@ window.translations = {
     skill_java_basic: "बेसिक जावा",
     skill_ubuntu: "उबंटू",
     skill_git: "गिट",
+    skill_ml: "मशीन लर्निंग",
     projects_heading: "परियोजना",
+    project_demand_title: "हाइपरलोकल डिमांड प्रेडिक्शन",
+    project_demand_desc: "तेज आउर सटीक क्विक-कॉमर्स डिमांड प्रेडिक्शन खातिर एगो हल्का AI पाइपलाइन।",
+    project_plant_title: "प्लांट डिसीज IoT मॉनिटर",
+    project_plant_desc: "कस्टम 18KB CNN के उपयोग क के पौधा के बीमारी के पता लगावे वाला ESP32-CAM पर एगो TinyML पाइपलाइन।",
+    project_robot_title: "ROS 2 ऑटोनॉमस रोबोट",
+    project_robot_desc: "ROS 2 आउर Gazebo में स्वायत्त रूप से नेविगेट करे वाला गणितीय रोबोट।",
     project_facevision_title: "फेस-विजन",
     project_facevision_desc:
       "ओपनसीवी के इस्तेमाल से फोटो आ वीडियो में चेहरा के पता लगाईं.",
@@ -675,6 +745,8 @@ window.translations = {
     learning_datastructures: "डेटा संरचना",
     learning_deep_learning: "डीप लर्निंग",
     learning_gans: "GANs",
+    learning_awp: "एंटीना आउर वेव प्रोपेगेशन",
+    learning_cuda: "पैरेलल कंप्यूटिंग (CUDA)",
     connect_heading: "जोड़े",
   },
   bn: {
@@ -689,9 +761,9 @@ window.translations = {
     profile_tagline: "ইসিই ছাত্র | এআই উৎসাহী | গল্প-চালিত দেব",
     about_me_heading: "আমার সম্পর্কে",
     about_me_para1:
-      "শিমলার শান্ত পাহাড় এবং লম্বা দেবদারু গাছের চারপাশে ঘিরে, আমি সরলতা এবং গভীরতা উভয়কেই প্রশংসা করতে শিখেছি। এই ভারসাম্য প্রযুক্তি সম্পর্কে আমার দৃষ্টিভঙ্গিকে রূপ দেয় — চিন্তাভাবনা করে, সৃজনশীলভাবে এবং স্থির মনোযোগ সহকারে।",
+      "\u09b6\u09bf\u09ae\u09b2\u09be\u09b0 \u09b6\u09be\u09a8\u09cd\u09a4 \u09aa\u09be\u09b9\u09be\u09a1\u09bc \u098f\u09ac\u0982 \u09a6\u09c7\u0993\u09a6\u09be\u09b0 \u09ac\u09a8\u09c7\u09b0 \u09ae\u09be\u099d\u09c7 \u09ac\u09c7\u09a1\u09bc\u09c7 \u0993\u09a0\u09be \u0986\u09ae\u09be\u09b0 \u099a\u09bf\u09a8\u09cd\u09a4\u09be\u09ad\u09be\u09ac\u09a8\u09be\u09b0 \u09a7\u09b0\u09a8\u0995\u09c7 \u09b0\u09c2\u09aa \u09a6\u09bf\u09af\u09bc\u09c7\u099b\u09c7 \u2014 \u09b6\u09be\u09a8\u09cd\u09a4 \u09aa\u09b0\u09cd\u09af\u09ac\u09c7\u0995\u09cd\u09b7\u09a3\u09c7\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09cc\u09a4\u09c2\u09b9\u09b2, \u098f\u09ac\u0982 \u0995\u09be\u09a0\u09be\u09ae\u09cb\u09b0 \u09b8\u09be\u09a5\u09c7 \u09b8\u09c3\u099c\u09a8\u09b6\u09c0\u09b2\u09a4\u09be\u09b0 \u09ad\u09be\u09b0\u09b8\u09be\u09ae\u09cd\u09af \u09ac\u099c\u09be\u09af\u09bc \u09b0\u09be\u0996\u09be\u0964",
     about_me_para2:
-      "আমি বিশ্বাস করি যে অর্থপূর্ণ সমাধান প্রযুক্তিগত দক্ষতা, স্পষ্ট চিন্তাভাবনা এবং সামান্য কৌতূহলকে একত্রিত করার মাধ্যমে আসে। আমার লক্ষ্য হল এমন প্রকল্প তৈরি করা যা ব্যবহারিক, উদ্ভাবনী এবং ইতিবাচক পরিবর্তন নিয়ে আসে।",
+      "\u0986\u09ae\u09bf \u0997\u09a4\u09bf \u09b6\u0995\u09cd\u09a4\u09bf \u09ac\u09bf\u09b6\u09cd\u09ac\u09ac\u09bf\u09a6\u09cd\u09af\u09be\u09b2\u09af\u09bc\u09c7\u09b0 \u0987\u09b2\u09c7\u0995\u099f\u09cd\u09b0\u09a8\u09bf\u0995\u09cd\u09b8 \u098f\u09ac\u0982 \u0995\u09ae\u09bf\u0989\u09a8\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09af\u09bc\u09be\u09b0\u09bf\u0982\u09af\u09bc\u09c7\u09b0 \u099a\u09c2\u09a1\u09bc\u09be\u09a8\u09cd\u09a4 \u09ac\u09b0\u09cd\u09b7\u09c7\u09b0 \u099b\u09be\u09a4\u09cd\u09b0, \u0987\u09a8\u09cd\u099f\u09c7\u09b2\u09bf\u099c\u09c7\u09a8\u09cd\u099f \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae, \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09be\u09af\u09bc\u09c7\u09a1 \u098f\u0986\u0987, \u09b8\u09bf\u09ae\u09c1\u09b2\u09c7\u09b6\u09a8 \u098f\u09ac\u0982 \u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09c7\u09b6\u09a8\u09be\u09b2 \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09af\u09bc\u09be\u09b0\u09bf\u0982\u09af\u09bc\u09c7 \u0986\u0997\u09cd\u09b0\u09b9\u09c0, \u098f\u09ac\u0982 \u0986\u09ae\u09be\u09b0 \u09b2\u0995\u09cd\u09b7\u09cd\u09af \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u09bf\u0995 \u098f\u09ac\u0982 \u099a\u09bf\u09a8\u09cd\u09a4\u09be\u09b6\u09c0\u09b2 \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09af\u09bc\u09be\u09b0\u09bf\u0982 \u09b8\u09ae\u09be\u09a7\u09be\u09a8 \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be\u0964",
     education_heading: "শিক্ষা",
     edu_gsv_degree: "ইলেকট্রনিক্স এবং কমিউনিকেশন ইঞ্জিনিয়ারিং (ECE) এ বি. টেক",
     edu_gsv_institute: "গতি শক্তি বিশ্ববিদ্যালয়, ভাদোদরা",
@@ -708,7 +780,14 @@ window.translations = {
     skill_java_basic: "বেসিক জাভা",
     skill_ubuntu: "উবুন্টু",
     skill_git: "গিট",
+    skill_ml: "মেশিন লার্নিং",
     projects_heading: "প্রকল্প",
+    project_demand_title: "হাইপারলোকাল ডিমান্ড প্রেডিকশন",
+    project_demand_desc: "দ্রুত এবং নির্ভুল কুইক-কমার্স ডিমান্ড প্রেডিকশনের জন্য একটি হালকা AI পাইপলাইন।",
+    project_plant_title: "প্ল্যান্ট ডিজিজ IoT মনিটর",
+    project_plant_desc: "কাস্টম 18KB CNN ব্যবহার করে উদ্ভিদের রোগ শনাক্ত করার জন্য ESP32-CAM-এ একটি TinyML পাইপলাইন।",
+    project_robot_title: "ROS 2 অটোনোমাস রোবট",
+    project_robot_desc: "ROS 2 এবং Gazebo তে স্বয়ংক্রিয়ভাবে নেভিগেট করা একটি গাণিতিক রোবট।",
     project_facevision_title: "ফেস-ভিশন",
     project_facevision_desc:
       "ওপেনসিভি ব্যবহার করে ছবি এবং ভিডিওতে মুখ সনাক্ত করুন।",
@@ -736,6 +815,8 @@ window.translations = {
     learning_datastructures: "ডেটা স্ট্রাকচার্স",
     learning_deep_learning: "ডিপ লার্নিং",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "অ্যান্টেনা এবং ওয়েভ প্রোপাগেশন",
+    learning_cuda: "প্যারালাল কম্পিউটিং (CUDA)",
     connect_heading: "যোগাযোগ",
   },
   mr: {
@@ -750,9 +831,9 @@ window.translations = {
     profile_tagline: "ईसीई विद्यार्थी | एआय उत्साही | कथा-प्रेरित देव",
     about_me_heading: "माझ्याबद्दल",
     about_me_para1:
-      "शिमल्याच्या शांत टेकड्या आणि उंच देवदार वृक्षांनी वेढलेला, मी साधेपणा आणि सखोलता दोन्हीची प्रशंसा करायला शिकलो आहे. हे संतुलन मी तंत्रज्ञानाकडे कसे पाहतो हे ठरवते — विचारपूर्वक, सर्जनशीलतेने आणि स्थिर लक्ष्याने.",
+      "\u0936\u093f\u092e\u0932\u093e\u091a\u094d\u092f\u093e \u0936\u093e\u0902\u0924 \u091f\u0947\u0915\u0921\u094d\u092f\u093e \u0906\u0923\u093f \u0926\u0947\u0935\u0926\u093e\u0930\u091a\u094d\u092f\u093e \u091c\u0902\u0917\u0932\u093e\u0902\u092e\u0927\u094d\u092f\u0947 \u0935\u093e\u0922\u0932\u094d\u092f\u093e\u0928\u0947 \u092e\u093e\u091d\u094d\u092f\u093e \u0935\u093f\u091a\u093e\u0930 \u0915\u0930\u0923\u094d\u092f\u093e\u091a\u094d\u092f\u093e \u092a\u0926\u094d\u0927\u0924\u0940\u0932\u093e \u0906\u0915\u093e\u0930 \u092e\u093f\u0933\u093e\u0932\u093e \u0906\u0939\u0947 \u2014 \u0936\u093e\u0902\u0924 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923\u093e\u0938\u0939 \u0915\u0941\u0924\u0942\u0939\u0932 \u0906\u0923\u093f \u0938\u0902\u0930\u091a\u0928\u0947\u0938\u0939 \u0938\u0930\u094d\u091c\u0928\u0936\u0940\u0932\u0924\u093e \u092f\u093e\u0902\u091a\u093e \u0938\u092e\u0924\u094b\u0932 \u0938\u093e\u0927\u0923\u0947.",
     about_me_para2:
-      "मला विश्वास आहे की अर्थपूर्ण उपाय हे तांत्रिक कौशल्ये, स्पष्ट विचार आणि थोड्या जिज्ञासेच्या संयोगातून येतात. माझे ध्येय असे प्रकल्प तयार करणे आहे जे व्यावहारिक, नाविन्यपूर्ण आणि सकारात्मक बदल घडवतात.",
+      "\u092e\u0940 \u0917\u0924\u0940 \u0936\u0915\u094d\u0924\u0940 \u0935\u093f\u0936\u094d\u0935\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f\u093e\u092e\u0927\u094d\u092f\u0947 \u0907\u0932\u0947\u0915\u094d\u091f\u094d\u0930\u0949\u0928\u093f\u0915\u094d\u0938 \u0906\u0923\u093f \u0915\u092e\u094d\u092f\u0941\u0928\u093f\u0915\u0947\u0936\u0928 \u0907\u0902\u091c\u093f\u0928\u093f\u0905\u0930\u093f\u0902\u0917\u091a\u093e \u0905\u0902\u0924\u093f\u092e \u0935\u0930\u094d\u0937\u093e\u091a\u093e \u0935\u093f\u0926\u094d\u092f\u093e\u0930\u094d\u0925\u0940 \u0906\u0939\u0947, \u092e\u0932\u093e \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0902\u091f \u0938\u093f\u0938\u094d\u091f\u0940\u092e\u094d\u0938, \u0905\u092a\u094d\u0932\u093e\u0907\u0921 \u090f\u0906\u092f, \u0938\u093f\u092e\u094d\u092f\u0941\u0932\u0947\u0936\u0928 \u0906\u0923\u093f \u0915\u0949\u092e\u094d\u092a\u094d\u092f\u0941\u091f\u0947\u0936\u0928\u0932 \u0907\u0902\u091c\u093f\u0928\u093f\u0905\u0930\u093f\u0902\u0917\u092e\u0927\u094d\u092f\u0947 \u0930\u0938 \u0906\u0939\u0947 \u0906\u0923\u093f \u0935\u094d\u092f\u093e\u0935\u0939\u093e\u0930\u093f\u0915 \u0906\u0923\u093f \u0935\u093f\u091a\u093e\u0930\u092a\u0942\u0930\u094d\u0935\u0915 \u0907\u0902\u091c\u093f\u0928\u093f\u0905\u0930 \u0915\u0947\u0932\u0947\u0932\u0947 \u0909\u092a\u093e\u092f \u0924\u092f\u093e\u0930 \u0915\u0930\u0923\u094d\u092f\u093e\u0935\u0930 \u092e\u093e\u091d\u0947 \u0932\u0915\u094d\u0937 \u0915\u0947\u0902\u0926\u094d\u0930\u093f\u0924 \u0906\u0939\u0947.",
     education_heading: "शिक्षण",
     edu_gsv_degree:
       "इलेक्ट्रॉनिक्स आणि कम्युनिकेशन इंजिनियरिंग (ECE) मध्ये बी. टेक",
@@ -770,7 +851,14 @@ window.translations = {
     skill_java_basic: "बेसिक जावा",
     skill_ubuntu: "उबंटू",
     skill_git: "गिट",
+    skill_ml: "मशीन लर्निंग",
     projects_heading: "प्रकल्प",
+    project_demand_title: "हायपरलोकल डिमांड प्रेडिक्शन",
+    project_demand_desc: "जलद आणि अचूक क्विक-कॉमर्स डिमांड प्रेडिक्शनसाठी एक हलकी AI पाईपलाईन.",
+    project_plant_title: "प्लांट डिसीज IoT मॉनिटर",
+    project_plant_desc: "कस्टम 18KB CNN चा वापर करून झाडांचे रोग शोधणारी ESP32-CAM वरील TinyML पाईपलाईन.",
+    project_robot_title: "ROS 2 ऑटोनॉमस रोबोट",
+    project_robot_desc: "ROS 2 आणि Gazebo मध्ये स्वायत्तपणे नेव्हिगेट करणारा गणितीय मॉडेल केलेला रोबोट.",
     project_facevision_title: "फेस-व्हिजन",
     project_facevision_desc:
       "ओपनसीव्ही वापरून प्रतिमा आणि व्हिडिओमधील चेहरे शोधा.",
@@ -798,6 +886,8 @@ window.translations = {
     learning_datastructures: "डेटा स्ट्रक्चर्स",
     learning_deep_learning: "डीप लर्निंग",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "अँटेना आणि वेव्ह प्रोपेगेशन",
+    learning_cuda: "पॅरलल कॉम्प्युटिंग (CUDA)",
     connect_heading: "जोडा",
   },
   ta: {
@@ -813,9 +903,9 @@ window.translations = {
       "ECE மாணவர் | AI & மென்பொருள் உருவாக்குநர் ஆர்வலர் | சினிமா மனப்பான்மை",
     about_me_heading: "என்னை பற்றி",
     about_me_para1:
-      "சிம்லாவின் அமைதியான மலைகள் மற்றும் உயரமான தேவதாரு மரங்களால் சூழப்பட்டு, எளிமையையும் ஆழத்தையும் பாராட்ட நான் கற்றுக்கொண்டேன். இந்த சமநிலை நான் தொழில்நுட்பத்தை அணுகும் விதத்தை வடிவமைக்கிறது — சிந்தனையுடன், படைப்புத்திறனுடன், மற்றும் நிலையான கவனத்துடன்.",
+      "\u0b9a\u0bbf\u0bae\u0bcd\u0bb2\u0bbe\u0bb5\u0bbf\u0ba9\u0bcd \u0b85\u0bae\u0bc8\u0ba4\u0bbf\u0baf\u0bbe\u0ba9 \u0bae\u0bb2\u0bc8\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba4\u0bbf\u0baf\u0bcb\u0b9f\u0bb0\u0bcd \u0b95\u0bbe\u0b9f\u0bc1\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf\u0bbf\u0bb2\u0bcd \u0bb5\u0bb3\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0ba4\u0bc1 \u0ba8\u0bbe\u0ba9\u0bcd \u0b9a\u0bbf\u0ba8\u0bcd\u0ba4\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0bb5\u0bbf\u0ba4\u0ba4\u0bcd\u0ba4\u0bc8 \u0bb5\u0b9f\u0bbf\u0bb5\u0bae\u0bc8\u0ba4\u0bcd\u0ba4\u0bc1\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1 - \u0b85\u0bae\u0bc8\u0ba4\u0bbf\u0baf\u0bbe\u0ba9 \u0b95\u0bb5\u0ba9\u0bbf\u0baa\u0bcd\u0baa\u0bc1\u0b9f\u0ba9\u0bcd \u0b86\u0bb0\u0bcd\u0bb5\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd, \u0b95\u0b9f\u0bcd\u0b9f\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bc1\u0b9f\u0ba9\u0bcd \u0baa\u0b9f\u0bc8\u0baa\u0bcd\u0baa\u0bbe\u0bb1\u0bcd\u0bb1\u0bb2\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b9a\u0bae\u0ba8\u0bbf\u0bb2\u0bc8\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1.",
     about_me_para2:
-      "அர்த்தமுள்ள தீர்வுகள் தொழில்நுட்ப திறன்கள், தெளிவான சிந்தனை மற்றும் ஒரு துளி ஆர்வத்தை இணைப்பதன் மூலம் வருகின்றன என்று நான் நம்புகிறேன். நடைமுறைக்கு உகந்த, புதுமையான மற்றும் நேர்மறையான மாற்றத்தை உருவாக்கும் திட்டங்களை உருவாக்குவதே எனது குறிக்கோள்.",
+      "\u0ba8\u0bbe\u0ba9\u0bcd \u0b95\u0ba4\u0bbf \u0b9a\u0b95\u0bcd\u0ba4\u0bbf \u0bb5\u0bbf\u0bb8\u0bcd\u0bb5\u0bb5\u0bbf\u0ba4\u0bcd\u0baf\u0bbe\u0bb2\u0baf\u0bbe\u0bb5\u0bbf\u0bb2\u0bcd \u0b8e\u0bb2\u0b95\u0bcd\u0b9f\u0bcd\u0bb0\u0bbe\u0ba9\u0bbf\u0b95\u0bcd\u0bb8\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b95\u0bae\u0bcd\u0baf\u0bc2\u0ba9\u0bbf\u0b95\u0bc7\u0bb7\u0ba9\u0bcd \u0b87\u0ba9\u0bcd\u0b9c\u0bbf\u0ba9\u0bbf\u0baf\u0bb0\u0bbf\u0b99\u0bcd \u0b87\u0bb1\u0bc1\u0ba4\u0bbf\u0baf\u0bbe\u0ba3\u0bcd\u0b9f\u0bc1 \u0bae\u0bbe\u0ba3\u0bb5\u0ba9\u0bcd. \u0ba8\u0bc1\u0ba3\u0bcd\u0ba3\u0bb1\u0bbf\u0bb5\u0bc1 \u0b85\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd, \u0b85\u0baa\u0bcd\u0bb3\u0bc8\u0b9f\u0bc1 AI, \u0b89\u0bb0\u0bc1\u0bb5\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0ba4\u0bb2\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b95\u0ba3\u0b95\u0bcd\u0b95\u0bc0\u0b9f\u0bcd\u0b9f\u0bc1 \u0baa\u0bca\u0bb1\u0bbf\u0baf\u0bbf\u0baf\u0bb2\u0bcd \u0b86\u0b95\u0bbf\u0baf\u0bb5\u0bb1\u0bcd\u0bb1\u0bbf\u0bb2\u0bcd \u0b86\u0bb0\u0bcd\u0bb5\u0bae\u0bc1\u0bb3\u0bcd\u0bb3\u0bb5\u0ba9\u0bcd, \u0bae\u0bc7\u0bb2\u0bc1\u0bae\u0bcd \u0ba8\u0b9f\u0bc8\u0bae\u0bc1\u0bb1\u0bc8 \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b9a\u0bbf\u0ba8\u0bcd\u0ba4\u0ba9\u0bc8\u0baf\u0bc1\u0b9f\u0ba9\u0bcd \u0bb5\u0b9f\u0bbf\u0bb5\u0bae\u0bc8\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0ba4\u0bc0\u0bb0\u0bcd\u0bb5\u0bc1\u0b95\u0bb3\u0bc8 \u0b89\u0bb0\u0bc1\u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bc1\u0bb5\u0ba4\u0bbf\u0bb2\u0bcd \u0b95\u0bb5\u0ba9\u0bae\u0bcd \u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bbf\u0bb1\u0bc7\u0ba9\u0bcd.",
     education_heading: "கல்வி",
     edu_gsv_degree:
       "மின்னணுவியல் மற்றும் தொலைத்தொடர்பு பொறியியல் (ECE) இளங்கலை",
@@ -834,7 +924,14 @@ window.translations = {
     skill_java_basic: "அடிப்படை ஜாவா",
     skill_ubuntu: "உபுண்டு",
     skill_git: "கிட்",
+    skill_ml: "மெஷின் லேர்னிங்",
     projects_heading: "திட்டங்கள்",
+    project_demand_title: "ஹைப்பர்லோக்கல் டிமாண்ட் பிரிடிக்‌ஷன்",
+    project_demand_desc: "வேகமான மற்றும் துல்லியமான குயிக்-காமர்ஸ் தேவை கணிப்பிற்கான ஒரு இலகுவான AI பைப்லைன்.",
+    project_plant_title: "தாவர நோய் IoT மானிட்டர்",
+    project_plant_desc: "தனிப்பயன் 18KB CNN ஐப் பயன்படுத்தி தாவர நோய்களைக் கண்டறியும் ESP32-CAM இல் ஒரு TinyML பைப்லைன்.",
+    project_robot_title: "ROS 2 ஆட்டோனமஸ் ரோபோ",
+    project_robot_desc: "ROS 2 மற்றும் Gazebo இல் தன்னிச்சையாக செல்லக்கூடிய ஒரு கணித ரீதியாக மாதிரி செய்யப்பட்ட ரோபோ.",
     project_facevision_title: "முக-பார்வை",
     project_facevision_desc:
       "OpenCV ஐப் பயன்படுத்தி படங்கள் மற்றும் வீடியோக்களில் முகங்களைக் கண்டறியவும்.",
@@ -864,6 +961,8 @@ window.translations = {
     learning_datastructures: "தரவு கட்டமைப்புகள்",
     learning_deep_learning: "ஆழமான கற்றல்",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "ஆண்டெனா மற்றும் வேவ் ப்ரோபகேஷன்",
+    learning_cuda: "பாரலல் கம்ப்யூட்டிங் (CUDA)",
     connect_heading: "இணைப்பு",
   },
   te: {
@@ -878,9 +977,9 @@ window.translations = {
     profile_tagline: "ECE విద్యార్థి | AI ఔత్సాహికుడు | స్టోరీ-డ్రివెన్ దేవ",
     about_me_heading: "నా గురించి",
     about_me_para1:
-      "సిమ్లాలోని ప్రశాంతమైన కొండలు మరియు ఎత్తైన దేవదారు వృక్షాల మధ్య నేను నివసిస్తున్నాను, సరళత మరియు లోతు రెండింటినీ అభినందించడం నేర్చుకున్నాను. ఈ సమతుల్యత నేను సాంకేతికతను ఎలా చేరుకుంటానో - ఆలోచనాత్మకంగా, సృజనాత్మకంగా మరియు స్థిరమైన దృష్టితో - రూపొందిస్తుంది.",
+      "\u0c38\u0c3f\u0c2e\u0c4d\u0c32\u0c3e\u0c32\u0c4b\u0c28\u0c3f \u0c2a\u0c4d\u0c30\u0c36\u0c3e\u0c02\u0c24\u0c2e\u0c48\u0c28 \u0c15\u0c4a\u0c02\u0c21\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c26\u0c47\u0c35\u0c26\u0c3e\u0c30\u0c4d \u0c05\u0c21\u0c35\u0c41\u0c32 \u0c2e\u0c27\u0c4d\u0c2f \u0c2a\u0c46\u0c30\u0c17\u0c21\u0c02 \u0c28\u0c3e \u0c06\u0c32\u0c4b\u0c1a\u0c28\u0c3e \u0c35\u0c3f\u0c27\u0c3e\u0c28\u0c3e\u0c28\u0c4d\u0c28\u0c3f \u0c24\u0c40\u0c30\u0c4d\u0c1a\u0c3f\u0c26\u0c3f\u0c26\u0c4d\u0c26\u0c3f\u0c02\u0c26\u0c3f \u2014 \u0c2a\u0c4d\u0c30\u0c36\u0c3e\u0c02\u0c24\u0c2e\u0c48\u0c28 \u0c2a\u0c30\u0c3f\u0c36\u0c40\u0c32\u0c28\u0c24\u0c4b \u0c09\u0c24\u0c4d\u0c38\u0c41\u0c15\u0c24\u0c28\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c28\u0c3f\u0c30\u0c4d\u0c2e\u0c3e\u0c23\u0c02\u0c24\u0c4b \u0c38\u0c43\u0c1c\u0c28\u0c3e\u0c24\u0c4d\u0c2e\u0c15\u0c24\u0c28\u0c41 \u0c38\u0c2e\u0c24\u0c41\u0c32\u0c4d\u0c2f\u0c02 \u0c1a\u0c47\u0c2f\u0c21\u0c02.",
     about_me_para2:
-      "అర్ధవంతమైన పరిష్కారాలు సాంకేతిక నైపుణ్యాలను స్పష్టమైన ఆలోచన మరియు కొద్దిగా ఉత్సుకతతో కలపడం ద్వారా వస్తాయని నేను నమ్ముతున్నాను. నా లక్ష్యం ఆచరణాత్మకమైన, వినూత్నమైన మరియు సానుకూల వ్యత్యాసాన్ని సృష్టించే ప్రాజెక్టులను నిర్మించడం.",
+      "\u0c28\u0c47\u0c28\u0c41 \u0c17\u0c24\u0c3f \u0c36\u0c15\u0c4d\u0c24\u0c3f \u0c35\u0c3f\u0c36\u0c4d\u0c35\u0c35\u0c3f\u0c26\u0c4d\u0c2f\u0c3e\u0c32\u0c2f\u0c02\u0c32\u0c4b \u0c0e\u0c32\u0c15\u0c4d\u0c1f\u0c4d\u0c30\u0c3e\u0c28\u0c3f\u0c15\u0c4d\u0c38\u0c4d \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c15\u0c2e\u0c4d\u0c2f\u0c42\u0c28\u0c3f\u0c15\u0c47\u0c37\u0c28\u0c4d \u0c07\u0c02\u0c1c\u0c28\u0c40\u0c30\u0c3f\u0c02\u0c17\u0c4d \u0c2b\u0c48\u0c28\u0c32\u0c4d \u0c07\u0c2f\u0c30\u0c4d \u0c35\u0c3f\u0c26\u0c4d\u0c2f\u0c3e\u0c30\u0c4d\u0c25\u0c3f\u0c28\u0c3f, \u0c07\u0c02\u0c1f\u0c46\u0c32\u0c3f\u0c1c\u0c46\u0c02\u0c1f\u0c4d \u0c38\u0c3f\u0c38\u0c4d\u0c1f\u0c2e\u0c4d\u0c38\u0c4d, \u0c05\u0c2a\u0c4d\u0c32\u0c48\u0c21\u0c4d \u0c0f\u0c10, \u0c38\u0c3f\u0c2e\u0c4d\u0c2f\u0c41\u0c32\u0c47\u0c37\u0c28\u0c4d \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c15\u0c02\u0c2a\u0c4d\u0c2f\u0c42\u0c1f\u0c47\u0c37\u0c28\u0c32\u0c4d \u0c07\u0c02\u0c1c\u0c28\u0c40\u0c30\u0c3f\u0c02\u0c17\u0c4d\u200c\u0c2a\u0c48 \u0c06\u0c38\u0c15\u0c4d\u0c24\u0c3f \u0c15\u0c32\u0c3f\u0c17\u0c3f \u0c09\u0c28\u0c4d\u0c28\u0c3e\u0c28\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c06\u0c1a\u0c30\u0c23\u0c3e\u0c24\u0c4d\u0c2e\u0c15\u0c2e\u0c48\u0c28 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c06\u0c32\u0c4b\u0c1a\u0c28\u0c3e\u0c24\u0c4d\u0c2e\u0c15\u0c02\u0c17\u0c3e \u0c30\u0c42\u0c2a\u0c4a\u0c02\u0c26\u0c3f\u0c02\u0c1a\u0c3f\u0c28 \u0c2a\u0c30\u0c3f\u0c37\u0c4d\u0c15\u0c3e\u0c30\u0c3e\u0c32\u0c28\u0c41 \u0c28\u0c3f\u0c30\u0c4d\u0c2e\u0c3f\u0c02\u0c1a\u0c21\u0c02\u0c2a\u0c48 \u0c26\u0c43\u0c37\u0c4d\u0c1f\u0c3f \u0c38\u0c3e\u0c30\u0c3f\u0c02\u0c1a\u0c3e\u0c28\u0c41.",
     education_heading: "విద్య",
     edu_gsv_degree:
       "ఎలక్ట్రానిక్స్ మరియు కమ్యూనికేషన్ ఇంజనీరింగ్ (ECE) లో బి.టెక్",
@@ -899,7 +998,14 @@ window.translations = {
     skill_java_basic: "బేసిక్ జావా",
     skill_ubuntu: "ఉబుంటు",
     skill_git: "గిట్",
+    skill_ml: "మెషిన్ లెర్నింగ్",
     projects_heading: "ప్రాజెక్టులు",
+    project_demand_title: "హైపర్‌లోకల్ డిమాండ్ ప్రెడిక్షన్",
+    project_demand_desc: "వేగవంతమైన మరియు ఖచ్చితమైన క్విక్-కామర్స్ డిమాండ్ అంచనా కోసం ఒక తేలికపాటి AI పైప్‌లైన్.",
+    project_plant_title: "ప్లాంట్ డిసీజ్ IoT మానిటర్",
+    project_plant_desc: "కస్టమ్ 18KB CNN ఉపయోగించి మొక్కల వ్యాధులను గుర్తించే ESP32-CAM పై ఒక TinyML పైప్‌లైన్.",
+    project_robot_title: "ROS 2 అటానమస్ రోబోట్",
+    project_robot_desc: "ROS 2 మరియు Gazebo లో స్వయంప్రతిపత్తితో నావిగేట్ చేసే ఒక గణితపరంగా మోడల్ చేయబడిన రోబోట్.",
     project_facevision_title: "ఫేస్-విజన్",
     project_facevision_desc:
       "OpenCVని ఉపయోగించి చిత్రాలు మరియు వీడియోలలో ముఖాలను గుర్తించండి.",
@@ -929,6 +1035,8 @@ window.translations = {
     learning_datastructures: "డేటా స్ట్రక్చర్స్",
     learning_deep_learning: "డీప్ లెర్నింగ్",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "యాంటెన్నా మరియు వేవ్ ప్రోపగేషన్",
+    learning_cuda: "పారలల్ కంప్యూటింగ్ (CUDA)",
     connect_heading: "కనెక్ట్ చేయండి",
   },
   ml: {
@@ -944,9 +1052,9 @@ window.translations = {
       "ECE വിദ്യാർത്ഥി | AI താൽപ്പര്യക്കാരൻ | കഥാധിഷ്ഠിത ഡെവലപ്പർ",
     about_me_heading: "എന്നെക്കുറിച്ച്",
     about_me_para1:
-      "ഷിംലയിലെ ശാന്തമായ കുന്നുകളും ഉയരംകൂടിയ ദേവദാരു വൃക്ഷങ്ങളും ചുറ്റിപ്പറ്റി, ലാളിത്യത്തെയും ആഴത്തെയും വിലമതിക്കാൻ ഞാൻ പഠിച്ചു. ഈ സന്തുലിതാവസ്ഥ സാങ്കേതികവിദ്യയോടുള്ള എന്റെ സമീപനത്തെ രൂപപ്പെടുത്തുന്നു — ശ്രദ്ധാപൂർവ്വം, ക്രിയാത്മകമായി, സ്ഥിരമായ ശ്രദ്ധയോടെ.",
+      "\u0d37\u0d3f\u0d02\u0d32\u0d2f\u0d3f\u0d32\u0d46 \u0d36\u0d3e\u0d28\u0d4d\u0d24\u0d2e\u0d3e\u0d2f \u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d15\u0d7e\u0d15\u0d4d\u0d15\u0d41\u0d02 \u0d26\u0d47\u0d35\u0d26\u0d3e\u0d30\u0d41 \u0d35\u0d28\u0d19\u0d4d\u0d19\u0d7e\u0d15\u0d4d\u0d15\u0d41\u0d02 \u0d07\u0d1f\u0d2f\u0d3f\u0d7d \u0d35\u0d33\u0d7c\u0d28\u0d4d\u0d28\u0d24\u0d4d \u0d0e\u0d7b\u0d4d\u0d31\u0d46 \u0d1a\u0d3f\u0d28\u0d4d\u0d24\u0d3e\u0d30\u0d40\u0d24\u0d3f\u0d2f\u0d46 \u0d30\u0d42\u0d2a\u0d2a\u0d4d\u0d2a\u0d46\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d3f \u2014 \u0d36\u0d3e\u0d28\u0d4d\u0d24\u0d2e\u0d3e\u0d2f \u0d28\u0d3f\u0d30\u0d40\u0d15\u0d4d\u0d37\u0d23\u0d35\u0d41\u0d02 \u0d1c\u0d3f\u0d1c\u0d4d\u0d1e\u0d3e\u0d38\u0d2f\u0d41\u0d02, \u0d18\u0d1f\u0d28\u0d2f\u0d41\u0d02 \u0d38\u0d7c\u0d17\u0d4d\u0d17\u0d3e\u0d24\u0d4d\u0d2e\u0d15\u0d24\u0d2f\u0d41\u0d02 \u0d38\u0d28\u0d4d\u0d24\u0d41\u0d32\u0d3f\u0d24\u0d2e\u0d3e\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41.",
     about_me_para2:
-      "സാങ്കേതിക വൈദഗ്ധ്യവും വ്യക്തമായ ചിന്തയും അല്പം ജിജ്ഞാസയും സംയോജിപ്പിക്കുന്നതിലൂടെ അർത്ഥവത്തായ പരിഹാരങ്ങൾ ഉണ്ടാകുമെന്ന് ഞാൻ വിശ്വസിക്കുന്നു. പ്രായോഗികവും നൂതനവും ക്രിയാത്മകമായ മാറ്റം വരുത്തുന്നതുമായ പ്രോജക്റ്റുകൾ നിർമ്മിക്കുക എന്നതാണ് എന്റെ ലക്ഷ്യം.",
+      "\u0d1e\u0d3e\u0d7b \u0d17\u0d24\u0d3f \u0d36\u0d15\u0d4d\u0d24\u0d3f \u0d35\u0d3f\u0d36\u0d4d\u0d35\u0d35\u0d3f\u0d26\u0d4d\u0d2f\u0d3e\u0d32\u0d2f\u0d24\u0d4d\u0d24\u0d3f\u0d32\u0d46 \u0d07\u0d32\u0d15\u0d4d\u0d1f\u0d4d\u0d30\u0d4b\u0d23\u0d3f\u0d15\u0d4d\u0d38\u0d4d \u0d06\u0d7b\u0d21\u0d4d \u0d15\u0d2e\u0d4d\u0d2e\u0d4d\u0d2f\u0d42\u0d23\u0d3f\u0d15\u0d4d\u0d15\u0d47\u0d37\u0d7b \u0d0e\u0d1e\u0d4d\u0d1a\u0d3f\u0d28\u0d40\u0d2f\u0d31\u0d3f\u0d02\u0d17\u0d4d \u0d05\u0d35\u0d38\u0d3e\u0d28 \u0d35\u0d7c\u0d37 \u0d35\u0d3f\u0d26\u0d4d\u0d2f\u0d3e\u0d7c\u0d24\u0d4d\u0d25\u0d3f\u0d2f\u0d3e\u0d23\u0d4d. \u0d07\u0d7b\u0d4d\u0d31\u0d32\u0d3f\u0d1c\u0d7b\u0d4d\u0d31\u0d4d \u0d38\u0d3f\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d19\u0d4d\u0d19\u0d7e, \u0d05\u0d2a\u0d4d\u0d32\u0d48\u0d21\u0d4d \u0d0e\u0d10, \u0d38\u0d3f\u0d2e\u0d41\u0d32\u0d47\u0d37\u0d7b, \u0d15\u0d2e\u0d4d\u0d2a\u0d4d\u0d2f\u0d42\u0d1f\u0d4d\u0d1f\u0d47\u0d37\u0d23\u0d7d \u0d0e\u0d1e\u0d4d\u0d1a\u0d3f\u0d28\u0d40\u0d2f\u0d31\u0d3f\u0d02\u0d17\u0d4d \u0d0e\u0d28\u0d4d\u0d28\u0d3f\u0d35\u0d2f\u0d3f\u0d7d \u0d24\u0d3e\u0d7d\u0d2a\u0d4d\u0d2a\u0d30\u0d4d\u0d2f\u0d2e\u0d41\u0d33\u0d4d\u0d33 \u0d1e\u0d3e\u0d7b \u0d2a\u0d4d\u0d30\u0d3e\u0d2f\u0d4b\u0d17\u0d3f\u0d15\u0d35\u0d41\u0d02 \u0d1a\u0d3f\u0d28\u0d4d\u0d24\u0d3e\u0d2a\u0d30\u0d2e\u0d3e\u0d2f\u0d3f \u0d30\u0d42\u0d2a\u0d15\u0d7d\u0d2a\u0d4d\u0d2a\u0d28 \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d24\u0d41\u0d2e\u0d3e\u0d2f \u0d2a\u0d30\u0d3f\u0d39\u0d3e\u0d30\u0d19\u0d4d\u0d19\u0d7e \u0d28\u0d3f\u0d7c\u0d2e\u0d4d\u0d2e\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d3f\u0d7d \u0d36\u0d4d\u0d30\u0d26\u0d4d\u0d27 \u0d15\u0d47\u0d28\u0d4d\u0d26\u0d4d\u0d30\u0d40\u0d15\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41.",
     education_heading: "വിദ്യാഭ്യാസം",
     edu_gsv_degree:
       "ഇലക്ട്രോണിക്സ് ആൻഡ് കമ്മ്യൂണിക്കേഷൻ എഞ്ചിനീയറിംഗിൽ (ECE) ബി.ടെക്",
@@ -965,7 +1073,14 @@ window.translations = {
     skill_java_basic: "ബേസിക് ജാവ",
     skill_ubuntu: "ഉബുണ്ടു",
     skill_git: "ഗിറ്റ്",
+    skill_ml: "മെഷീൻ ലേണിംഗ്",
     projects_heading: "പ്രോജക്റ്റുകൾ",
+    project_demand_title: "ഹൈപ്പർലോക്കൽ ഡിമാൻഡ് പ്രെഡിക്ഷൻ",
+    project_demand_desc: "വേഗമേറിയതും കൃത്യവുമായ ക്വിക്ക്-കൊമേഴ്‌സ് ഡിമാൻഡ് പ്രവചനത്തിനായുള്ള ഒരു ഭാരം കുറഞ്ഞ AI പൈപ്പ്‌ലൈൻ.",
+    project_plant_title: "പ്ലാന്റ് ഡിസീസ് IoT മോണിറ്റർ",
+    project_plant_desc: "കസ്റ്റം 18KB CNN ഉപയോഗിച്ച് സസ്യരോഗങ്ങൾ കണ്ടെത്തുന്ന ESP32-CAM-ലെ ഒരു TinyML പൈപ്പ്‌ലൈൻ.",
+    project_robot_title: "ROS 2 ഓട്ടോണമസ് റോബോട്ട്",
+    project_robot_desc: "ROS 2, Gazebo എന്നിവയിൽ സ്വയം നാവിഗേറ്റ് ചെയ്യുന്ന ഗണിതശാസ്ത്രപരമായി മാതൃകയാക്കിയ റോബോട്ട്.",
     project_facevision_title: "ഫേസ്-വിഷൻ",
     project_facevision_desc:
       "OpenCV ഉപയോഗിച്ച് ചിത്രങ്ങളിലും വീഡിയോകളിലും മുഖങ്ങൾ കണ്ടെത്തുക.",
@@ -993,6 +1108,8 @@ window.translations = {
     learning_datastructures: "ഡാറ്റാ സ്ട്രക്ചറുകൾ",
     learning_deep_learning: "ഡീപ് ലേണിംഗ്",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "ആന്റിന ആൻഡ് വേവ് പ്രൊപഗേഷൻ",
+    learning_cuda: "പാരലൽ കമ്പ്യൂട്ടിംഗ് (CUDA)",
     connect_heading: "ബന്ധപ്പെടുക",
   },
   kn: {
@@ -1007,9 +1124,9 @@ window.translations = {
     profile_tagline: "ECE ವಿದ್ಯಾರ್ಥಿ | AI ಉತ್ಸಾಹಿ | ಕಥೆ-ಚಾಲಿತ ಡೆವಲಪರ್",
     about_me_heading: "ನನ್ನ ಬಗ್ಗೆ",
     about_me_para1:
-      "ಶಿಮ್ಲಾದ ಪ್ರಶಾಂತ ಬೆಟ್ಟಗಳು ಮತ್ತು ಎತ್ತರದ ದೇವದಾರು ಮರಗಳಿಂದ ಆವೃತವಾಗಿ, ನಾನು ಸರಳತೆ ಮತ್ತು ಆಳ ಎರಡನ್ನೂ ಪ್ರಶಂಸಿಸಲು ಕಲಿತಿದ್ದೇನೆ. ಈ ಸಮತೋಲನವು ನಾನು ತಂತ್ರಜ್ಞಾನವನ್ನು ಹೇಗೆ ಸಮೀಪಿಸುತ್ತೇನೆ ಎಂಬುದನ್ನು ರೂಪಿಸುತ್ತದೆ - ಚಿಂತನಶೀಲವಾಗಿ, ಸೃಜನಾತ್ಮಕವಾಗಿ ಮತ್ತು ಸ್ಥಿರ ಗಮನದಿಂದ.",
+      "\u0cb6\u0cbf\u0cae\u0ccd\u0cb2\u0cbe\u0ca6 \u0cb6\u0cbe\u0c82\u0ca4 \u0cac\u0cc6\u0c9f\u0ccd\u0c9f\u0c97\u0cb3\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca6\u0cc7\u0cb5\u0ca6\u0cbe\u0cb0\u0ccd \u0c95\u0cbe\u0ca1\u0cc1\u0c97\u0cb3 \u0ca8\u0ca1\u0cc1\u0cb5\u0cc6 \u0cac\u0cc6\u0cb3\u0cc6\u0ca6\u0ca6\u0ccd\u0ca6\u0cc1 \u0ca8\u0ca8\u0ccd\u0ca8 \u0c86\u0cb2\u0ccb\u0c9a\u0ca8\u0cbe \u0cb5\u0cbf\u0ca7\u0cbe\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cc2\u0caa\u0cbf\u0cb8\u0cbf\u0ca6\u0cc6 - \u0cb6\u0cbe\u0c82\u0ca4 \u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0ca3\u0cc6\u0caf\u0cca\u0c82\u0ca6\u0cbf\u0c97\u0cc6 \u0c95\u0cc1\u0ca4\u0cc2\u0cb9\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb0\u0c9a\u0ca8\u0cc6\u0caf\u0cca\u0c82\u0ca6\u0cbf\u0c97\u0cc6 \u0cb8\u0cc3\u0c9c\u0ca8\u0cb6\u0cc0\u0cb2\u0ca4\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cae\u0ca4\u0ccb\u0cb2\u0ca8\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1.",
     about_me_para2:
-      "ಅರ್ಥಪೂರ್ಣ ಪರಿಹಾರಗಳು ತಾಂತ್ರಿಕ ಕೌಶಲ್ಯಗಳನ್ನು ಸ್ಪಷ್ಟ ಚಿಂತನೆ ಮತ್ತು ಸ್ವಲ್ಪ ಕುತೂಹಲದೊಂದಿಗೆ ಸಂಯೋಜಿಸುವುದರಿಂದ ಬರುತ್ತವೆ ಎಂದು ನಾನು ನಂಬುತ್ತೇನೆ. ನನ್ನ ಗುರಿ ಪ್ರಾಯೋಗಿಕ, ನವೀನ ಮತ್ತು ಸಕಾರಾತ್ಮಕ ವ್ಯತ್ಯಾಸವನ್ನು ಮಾಡುವ ಯೋಜನೆಗಳನ್ನು ನಿರ್ಮಿಸುವುದು.",
+      "\u0ca8\u0cbe\u0ca8\u0cc1 \u0c97\u0ca4\u0cbf \u0cb6\u0c95\u0ccd\u0ca4\u0cbf \u0cb5\u0cbf\u0cb6\u0ccd\u0cb5\u0cb5\u0cbf\u0ca6\u0ccd\u0caf\u0cbe\u0cb2\u0caf\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0c8e\u0cb2\u0cc6\u0c95\u0ccd\u0c9f\u0ccd\u0cb0\u0cbe\u0ca8\u0cbf\u0c95\u0ccd\u0cb8\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0c95\u0cae\u0ccd\u0caf\u0cc1\u0ca8\u0cbf\u0c95\u0cc7\u0cb7\u0ca8\u0ccd \u0c87\u0c82\u0c9c\u0cbf\u0ca8\u0cbf\u0caf\u0cb0\u0cbf\u0c82\u0c97\u0ccd \u0c85\u0c82\u0ca4\u0cbf\u0cae \u0cb5\u0cb0\u0ccd\u0cb7\u0ca6 \u0cb5\u0cbf\u0ca6\u0ccd\u0caf\u0cbe\u0cb0\u0ccd\u0ca5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0ccd\u0ca6\u0cc7\u0ca8\u0cc6. \u0c87\u0c82\u0c9f\u0cc6\u0cb2\u0cbf\u0c9c\u0cc6\u0c82\u0c9f\u0ccd \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0cae\u0ccd\u0cb8\u0ccd, \u0c85\u0caa\u0ccd\u0cb2\u0cc8\u0ca1\u0ccd \u0c8e\u0c90, \u0cb8\u0cbf\u0cae\u0ccd\u0caf\u0cc1\u0cb2\u0cc7\u0cb6\u0ca8\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0c95\u0c82\u0caa\u0ccd\u0caf\u0cc2\u0c9f\u0cc7\u0cb6\u0ca8\u0cb2\u0ccd \u0c87\u0c82\u0c9c\u0cbf\u0ca8\u0cbf\u0caf\u0cb0\u0cbf\u0c82\u0c97\u0ccd\u200c\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c86\u0cb8\u0c95\u0ccd\u0ca4\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1, \u0caa\u0ccd\u0cb0\u0cbe\u0caf\u0ccb\u0c97\u0cbf\u0c95 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0c9a\u0cbf\u0c82\u0ca4\u0ca8\u0cb6\u0cc0\u0cb2\u0cb5\u0cbe\u0c97\u0cbf \u0cb5\u0cbf\u0ca8\u0ccd\u0caf\u0cbe\u0cb8\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0caa\u0cb0\u0cbf\u0cb9\u0cbe\u0cb0\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb0\u0ccd\u0cae\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cb0 \u0cae\u0cc7\u0cb2\u0cc6 \u0c95\u0cc7\u0c82\u0ca6\u0ccd\u0cb0\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc7\u0ca8\u0cc6.",
     education_heading: "ಶಿಕ್ಷಣ",
     edu_gsv_degree:
       "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಮತ್ತು ಸಂವಹನ ಎಂಜಿನಿಯರಿಂಗ್ (ECE) ನಲ್ಲಿ ಬಿ.ಟೆಕ್",
@@ -1028,7 +1145,14 @@ window.translations = {
     skill_java_basic: "ಮೂಲ ಜಾವಾ",
     skill_ubuntu: "ಉಬುಂಟು",
     skill_git: "ಗಿಟ್",
+    skill_ml: "ಮಷಿನ್ ಲರ್ನಿಂಗ್",
     projects_heading: "ಯೋಜನೆಗಳು",
+    project_demand_title: "ಹೈಪರ್‌ಲೋಕಲ್ ಡಿಮ್ಯಾಂಡ್ ಪ್ರೆಡಿಕ್ಷನ್",
+    project_demand_desc: "ವೇಗದ ಮತ್ತು ನಿಖರವಾದ ಕ್ವಿಕ್-ಕಾಮರ್ಸ್ ಡಿಮ್ಯಾಂಡ್ ಮುನ್ಸೂಚನೆಗಾಗಿ ಹಗುರವಾದ AI ಪೈಪ್‌ಲೈನ್.",
+    project_plant_title: "ಪ್ಲಾಂಟ್ ಡಿಸೀಸ್ IoT ಮಾನಿಟರ್",
+    project_plant_desc: "ಕಸ್ಟಮ್ 18KB CNN ಬಳಸಿ ಸಸ್ಯ ರೋಗಗಳನ್ನು ಪತ್ತೆಹಚ್ಚುವ ESP32-CAM ನಲ್ಲಿನ TinyML ಪೈಪ್‌ಲೈನ್.",
+    project_robot_title: "ROS 2 ಆಟೋನಮಸ್ ರೋಬೋಟ್",
+    project_robot_desc: "ROS 2 ಮತ್ತು Gazebo ನಲ್ಲಿ ಸ್ವಾಯತ್ತವಾಗಿ ನ್ಯಾವಿಗೇಟ್ ಮಾಡುವ ಗಣಿತೀಯವಾಗಿ ರೂಪಿಸಲಾದ ರೋಬೋಟ್.",
     project_facevision_title: "ಫೇಸ್-ವಿಷನ್",
     project_facevision_desc:
       "OpenCV ಬಳಸಿ ಚಿತ್ರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳಲ್ಲಿ ಮುಖಗಳನ್ನು ಗುರುತಿಸಿ.",
@@ -1057,6 +1181,8 @@ window.translations = {
     learning_datastructures: "ಡೇಟಾ ರಚನೆಗಳು",
     learning_deep_learning: "ಡೀಪ್ ಲರ್ನಿಂಗ್",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "ಆಂಟೆನಾ ಮತ್ತು ವೇವ್ ಪ್ರೊಪಗೇಷನ್",
+    learning_cuda: "ಪ್ಯಾರಲಲ್ ಕಂಪ್ಯೂಟಿಂಗ್ (CUDA)",
     connect_heading: "ಸಂಪರ್ಕಿಸಿ",
   },
   sd: {
@@ -1072,9 +1198,9 @@ window.translations = {
       "اي سي اي جو شاگرد | اي آءِ جو شوقين | ڪهاڻي تي مبني ڊولپر",
     about_me_heading: "منهنجي باري ۾",
     about_me_para1:
-      "شملي جي پرامن جبلن ۽ وڏن ديودار جي وڻن سان گهيريل، مون سادگي ۽ گهراڻي ٻنهي جي تعريف ڪرڻ سکي آهي. هي توازن ٽيڪنالاجي ڏانهن منهنجي رويي کي شڪل ڏئي ٿو — سوچي سمجهي، تخليقي ۽ مستحڪم توجہ سان.",
+      "\u0634\u0645\u0644\u06c1 \u062c\u064a \u062e\u0627\u0645\u0648\u0634 \u067d\u06aa\u0631\u064a\u0646 \u06fd \u062f\u064a\u0648\u062f\u0627\u0631 \u062c\u064a \u062c\u0646\u06af\u0644\u0646 \u06fe \u067e\u0644\u062c\u06bb \u0645\u0646\u0647\u0646\u062c\u064a \u0633\u0648\u0686\u06bb \u062c\u064a \u0627\u0646\u062f\u0627\u0632 \u06a9\u064a \u0634\u06aa\u0644 \u068f\u0646\u064a \u0622\u0647\u064a \u2014 \u067e\u0631\u0633\u06a9\u0648\u0646 \u0645\u0634\u0627\u0647\u062f\u064a \u0633\u0627\u0646 \u06af\u068f \u062a\u062c\u0633\u0633\u060c \u06fd \u0633\u0627\u062e\u062a \u0633\u0627\u0646 \u06af\u068f \u062a\u062e\u0644\u064a\u0642\u064a \u0635\u0644\u0627\u062d\u064a\u062a\u0646 \u062c\u0648 \u062a\u0648\u0627\u0632\u0646 \u0628\u0631\u0642\u0631\u0627\u0631 \u0631\u06a9\u06bb.",
     about_me_para2:
-      "منهنجو خيال آهي ته بامعني حل ٽيڪنيڪل صلاحيتن کي واضح سوچ ۽ ٿوري تجسس سان ملائڻ سان اچن ٿا. منهنجو مقصد اهڙا منصوبا ٺاهڻ آهي جيڪي عملي، جديد ۽ مثبت فرق پيدا ڪن.",
+      "\u0645\u0627\u0646 \u06af\u062a\u064a \u0634\u06aa\u062a\u064a \u0648\u0634\u0648 \u0648\u062f\u064a\u0627\u0644\u064a\u0647 \u06fe \u0627\u0644\u064a\u06aa\u067d\u0631\u0627\u0646\u06aa\u0633 \u06fd \u06aa\u0645\u064a\u0648\u0646\u064a\u06aa\u064a\u0634\u0646 \u0627\u0646\u062c\u0646\u064a\u0626\u0631\u0646\u06af \u062c\u0648 \u0641\u0627\u0626\u0646\u0644 \u0627\u064a\u0626\u0631 \u062c\u0648 \u0634\u0627\u06af\u0631\u062f \u0622\u0647\u064a\u0627\u0646\u060c \u062c\u0646\u0647\u0646 \u062c\u064a \u062f\u0644\u0686\u0633\u067e\u064a \u0630\u0647\u064a\u0646 \u0633\u0633\u067d\u0645\u0632\u060c \u0627\u067e\u0644\u0627\u0626\u064a\u068a \u0627\u064a \u0622\u0626\u064a\u060c \u0633\u0645\u0648\u0644\u064a\u0634\u0646 \u06fd \u06aa\u0645\u067e\u064a\u0648\u067d\u064a\u0634\u0646\u0644 \u0627\u0646\u062c\u0646\u064a\u0626\u0631\u0646\u06af \u06fe \u0622\u0647\u064a\u060c \u06fd \u0645\u0646\u0647\u0646\u062c\u0648 \u0641\u0648\u06aa\u0633 \u0639\u0645\u0644\u064a \u06fd \u0633\u0648\u0686\u064a \u0633\u0645\u062c\u0647\u064a \u062a\u064a\u0627\u0631 \u06aa\u064a\u0644 \u062d\u0644 \u067a\u0627\u0647\u06bb \u062a\u064a \u0622\u0647\u064a.",
     education_heading: "تعليم",
     edu_gsv_degree: "بي. ٽيڪ (اليڪٽرانڪس ۽ ڪميونيڪيشن انجنيئرنگ)",
     edu_gsv_institute: "گتي شکتی وشو ودياليہ، وڊودرا",
@@ -1091,7 +1217,14 @@ window.translations = {
     skill_java_basic: "بنيادي جاوا",
     skill_ubuntu: "اوبنٽو",
     skill_git: "گٽ",
+    skill_ml: "مشين لرننگ",
     projects_heading: "پروجيڪٽس",
+    project_demand_title: "هائپر لوڪل ڊيمانڊ پريڊڪشن",
+    project_demand_desc: "تيز ۽ درست ڪوئڪ ڪامرس ڊيمانڊ پريڊڪشن لاءِ هڪ هلڪي AI پائپ لائن.",
+    project_plant_title: "پلانٽ ڊيزيز IoT مانيٽر",
+    project_plant_desc: "ڪسٽم 18KB CNN استعمال ڪندي ٻوٽن جي بيمارين جو پتو لڳائيندڙ ESP32-CAM تي هڪ TinyML پائپ لائن.",
+    project_robot_title: "ROS 2 خود مختيار روبوٽ",
+    project_robot_desc: "ROS 2 ۽ Gazebo ۾ خود مختيار طور تي نيويگيٽ ڪندڙ رياضياتي ماڊل وارو روبوٽ.",
     project_facevision_title: "فيس-وژن",
     project_facevision_desc:
       "اوپن سي وي استعمال ڪندي تصويرن ۽ وڊيوز ۾ منهن سڃاڻي وٺو.",
@@ -1118,6 +1251,8 @@ window.translations = {
     learning_datastructures: "ڊيٽا اسٽرڪچرز",
     learning_deep_learning: "ڊيپ لرننگ",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "اينٽينا ۽ ويو پروپيگيشن",
+    learning_cuda: "پيرالل ڪمپيوٽنگ (CUDA)",
     connect_heading: "رابطو",
   },
   "zh-Hans": {
@@ -1132,9 +1267,9 @@ window.translations = {
     profile_tagline: "ECE学生 | AI & 软件开发爱好者 | 电影思维",
     about_me_heading: "关于我",
     about_me_para1:
-      "我住在西姆拉宁静的山丘和高大的雪松林中，学会了欣赏简洁和深度。这种平衡塑造了我对待技术的方式——深思熟虑、富有创造性且专注。",
+      "\u5728\u897f\u59c6\u62c9\u5b81\u9759\u7684\u7fa4\u5c71\u548c\u96ea\u677e\u6797\u4e2d\u957f\u5927\uff0c\u5851\u9020\u4e86\u6211\u7684\u601d\u7ef4\u65b9\u5f0f\u2014\u2014\u5728\u597d\u5947\u5fc3\u4e0e\u51b7\u9759\u89c2\u5bdf\u4e4b\u95f4\uff0c\u5728\u521b\u9020\u529b\u4e0e\u7ed3\u6784\u4e4b\u95f4\u4fdd\u6301\u5e73\u8861\u3002",
     about_me_para2:
-      "我相信有意义的解决方案来自于技术技能与清晰思维和一点好奇心的结合。我的目标是构建实用、创新并能带来积极影响的项目。",
+      "\u6211\u662f Gati Shakti Vishwavidyalaya \u7535\u5b50\u4e0e\u901a\u4fe1\u5de5\u7a0b\u4e13\u4e1a\u7684\u6700\u540e\u4e00\u5e74\u5b66\u751f\uff0c\u5bf9\u667a\u80fd\u7cfb\u7edf\u3001\u5e94\u7528\u4eba\u5de5\u667a\u80fd\u3001\u4eff\u771f\u548c\u8ba1\u7b97\u5de5\u7a0b\u611f\u5174\u8da3\uff0c\u81f4\u529b\u4e8e\u6784\u5efa\u5b9e\u7528\u4e14\u7ecf\u8fc7\u6df1\u601d\u719f\u8651\u7684\u5de5\u7a0b\u89e3\u51b3\u65b9\u6848\u3002",
     education_heading: "教育",
     edu_gsv_degree: "电子与通信工程（ECE）学士",
     edu_gsv_institute: "加蒂·沙克蒂·维什瓦维迪亚拉亚，瓦多达拉",
@@ -1150,7 +1285,14 @@ window.translations = {
     skill_java_basic: "基本Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "机器学习",
     projects_heading: "项目",
+    project_demand_title: "超本地化需求预测",
+    project_demand_desc: "一种轻量级的 AI 管道，用于快速准确地进行快速商务需求预测。",
+    project_plant_title: "植物病害 IoT 监视器",
+    project_plant_desc: "ESP32-CAM 上的端到端 TinyML 管道，使用自定义 18KB CNN 检测植物病害。",
+    project_robot_title: "ROS 2 自主机器人",
+    project_robot_desc: "一个数学模型的滑动转向机器人，在 ROS 2 和 Gazebo 中通过闭式运动学自主导航。",
     project_facevision_title: "人脸识别",
     project_facevision_desc: "使用OpenCV检测图像和视频中的人脸。",
     project_stardetection_title: "星星检测",
@@ -1175,6 +1317,8 @@ window.translations = {
     learning_datastructures: "数据结构",
     learning_deep_learning: "深度学习",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "天线与电波传播",
+    learning_cuda: "并行计算 (CUDA)",
     connect_heading: "联系",
   },
   "zh-Hant": {
@@ -1189,9 +1333,9 @@ window.translations = {
     profile_tagline: "ECE學生 | AI & 軟體開發愛好者 | 電影思維",
     about_me_heading: "關於我",
     about_me_para1:
-      "我住在西姆拉寧靜的山丘和高大的雪松林中，學會了欣賞簡潔和深度。這種平衡塑造了我對待技術的方式——深思熟慮、富有創造性且專注。",
+      "\u5728\u897f\u59c6\u62c9\u5be7\u975c\u7684\u7fa4\u5c71\u548c\u96ea\u677e\u6797\u4e2d\u9577\u5927\uff0c\u5851\u9020\u4e86\u6211\u7684\u601d\u7dad\u65b9\u5f0f\u2014\u2014\u5728\u597d\u5947\u5fc3\u8207\u51b7\u975c\u89c0\u5bdf\u4e4b\u9593\uff0c\u5728\u5275\u9020\u529b\u8207\u7d50\u69cb\u4e4b\u9593\u4fdd\u6301\u5e73\u8861\u3002",
     about_me_para2:
-      "我相信有意義的解決方案來自於技術技能與清晰思維和一點好奇心的結合。我的目標是構建實用、創新並能帶來積極影響的項目。",
+      "\u6211\u662f Gati Shakti Vishwavidyalaya \u96fb\u5b50\u8207\u901a\u4fe1\u5de5\u7a0b\u5c08\u696d\u7684\u6700\u5f8c\u4e00\u5e74\u5b78\u751f\uff0c\u5c0d\u667a\u80fd\u7cfb\u7d71\u3001\u61c9\u7528\u4eba\u5de5\u667a\u80fd\u3001\u4eff\u771f\u548c\u8a08\u7b97\u5de5\u7a0b\u611f\u8208\u8da3\uff0c\u81f4\u529b\u65bc\u69cb\u5efa\u5be6\u7528\u4e14\u7d93\u904e\u6df1\u601d\u719f\u616e\u7684\u5de5\u7a0b\u89e3\u6c7a\u65b9\u6848\u3002",
     education_heading: "教育",
     edu_gsv_degree: "電子與通信工程（ECE）學士",
     edu_gsv_institute: "加蒂·沙克蒂·維什瓦維迪亞拉亞，瓦多達拉",
@@ -1207,7 +1351,14 @@ window.translations = {
     skill_java_basic: "基本Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "機器學習",
     projects_heading: "項目",
+    project_demand_title: "超本地化需求預測",
+    project_demand_desc: "一種輕量級的 AI 管道，用於快速準確地進行快速商務需求預測。",
+    project_plant_title: "植物病害 IoT 監視器",
+    project_plant_desc: "ESP32-CAM 上的端到端 TinyML 管道，使用自定義 18KB CNN 檢測植物病害。",
+    project_robot_title: "ROS 2 自主機器人",
+    project_robot_desc: "一個數學模型的滑動轉向機器人，在 ROS 2 和 Gazebo 中通過閉式運動學自主導航。",
     project_facevision_title: "人臉識別",
     project_facevision_desc: "使用OpenCV檢測圖像和視頻中的人臉。",
     project_stardetection_title: "星星檢測",
@@ -1232,6 +1383,8 @@ window.translations = {
     learning_datastructures: "數據結構",
     learning_deep_learning: "深度學習",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "天線與電波傳播",
+    learning_cuda: "並行計算 (CUDA)",
     connect_heading: "聯繫",
   },
   ko: {
@@ -1247,9 +1400,9 @@ window.translations = {
       "ECE 학생 | AI & 소프트웨어 개발 애호가 | 시네마틱 사고방식",
     about_me_heading: "소개",
     about_me_para1:
-      "심라의 고요한 언덕과 우뚝 솟은 데오다르 나무에 둘러싸여, 저는 단순함과 깊이 모두를 소중히 여기는 법을 배웠습니다. 이러한 균형은 제가 기술에 접근하는 방식—사려 깊고, 창의적이며, 꾸준한 집중력으로—을 형성합니다.",
+      "\uc2ec\ub77c\uc758 \uace0\uc694\ud55c \uc5b8\ub355\uacfc \ub370\uc624\ub2e4\ub974 \uc232 \uc18d\uc5d0\uc11c \uc790\ub77c\uba74\uc11c \uc81c \uc0ac\uace0\ubc29\uc2dd\uc774 \ud615\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud638\uae30\uc2ec\uacfc \ucc28\ubd84\ud55c \uad00\ucc30\ub825, \ucc3d\uc758\uc131\uacfc \uad6c\uc870 \uc0ac\uc774\uc758 \uade0\ud615\uc744 \ub9de\ucd94\ub294 \ubc95\uc744 \ubc30\uc6e0\uc2b5\ub2c8\ub2e4.",
     about_me_para2:
-      "저는 의미 있는 솔루션이 기술적 능력과 명확한 사고, 그리고 약간의 호기심을 결합함으로써 나온다고 믿습니다. 저의 목표는 실용적이고 혁신적이며 긍정적인 변화를 가져오는 프로젝트를 구축하는 것입니다.",
+      "\uc800\ub294 Gati Shakti Vishwavidyalaya\uc5d0\uc11c \uc804\uc790 \ubc0f \ud1b5\uc2e0 \uacf5\ud559\uc744 \uc804\uacf5\ud558\ub294 4\ud559\ub144 \ud559\uc0dd\uc785\ub2c8\ub2e4. \uc9c0\ub2a5\ud615 \uc2dc\uc2a4\ud15c, \uc751\uc6a9 AI, \uc2dc\ubbac\ub808\uc774\uc158 \ubc0f \ucef4\ud4e8\ud130 \uacf5\ud559\uc5d0 \uad00\uc2ec\uc774 \uc788\uc73c\uba70, \uc2e4\uc6a9\uc801\uc774\uace0 \uc2e0\uc911\ud558\uac8c \uc124\uacc4\ub41c \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 \uc194\ub8e8\uc158\uc744 \uad6c\ucd95\ud558\ub294 \ub370 \uc911\uc810\uc744 \ub450\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
     education_heading: "교육",
     edu_gsv_degree: "전자통신공학(ECE) 학사",
     edu_gsv_institute: "가티 샤크티 비슈와비디야라야, 바도다라",
@@ -1266,7 +1419,14 @@ window.translations = {
     skill_java_basic: "기본 Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "머신러닝",
     projects_heading: "프로젝트",
+    project_demand_title: "초지역적 수요 예측",
+    project_demand_desc: "빠르고 정확한 퀵커머스 수요 예측을 위한 경량 AI 파이프라인.",
+    project_plant_title: "식물 질병 IoT 모니터",
+    project_plant_desc: "맞춤형 18KB CNN을 사용하여 식물 질병을 감지하는 ESP32-CAM의 종단간 TinyML 파이프라인.",
+    project_robot_title: "ROS 2 자율 로봇",
+    project_robot_desc: "ROS 2 및 Gazebo에서 폐쇄형 운동학을 통해 자율적으로 탐색하는 수학적으로 모델링된 스키드 스티어 로봇.",
     project_facevision_title: "페이스 비전",
     project_facevision_desc:
       "OpenCV를 사용하여 이미지 및 비디오에서 얼굴을 감지합니다.",
@@ -1293,6 +1453,8 @@ window.translations = {
     learning_datastructures: "데이터 구조",
     learning_deep_learning: "심층 학습",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "안테나 및 전파 전파",
+    learning_cuda: "병렬 컴퓨팅 (CUDA)",
     connect_heading: "연결",
   },
   ja: {
@@ -1308,9 +1470,9 @@ window.translations = {
       "ECE学生 | AI＆ソフトウェア開発愛好家 | 映画のような考え方",
     about_me_heading: "私について",
     about_me_para1:
-      "シムラの穏やかな丘と高いデオダール杉に囲まれて、私はシンプルさと奥深さの両方を高く評価することを学びました。このバランスが、私がテクノロジーにどのようにアプローチするかを形作っています—思慮深く、創造的に、そして着実な集中力で。",
+      "\u30b7\u30e0\u30e9\u30fc\u306e\u9759\u304b\u306a\u4e18\u3068\u30d2\u30de\u30e9\u30e4\u30b9\u30ae\u306e\u68ee\u306e\u4e2d\u3067\u80b2\u3063\u305f\u7d4c\u9a13\u306f\u3001\u79c1\u306e\u601d\u8003\u30d7\u30ed\u30bb\u30b9\u3092\u5f62\u6210\u3057\u307e\u3057\u305f\u3002\u597d\u5947\u5fc3\u3068\u51b7\u9759\u306a\u89b3\u5bdf\u3001\u5275\u9020\u6027\u3068\u69cb\u9020\u306e\u30d0\u30e9\u30f3\u30b9\u3092\u4fdd\u3064\u3053\u3068\u3092\u5b66\u3073\u307e\u3057\u305f\u3002",
     about_me_para2:
-      "私は、技術スキルと明確な思考、そして少しの好奇心を組み合わせることで、意味のあるソリューションが生まれると信じています。私の目標は、実用的で革新的で、良い変化をもたらすプロジェクトを構築することです。",
+      "\u79c1\u306f Gati Shakti Vishwavidyalaya \u3067\u96fb\u5b50\u901a\u4fe1\u5de5\u5b66\u3092\u5c02\u653b\u3059\u308b\u6700\u7d42\u5b66\u5e74\u306e\u5b66\u751f\u3067\u3059\u3002\u30a4\u30f3\u30c6\u30ea\u30b8\u30a7\u30f3\u30c8 \u30b7\u30b9\u30c6\u30e0\u3001\u5fdc\u7528 AI\u3001\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3\u3001\u8a08\u7b97\u5de5\u5b66\u306b\u8208\u5473\u304c\u3042\u308a\u3001\u5b9f\u7528\u7684\u3067\u601d\u616e\u6df1\u304f\u8a2d\u8a08\u3055\u308c\u305f\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306e\u69cb\u7bc9\u306b\u91cd\u70b9\u3092\u7f6e\u3044\u3066\u3044\u307e\u3059\u3002",
     education_heading: "学歴",
     edu_gsv_degree: "電子通信工学（ECE）学士号",
     edu_gsv_institute:
@@ -1329,7 +1491,14 @@ window.translations = {
     skill_java_basic: "基本的なJava",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "機械学習",
     projects_heading: "プロジェクト",
+    project_demand_title: "ハイパーローカル需要予測",
+    project_demand_desc: "高速で正確なクイックコマース需要予測のための軽量なAIパイプライン。",
+    project_plant_title: "植物病害IoTモニター",
+    project_plant_desc: "カスタム18KB CNNを使用して植物の病気を検出するESP32-CAM上のエンドツーエンドのTinyMLパイプライン。",
+    project_robot_title: "ROS 2 自律ロボット",
+    project_robot_desc: "ROS 2とGazeboにおいて閉形式運動学により自律的にナビゲートする数学的にモデル化されたスキッドステアロボット。",
     project_facevision_title: "フェイス・ビジョン",
     project_facevision_desc: "OpenCVを使用して画像や動画内の顔を検出します。",
     project_stardetection_title: "スター・ディテクション",
@@ -1355,6 +1524,8 @@ window.translations = {
     learning_datastructures: "データ構造",
     learning_deep_learning: "深層学習",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "アンテナと電波伝搬",
+    learning_cuda: "並列コンピューティング (CUDA)",
     connect_heading: "接続",
   },
   ar: {
@@ -1370,9 +1541,9 @@ window.translations = {
       "طالب ECE | متحمس للذكاء الاصطناعي وتطوير البرمجيات | عقلية سينمائية",
     about_me_heading: "عني",
     about_me_para1:
-      "محاطًا بالتلال الهادئة وأشجار الأرز الطويلة في شيملا، تعلمت تقدير البساطة والعمق على حد سواء. هذا التوازن يشكل طريقتي في التعامل مع التكنولوجيا - بتفكير، وإبداع، وتركيز ثابت.",
+      "\u0644\u0642\u062f \u0634\u0643\u0644\u062a \u0646\u0634\u0623\u062a\u064a \u0648\u0633\u0637 \u062a\u0644\u0627\u0644 \u0634\u064a\u0645\u0644\u0627 \u0627\u0644\u0647\u0627\u062f\u0626\u0629 \u0648\u063a\u0627\u0628\u0627\u062a \u0627\u0644\u062f\u0648\u062f\u0627\u0631 \u0627\u0644\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u064a \u0623\u0641\u0643\u0631 \u0628\u0647\u0627 - \u062d\u064a\u062b \u0627\u0644\u0645\u0648\u0627\u0632\u0646\u0629 \u0628\u064a\u0646 \u0627\u0644\u0641\u0636\u0648\u0644 \u0648\u0627\u0644\u0645\u0644\u0627\u062d\u0638\u0629 \u0627\u0644\u0647\u0627\u062f\u0626\u0629\u060c \u0648\u0628\u064a\u0646 \u0627\u0644\u0625\u0628\u062f\u0627\u0639 \u0648\u0627\u0644\u0647\u064a\u0643\u0644 \u0627\u0644\u062a\u0646\u0638\u064a\u0645\u064a.",
     about_me_para2:
-      "أعتقد أن الحلول الهادفة تأتي من الجمع بين المهارات التقنية والتفكير الواضح ولمسة من الفضول. هدفي هو بناء مشاريع عملية ومبتكرة وتحدث فرقًا إيجابيًا.",
+      "\u0623\u0646\u0627 \u0637\u0627\u0644\u0628 \u0641\u064a \u0627\u0644\u0633\u0646\u0629 \u0627\u0644\u0646\u0647\u0627\u0626\u064a\u0629 \u0641\u064a \u0647\u0646\u062f\u0633\u0629 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a\u0627\u062a \u0648\u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0641\u064a \u062c\u0627\u0645\u0639\u0629 \u062c\u0627\u062a\u064a \u0634\u0627\u0643\u062a\u064a \u0641\u064a\u0634\u0648\u0627\u0641\u064a\u062f\u064a\u0627\u0644\u0627\u064a\u0627\u060c \u0645\u0647\u062a\u0645 \u0628\u0627\u0644\u0623\u0646\u0638\u0645\u0629 \u0627\u0644\u0630\u0643\u064a\u0629 \u0648\u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u064a \u0648\u0627\u0644\u0645\u062d\u0627\u0643\u0627\u0629 \u0648\u0627\u0644\u0647\u0646\u062f\u0633\u0629 \u0627\u0644\u062d\u0627\u0633\u0648\u0628\u064a\u0629\u060c \u0645\u0639 \u0627\u0644\u062a\u0631\u0643\u064a\u0632 \u0639\u0644\u0649 \u0628\u0646\u0627\u0621 \u062d\u0644\u0648\u0644 \u0647\u0646\u062f\u0633\u064a\u0629 \u0639\u0645\u0644\u064a\u0629 \u0648\u0645\u062f\u0631\u0648\u0633\u0629 \u0628\u0639\u0646\u0627\u064a\u0629.",
     education_heading: "التعليم",
     edu_gsv_degree: "بكالوريوس في هندسة الإلكترونيات والاتصالات (ECE)",
     edu_gsv_institute: "جامعة غاتي شاكتي، فادودارا",
@@ -1389,7 +1560,14 @@ window.translations = {
     skill_java_basic: "جافا أساسية",
     skill_ubuntu: "أوبونتو",
     skill_git: "جيت",
+    skill_ml: "تعلم الآلة",
     projects_heading: "المشاريع",
+    project_demand_title: "تنبؤ الطلب المحلي الفائق",
+    project_demand_desc: "خط أنابيب ذكاء اصطناعي خفيف الوزن لتنبؤ سريع ودقيق بطلب التجارة السريعة.",
+    project_plant_title: "مراقب أمراض النباتات بإنترنت الأشياء",
+    project_plant_desc: "خط أنابيب TinyML على ESP32-CAM لاكتشاف أمراض النبات باستخدام شبكة CNN مخصصة بسعة 18 كيلو بايت.",
+    project_robot_title: "روبوت ROS 2 المستقل",
+    project_robot_desc: "روبوت بنموذج رياضي يتنقل بشكل مستقل عبر حركيات مغلقة في ROS 2 و Gazebo.",
     project_facevision_title: "رؤية الوجه",
     project_facevision_desc:
       "اكتشاف الوجوه في الصور ومقاطع الفيديو باستخدام OpenCV.",
@@ -1416,6 +1594,8 @@ window.translations = {
     learning_datastructures: "هياكل البيانات",
     learning_deep_learning: "التعلم العميق",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "الهوائيات وانتشار الموجات",
+    learning_cuda: "الحوسبة المتوازية (CUDA)",
     connect_heading: "تواصل",
   },
   fa: {
@@ -1431,9 +1611,9 @@ window.translations = {
       "دانشجوی ECE | علاقه‌مند به هوش مصنوعی و توسعه نرم‌افزار | ذهنیت سینمایی",
     about_me_heading: "درباره من",
     about_me_para1:
-      "در میان تپه‌های آرام و درختان بلند دیودار شیملا، یاد گرفته‌ام که هم سادگی و هم عمق را ارج نهم. این تعادل نحوه برخورد من با فناوری را شکل می‌دهد – متفکرانه، خلاقانه و با تمرکز ثابت.",
+      "\u0628\u0632\u0631\u06af \u0634\u062f\u0646 \u062f\u0631 \u0645\u06cc\u0627\u0646 \u062a\u067e\u0647\u200c\u0647\u0627\u06cc \u0622\u0631\u0627\u0645 \u0648 \u062c\u0646\u06af\u0644\u200c\u0647\u0627\u06cc \u062f\u0626\u0648\u062f\u0627\u0631 \u0634\u06cc\u0645\u0644\u0627\u060c \u0637\u0631\u0632 \u0641\u06a9\u0631 \u0645\u0646 \u0631\u0627 \u0634\u06a9\u0644 \u062f\u0627\u062f\u0647 \u0627\u0633\u062a \u2014 \u0627\u06cc\u062c\u0627\u062f \u062a\u0639\u0627\u062f\u0644 \u0628\u06cc\u0646 \u06a9\u0646\u062c\u06a9\u0627\u0648\u06cc \u0648 \u0645\u0634\u0627\u0647\u062f\u0647 \u0622\u0631\u0627\u0645\u060c \u0648 \u062e\u0644\u0627\u0642\u06cc\u062a \u0628\u0627 \u0633\u0627\u062e\u062a\u0627\u0631.",
     about_me_para2:
-      "من معتقدم که راه‌حل‌های معنادار از ترکیب مهارت‌های فنی با تفکر روشن و کمی کنجکاوی حاصل می‌شوند. هدف من ساخت پروژه‌هایی است که کاربردی، نوآورانه و تأثیرگذار باشند.",
+      "\u0645\u0646 \u062f\u0627\u0646\u0634\u062c\u0648\u06cc \u0633\u0627\u0644 \u0622\u062e\u0631 \u0645\u0647\u0646\u062f\u0633\u06cc \u0627\u0644\u06a9\u062a\u0631\u0648\u0646\u06cc\u06a9 \u0648 \u0627\u0631\u062a\u0628\u0627\u0637\u0627\u062a \u062f\u0631 \u062f\u0627\u0646\u0634\u06af\u0627\u0647 \u06af\u0627\u062a\u06cc \u0634\u0627\u06a9\u062a\u06cc \u0648\u06cc\u0634\u0648\u0627\u0648\u06cc\u062f\u06cc\u0627\u0644\u0627\u06cc\u0627 \u0647\u0633\u062a\u0645 \u06a9\u0647 \u0628\u0647 \u0633\u06cc\u0633\u062a\u0645\u200c\u0647\u0627\u06cc \u0647\u0648\u0634\u0645\u0646\u062f\u060c \u0647\u0648\u0634 \u0645\u0635\u0646\u0648\u0639\u06cc \u06a9\u0627\u0631\u0628\u0631\u062f\u06cc\u060c \u0634\u0628\u06cc\u0647\u200c\u0633\u0627\u0632\u06cc \u0648 \u0645\u0647\u0646\u062f\u0633\u06cc \u0645\u062d\u0627\u0633\u0628\u0627\u062a\u06cc \u0639\u0644\u0627\u0642\u0647\u200c\u0645\u0646\u062f\u0645 \u0648 \u062a\u0645\u0631\u06a9\u0632\u0645 \u0628\u0631 \u0633\u0627\u062e\u062a \u0631\u0627\u0647\u200c\u062d\u0644\u200c\u0647\u0627\u06cc \u0645\u0647\u0646\u062f\u0633\u06cc \u0639\u0645\u0644\u06cc \u0648 \u0645\u062a\u0641\u06a9\u0631\u0627\u0646\u0647 \u0627\u0633\u062a.",
     education_heading: "تحصیلات",
     edu_gsv_degree: "کارشناسی مهندسی الکترونیک و ارتباطات (ECE)",
     edu_gsv_institute: "دانشگاه گاتی شاکتی، وادودارا",
@@ -1450,7 +1630,14 @@ window.translations = {
     skill_java_basic: "جاوا پایه",
     skill_ubuntu: "اوبونتو",
     skill_git: "گیت",
+    skill_ml: "یادگیری ماشین",
     projects_heading: "پروژه‌ها",
+    project_demand_title: "پیش‌بینی تقاضای بیش‌محلی",
+    project_demand_desc: "یک خط لوله هوش مصنوعی سبک برای پیش‌بینی سریع و دقیق تقاضای تجارت سریع.",
+    project_plant_title: "نمایشگر بیماری‌های گیاهی IoT",
+    project_plant_desc: "یک خط لوله TinyML در ESP32-CAM برای تشخیص بیماری‌های گیاهی با استفاده از CNN سفارشی 18KB.",
+    project_robot_title: "ربات خودمختار ROS 2",
+    project_robot_desc: "یک ربات با مدل‌سازی ریاضی که به‌طور خودمختار از طریق سینماتیک در ROS 2 و Gazebo حرکت می‌کند.",
     project_facevision_title: "فیس-ویژن",
     project_facevision_desc:
       "تشخیص چهره در تصاویر و ویدئوها با استفاده از OpenCV.",
@@ -1478,6 +1665,8 @@ window.translations = {
     learning_datastructures: "ساختمان داده‌ها",
     learning_deep_learning: "یادگیری عمیق",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "آنتن و انتشار امواج",
+    learning_cuda: "محاسبات موازی (CUDA)",
     connect_heading: "تماس",
   },
   fr: {
@@ -1493,9 +1682,9 @@ window.translations = {
       "Étudiant ECE | Passionné d'IA et de développement logiciel | Mentalité cinématique",
     about_me_heading: "À propos de moi",
     about_me_para1:
-      "Entouré des collines sereines et des grands cèdres de Shimla, j'ai appris à apprécier la simplicité et la profondeur. Cet équilibre façonne ma façon d'aborder la technologie — avec réflexion, créativité et une concentration constante.",
+      "Grandir au milieu des collines tranquilles et des for\u00eats de c\u00e8dres de l'Himalaya \u00e0 Shimla a fa\u00e7onn\u00e9 ma fa\u00e7on de penser \u2014 \u00e9quilibrant curiosit\u00e9 et observation calme, cr\u00e9ativit\u00e9 et structure.",
     about_me_para2:
-      "Je crois que les solutions significatives proviennent de la combinaison des compétences techniques avec une pensée claire et une touche de curiosité. Mon objectif est de construire des projets qui sont pratiques, innovants et qui font une différence positive.",
+      "Je suis \u00e9tudiant en derni\u00e8re ann\u00e9e d'ing\u00e9nierie \u00e9lectronique et de communication \u00e0 Gati Shakti Vishwavidyalaya, int\u00e9ress\u00e9 par les syst\u00e8mes intelligents, l'IA appliqu\u00e9e, la simulation et l'ing\u00e9nierie informatique, avec un accent sur la cr\u00e9ation de solutions d'ing\u00e9nierie pratiques et r\u00e9fl\u00e9chies.",
     education_heading: "Éducation",
     edu_gsv_degree: "B. Tech en ingénierie électronique et communication (ECE)",
     edu_gsv_institute: "Gati Shakti Vishwavidyalaya, Vadodara",
@@ -1512,7 +1701,14 @@ window.translations = {
     skill_java_basic: "Java de base",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Apprentissage Automatique",
     projects_heading: "Projets",
+    project_demand_title: "Prévision de la Demande Hyperlocale",
+    project_demand_desc: "Un pipeline d'IA léger pour des prévisions de demande rapides et précises dans le commerce rapide.",
+    project_plant_title: "Moniteur IoT de Maladies des Plantes",
+    project_plant_desc: "Un pipeline TinyML de bout en bout sur ESP32-CAM détectant les maladies des plantes avec un CNN personnalisé de 18 Ko.",
+    project_robot_title: "Robot Autonome ROS 2",
+    project_robot_desc: "Un robot modélisé mathématiquement naviguant de manière autonome via la cinématique dans ROS 2 et Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Détecter les visages dans les images et les vidéos à l'aide d'OpenCV.",
@@ -1541,6 +1737,8 @@ window.translations = {
     learning_datastructures: "Structures de données",
     learning_deep_learning: "Apprentissage profond",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antennes et Propagation des Ondes",
+    learning_cuda: "Calcul Parallèle (CUDA)",
     connect_heading: "Connecter",
   },
   de: {
@@ -1556,9 +1754,9 @@ window.translations = {
       "ECE-Student | KI- & Softwareentwicklungs-Enthusiast | Cinematic Mindset",
     about_me_heading: "Über mich",
     about_me_para1:
-      "Umgeben von den heiteren Hügeln und hohen Deodar-Bäumen Shimlas habe ich gelernt, sowohl Einfachheit als auch Tiefe zu schätzen. Diese Balance prägt meinen Umgang mit Technologie — nachdenklich, kreativ und mit stetigem Fokus.",
+      "Das Aufwachsen inmitten der ruhigen H\u00fcgel und Deodar-W\u00e4lder von Shimla hat meine Denkweise gepr\u00e4gt \u2014 eine Balance zwischen Neugier und ruhiger Beobachtung sowie Kreativit\u00e4t und Struktur.",
     about_me_para2:
-      "Ich glaube, dass bedeutungsvolle Lösungen durch die Kombination von technischen Fähigkeiten mit klarem Denken und einem Hauch von Neugier entstehen. Mein Ziel ist es, Projekte zu entwickeln, die praktisch, innovativ sind und einen positiven Unterschied machen.",
+      "Ich bin ein Student im letzten Jahr der Elektronik- und Informationstechnik an der Gati Shakti Vishwavidyalaya. Meine Interessen liegen in intelligenten Systemen, angewandter KI, Simulation und Computer-Engineering, mit dem Fokus auf die Entwicklung praktischer und durchdachter technischer L\u00f6sungen.",
     education_heading: "Bildung",
     edu_gsv_degree: "B. Tech in Elektronik- und Kommunikationstechnik (ECE)",
     edu_gsv_institute: "Gati Shakti Vishwavidyalaya, Vadodara",
@@ -1575,7 +1773,14 @@ window.translations = {
     skill_java_basic: "Grundlagen Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Maschinelles Lernen",
     projects_heading: "Projekte",
+    project_demand_title: "Hyperlokale Nachfragevorhersage",
+    project_demand_desc: "Eine leichte KI-Pipeline für schnelle und genaue Nachfragevorhersagen im Quick-Commerce.",
+    project_plant_title: "IoT-Pflanzenkrankheitsmonitor",
+    project_plant_desc: "Eine End-to-End TinyML-Pipeline auf ESP32-CAM zur Erkennung von Pflanzenkrankheiten mit einem 18-KB-CNN.",
+    project_robot_title: "Autonomer ROS 2-Roboter",
+    project_robot_desc: "Ein mathematisch modellierter Roboter, der in ROS 2 und Gazebo autonom navigiert.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Erkennen von Gesichtern in Bildern und Videos mit OpenCV.",
@@ -1605,6 +1810,8 @@ window.translations = {
     learning_datastructures: "Datenstrukturen",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antennen und Wellenausbreitung",
+    learning_cuda: "Paralleles Rechnen (CUDA)",
     connect_heading: "Verbinden",
   },
   es: {
@@ -1620,9 +1827,9 @@ window.translations = {
       "Estudiante de ECE | Entusiasta de la IA y el desarrollo de software | Mentalidad Cinematográfica",
     about_me_heading: "Sobre mí",
     about_me_para1:
-      "Rodeado por las serenas colinas y los altos árboles de Deodar de Shimla, he aprendido a apreciar tanto la simplicidad como la profundidad. Este equilibrio moldea mi enfoque de la tecnología, de manera reflexiva, creativa y con un enfoque constante.",
+      "Crecer en medio de las tranquilas colinas y los bosques de cedros del Himalaya en Shimla molde\u00f3 mi forma de pensar: equilibrando la curiosidad con la observaci\u00f3n tranquila, y la creatividad con la estructura.",
     about_me_para2:
-      "Creo que las soluciones significativas provienen de la combinación de habilidades técnicas con un pensamiento claro y una pizca de curiosidad. Mi objetivo es construir proyectos que sean prácticos, innovadores y que generen un impacto positivo.",
+      "Soy estudiante de \u00faltimo a\u00f1o de Ingenier\u00eda Electr\u00f3nica y de Comunicaciones en Gati Shakti Vishwavidyalaya, interesado en sistemas inteligentes, IA aplicada, simulaci\u00f3n e ingenier\u00eda computacional, con un enfoque en la construcci\u00f3n de soluciones de ingenier\u00eda pr\u00e1cticas y bien pensadas.",
     education_heading: "Educación",
     edu_gsv_degree:
       "Licenciatura en Ingeniería Electrónica y Comunicación (ECE)",
@@ -1641,7 +1848,14 @@ window.translations = {
     skill_java_basic: "Java Básico",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Aprendizaje Automático",
     projects_heading: "Proyectos",
+    project_demand_title: "Predicción de Demanda Hiperlocal",
+    project_demand_desc: "Una canalización de IA ligera para predicciones rápidas y precisas de la demanda en el comercio rápido.",
+    project_plant_title: "Monitor IoT de Enfermedades de Plantas",
+    project_plant_desc: "Una canalización TinyML de extremo a extremo en ESP32-CAM que detecta enfermedades de plantas con un CNN de 18 KB.",
+    project_robot_title: "Robot Autónomo ROS 2",
+    project_robot_desc: "Un robot modelado matemáticamente que navega de forma autónoma a través de cinemática en ROS 2 y Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Detectar rostros en imágenes y videos usando OpenCV.",
@@ -1670,6 +1884,8 @@ window.translations = {
     learning_datastructures: "Estructuras de datos",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antenas y Propagación de Ondas",
+    learning_cuda: "Computación Paralela (CUDA)",
     connect_heading: "Conectar",
   },
   pt: {
@@ -1685,9 +1901,9 @@ window.translations = {
       "Estudante de ECE | Entusiasta de IA e Desenvolvimento de Software | Mentalidade Cinematográfica",
     about_me_heading: "Sobre Mim",
     about_me_para1:
-      "Rodeado pelas serenas colinas e altas árvores Deodar de Shimla, aprendi a apreciar tanto a simplicidade quanto a profundidade. Esse equilíbrio molda como abordo a tecnologia — com pensamento, criatividade e foco constante.",
+      "Crescer no meio das colinas tranquilas e das florestas de cedros do Himalaia em Shimla moldou a minha forma de pensar \u2014 equilibrando a curiosidade com a observa\u00e7\u00e3o calma, e a criatividade com a estrutura.",
     about_me_para2:
-      "Acredito que soluções significativas vêm da combinação de habilidades técnicas com pensamento claro e um toque de curiosidade. Meu objetivo é construir projetos práticos, inovadores e que façam uma diferença positiva.",
+      "Sou aluno do \u00faltimo ano de Engenharia Eletr\u00f3nica e de Comunica\u00e7\u00f5es na Gati Shakti Vishwavidyalaya, interessado em sistemas inteligentes, IA aplicada, simula\u00e7\u00e3o e engenharia computacional, com foco na constru\u00e7\u00e3o de solu\u00e7\u00f5es de engenharia pr\u00e1ticas e bem pensadas.",
     education_heading: "Educação",
     edu_gsv_degree:
       "Bacharelado em Engenharia Eletrônica e de Comunicações (ECE)",
@@ -1705,7 +1921,14 @@ window.translations = {
     skill_java_basic: "Java Básico",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Aprendizado de Máquina",
     projects_heading: "Projetos",
+    project_demand_title: "Previsão de Demanda Hiperlocal",
+    project_demand_desc: "Um pipeline de IA leve para previsão rápida e precisa da demanda de comércio rápido.",
+    project_plant_title: "Monitor IoT de Doenças de Plantas",
+    project_plant_desc: "Um pipeline TinyML de ponta a ponta no ESP32-CAM detectando doenças de plantas com um CNN de 18 KB.",
+    project_robot_title: "Robô Autônomo ROS 2",
+    project_robot_desc: "Um robô modelado matematicamente navegando de forma autônoma via cinemática no ROS 2 e Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Detectar rostos em imagens e vídeos usando OpenCV.",
@@ -1734,6 +1957,8 @@ window.translations = {
     learning_datastructures: "Estruturas de Dados",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antenas e Propagação de Ondas",
+    learning_cuda: "Computação Paralela (CUDA)",
     connect_heading: "Conectar",
   },
   it: {
@@ -1749,9 +1974,9 @@ window.translations = {
       "Studente ECE | Appassionato di AI | Sviluppatore orientato alla storia",
     about_me_heading: "Su di me",
     about_me_para1:
-      "Circondato dalle serene colline e dagli alti alberi di Deodar di Shimla, ho imparato ad apprezzare sia la semplicità che la profondità. Questo equilibrio modella il mio approccio alla tecnologia — con riflessione, creatività e una costante attenzione.",
+      "Crescere tra le tranquille colline e le foreste di cedri dell'Himalaya a Shimla ha plasmato il mio modo di pensare: in equilibrio tra curiosit\u00e0 e osservazione calma, tra creativit\u00e0 e struttura.",
     about_me_para2:
-      "Credo che soluzioni significative derivino dalla combinazione di competenze tecniche con un pensiero chiaro e un pizzico di curiosità. Il mio obiettivo è costruire progetti che siano pratici, innovativi e che facciano una differenza positiva.",
+      "Sono uno studente all'ultimo anno di Ingegneria Elettronica e delle Telecomunicazioni presso Gati Shakti Vishwavidyalaya, interessato ai sistemi intelligenti, all'IA applicata, alla simulazione e all'ingegneria computazionale, con un focus sulla costruzione di soluzioni ingegneristiche pratiche e ponderate.",
     education_heading: "Istruzione",
     edu_gsv_degree:
       "B. Tech in Ingegneria Elettronica e delle Comunicazioni (ECE)",
@@ -1769,7 +1994,14 @@ window.translations = {
     skill_java_basic: "Java Base",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Apprendimento Automatico",
     projects_heading: "Progetti",
+    project_demand_title: "Previsione della Domanda Iperlocale",
+    project_demand_desc: "Una pipeline AI leggera per previsioni rapide e accurate della domanda nel quick-commerce.",
+    project_plant_title: "Monitor IoT delle Malattie delle Piante",
+    project_plant_desc: "Una pipeline TinyML end-to-end su ESP32-CAM che rileva malattie delle piante utilizzando una CNN personalizzata da 18 KB.",
+    project_robot_title: "Robot Autonomo ROS 2",
+    project_robot_desc: "Un robot modellato matematicamente che naviga autonomamente tramite cinematica in ROS 2 e Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Rileva i volti in immagini e video usando OpenCV.",
@@ -1798,6 +2030,8 @@ window.translations = {
     learning_datastructures: "Strutture Dati",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antenne e Propagazione delle Onde",
+    learning_cuda: "Calcolo Parallelo (CUDA)",
     connect_heading: "Connetti",
   },
   ru: {
@@ -1813,9 +2047,9 @@ window.translations = {
       "Студент ECE | Энтузиаст ИИ и разработки ПО | Кинематографическое мышление",
     about_me_heading: "Обо мне",
     about_me_para1:
-      "Окруженный безмятежными холмами и высокими деодарскими деревьями Шимлы, я научился ценить как простоту, так и глубину. Этот баланс формирует мой подход к технологиям — вдумчивый, творческий и с постоянным фокусом.",
+      "\u0412\u0437\u0440\u043e\u0441\u043b\u0435\u043d\u0438\u0435 \u0441\u0440\u0435\u0434\u0438 \u0442\u0438\u0445\u0438\u0445 \u0445\u043e\u043b\u043c\u043e\u0432 \u0438 \u043a\u0435\u0434\u0440\u043e\u0432\u044b\u0445 \u043b\u0435\u0441\u043e\u0432 \u0428\u0438\u043c\u043b\u044b \u0441\u0444\u043e\u0440\u043c\u0438\u0440\u043e\u0432\u0430\u043b\u043e \u043c\u043e\u0439 \u043e\u0431\u0440\u0430\u0437 \u043c\u044b\u0448\u043b\u0435\u043d\u0438\u044f \u2014 \u0431\u0430\u043b\u0430\u043d\u0441 \u043c\u0435\u0436\u0434\u0443 \u043b\u044e\u0431\u043e\u043f\u044b\u0442\u0441\u0442\u0432\u043e\u043c \u0438 \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u044b\u043c \u043d\u0430\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u0435\u043c, \u0442\u0432\u043e\u0440\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0438 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u043e\u0439.",
     about_me_para2:
-      "Я верю, что значимые решения приходят из сочетания технических навыков с ясным мышлением и толикой любопытства. Моя цель — создавать проекты, которые практичны, инновационны и приносят положительные изменения.",
+      "\u042f \u0441\u0442\u0443\u0434\u0435\u043d\u0442 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0433\u043e \u043a\u0443\u0440\u0441\u0430 \u0444\u0430\u043a\u0443\u043b\u044c\u0442\u0435\u0442\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0438 \u0438 \u0441\u0432\u044f\u0437\u0438 \u0432 Gati Shakti Vishwavidyalaya, \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0441\u044c \u0438\u043d\u0442\u0435\u043b\u043b\u0435\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u043c\u0438, \u043f\u0440\u0438\u043a\u043b\u0430\u0434\u043d\u044b\u043c \u0418\u0418, \u043c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u0438 \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u0438\u0435\u0439, \u0441 \u0430\u043a\u0446\u0435\u043d\u0442\u043e\u043c \u043d\u0430 \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u043d\u044b\u0445 \u0438 \u043f\u0440\u043e\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0445 \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439.",
     education_heading: "Образование",
     edu_gsv_degree:
       "Бакалавр технических наук в области электроники и связи (ECE)",
@@ -1833,7 +2067,14 @@ window.translations = {
     skill_java_basic: "Базовый Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Машинное обучение",
     projects_heading: "Проекты",
+    project_demand_title: "Гиперлокальное прогнозирование спроса",
+    project_demand_desc: "Легкий конвейер ИИ для быстрого и точного прогнозирования спроса в сфере быстрой коммерции.",
+    project_plant_title: "IoT-монитор болезней растений",
+    project_plant_desc: "Сквозной конвейер TinyML на ESP32-CAM, обнаруживающий болезни растений с помощью пользовательской CNN на 18 КБ.",
+    project_robot_title: "Автономный робот ROS 2",
+    project_robot_desc: "Математически смоделированный робот, автономно перемещающийся с помощью кинематики в ROS 2 и Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Обнаружение лиц на изображениях и видео с использованием OpenCV.",
@@ -1863,6 +2104,8 @@ window.translations = {
     learning_datastructures: "Структуры данных",
     learning_deep_learning: "Глубокое обучение",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Антенны и распространение радиоволн",
+    learning_cuda: "Параллельные вычисления (CUDA)",
     connect_heading: "Связаться",
   },
   tr: {
@@ -1878,9 +2121,9 @@ window.translations = {
       "ECE öğrencisi | Yapay Zeka ve Yazılım Geliştirme Meraklısı | Sinematik Zihniyet",
     about_me_heading: "Hakkımda",
     about_me_para1:
-      "Şimla'nın sakin tepeleri ve uzun Deodar ağaçları ile çevrili olarak, hem sadeliği hem de derinliği takdir etmeyi öğrendim. Bu denge, teknolojiye nasıl yaklaştığımı şekillendiriyor — düşünceli, yaratıcı ve istikrarlı bir odaklanma ile.",
+      "Shimla'n\u0131n sessiz tepeleri ve Deodar ormanlar\u0131n\u0131n ortas\u0131nda b\u00fcy\u00fcmek, d\u00fc\u015f\u00fcnce tarz\u0131m\u0131 \u015fekillendirdi \u2014 merak\u0131 sakin bir g\u00f6zlemle, yarat\u0131c\u0131l\u0131\u011f\u0131 ise yap\u0131yla dengelememi sa\u011flad\u0131.",
     about_me_para2:
-      "Anlamlı çözümlerin teknik becerileri net düşünme ve biraz merakla birleştirmekten geldiğine inanıyorum. Amacım, pratik, yenilikçi ve olumlu bir fark yaratan projeler oluşturmaktır.",
+      "Gati Shakti Vishwavidyalaya'da Elektronik ve Haberle\u015fme M\u00fchendisli\u011fi son s\u0131n\u0131f \u00f6\u011frencisiyim. Ak\u0131ll\u0131 sistemler, uygulamal\u0131 yapay zeka, sim\u00fclasyon ve hesaplamal\u0131 m\u00fchendislik ile ilgileniyor, pratik ve d\u00fc\u015f\u00fcnceli bir \u015fekilde tasarlanm\u0131\u015f \u00e7\u00f6z\u00fcmler olu\u015fturmaya odaklan\u0131yorum.",
     education_heading: "Eğitim",
     edu_gsv_degree: "Elektronik ve Haberleşme Mühendisliği (ECE) Lisans",
     edu_gsv_institute: "Gati Shakti Vishwavidyalaya, Vadodara",
@@ -1897,7 +2140,14 @@ window.translations = {
     skill_java_basic: "Temel Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Makine Öğrenimi",
     projects_heading: "Projeler",
+    project_demand_title: "Hiperlokal Talep Tahmini",
+    project_demand_desc: "Hızlı ve doğru hızlı ticaret talep tahmini için hafif bir AI boru hattı.",
+    project_plant_title: "Bitki Hastalığı IoT Monitörü",
+    project_plant_desc: "Özel bir 18KB CNN kullanarak bitki hastalıklarını tespit eden ESP32-CAM üzerinde uçtan uca bir TinyML boru hattı.",
+    project_robot_title: "ROS 2 Otonom Robot",
+    project_robot_desc: "ROS 2 ve Gazebo'da kapalı form kinematiği aracılığıyla otonom olarak gezinen matematiksel olarak modellenmiş bir robot.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "OpenCV kullanarak resimlerde ve videolarda yüzleri algılayın.",
@@ -1927,6 +2177,8 @@ window.translations = {
     learning_datastructures: "Veri Yapıları",
     learning_deep_learning: "Derin Öğrenme",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Anten ve Dalga Yayılımı",
+    learning_cuda: "Paralel Hesaplama (CUDA)",
     connect_heading: "Bağlan",
   },
   nl: {
@@ -1942,9 +2194,9 @@ window.translations = {
       "ECE student | AI & Software Ontwikkelaar Enthousiast | Cinematische Mindset",
     about_me_heading: "Over Mij",
     about_me_para1:
-      "Omringd door de serene heuvels en hoge Deodar bomen van Shimla, heb ik geleerd zowel eenvoud als diepte te waarderen. Dit evenwicht vormt mijn benadering van technologie — bedachtzaam, creatief en met een constante focus.",
+      "Opgroeien te midden van de rustige heuvels en cederbossen van Shimla heeft mijn manier van denken gevormd \u2014 een balans tussen nieuwsgierigheid en rustige observatie, en creativiteit en structuur.",
     about_me_para2:
-      "Ik geloof dat zinvolle oplossingen voortkomen uit het combineren van technische vaardigheden met helder denken en een vleugje nieuwsgierigheid. Mijn doel is om projecten te bouwen die praktisch, innovatief en een positief verschil maken.",
+      "Ik ben een laatstejaarsstudent Elektronica en Communicatietechniek aan Gati Shakti Vishwavidyalaya, ge\u00efnteresseerd in intelligente systemen, toegepaste AI, simulatie en computationele engineering, met een focus op het bouwen van praktische en doordachte technische oplossingen.",
     education_heading: "Opleiding",
     edu_gsv_degree: "B. Tech in Elektronica en Communicatie Engineering (ECE)",
     edu_gsv_institute: "Gati Shakti Vishwavidyalaya, Vadodara",
@@ -1961,7 +2213,14 @@ window.translations = {
     skill_java_basic: "Basis Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Machine Learning",
     projects_heading: "Projecten",
+    project_demand_title: "Hyperlokale Vraagvoorspelling",
+    project_demand_desc: "Een lichtgewicht AI-pijplijn voor snelle en nauwkeurige vraagvoorspellingen in quick-commerce.",
+    project_plant_title: "IoT-Plantenziekte Monitor",
+    project_plant_desc: "Een end-to-end TinyML-pijplijn op ESP32-CAM die plantenziekten detecteert met behulp van een 18KB CNN.",
+    project_robot_title: "Autonome ROS 2 Robot",
+    project_robot_desc: "Een wiskundig gemodelleerde robot die autonoom navigeert via gesloten-vorm kinematica in ROS 2 en Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc:
       "Detecteer gezichten in afbeeldingen en video's met behulp van OpenCV.",
@@ -1991,6 +2250,8 @@ window.translations = {
     learning_datastructures: "Datastructuren",
     learning_deep_learning: "Deep Learning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antennes en Golfvoortplanting",
+    learning_cuda: "Parallel Computing (CUDA)",
     connect_heading: "Verbinden",
   },
   sv: {
@@ -2006,9 +2267,9 @@ window.translations = {
       "ECE-student | AI & Mjukvaruutvecklingsentusiast | Filmatisk inställning",
     about_me_heading: "Om mig",
     about_me_para1:
-      "Omgiven av Shimlas fridfulla kullar och höga Deodar-träd har jag lärt mig att uppskatta både enkelhet och djup. Denna balans formar hur jag närmar mig teknik – eftertänksamt, kreativt och med ett stadigt fokus.",
+      "Att v\u00e4xa upp bland de lugna kullarna och ceder-skogarna i Shimla har format mitt s\u00e4tt att t\u00e4nka \u2014 att balansera nyfikenhet med lugn observation, och kreativitet med struktur.",
     about_me_para2:
-      "Jag tror att meningsfulla lösningar kommer från att kombinera tekniska färdigheter med klart tänkande och en gnutta nyfikenhet. Mitt mål är att bygga projekt som är praktiska, innovativa och gör en positiv skillnad.",
+      "Jag \u00e4r sista\u00e5rsstudent i elektronik och kommunikationsteknik vid Gati Shakti Vishwavidyalaya, intresserad av intelligenta system, till\u00e4mpad AI, simulering och ber\u00e4kningsteknik, med fokus p\u00e5 att bygga praktiska och genomt\u00e4nkta tekniska l\u00f6sningar.",
     education_heading: "Utbildning",
     edu_gsv_degree:
       "Civilingenjör i Elektronik- och Kommunikationsteknik (ECE)",
@@ -2026,7 +2287,14 @@ window.translations = {
     skill_java_basic: "Grundläggande Java",
     skill_ubuntu: "Ubuntu",
     skill_git: "Git",
+    skill_ml: "Maskininlärning",
     projects_heading: "Projekt",
+    project_demand_title: "Hyperlokal Efterfrågeprognos",
+    project_demand_desc: "En lättviktig AI-pipeline för snabba och exakta efterfrågeprognoser inom quick-commerce.",
+    project_plant_title: "IoT-Växtsjukdomsmonitor",
+    project_plant_desc: "En end-to-end TinyML-pipeline på ESP32-CAM som upptäcker växtsjukdomar med en 18 KB CNN.",
+    project_robot_title: "Autonom ROS 2 Robot",
+    project_robot_desc: "En matematiskt modellerad robot som navigerar autonomt via sluten kinematik i ROS 2 och Gazebo.",
     project_facevision_title: "Face-Vision",
     project_facevision_desc: "Upptäck ansikten i bilder och videor med OpenCV.",
     project_stardetection_title: "Stjärn-Detektion",
@@ -2053,6 +2321,8 @@ window.translations = {
     learning_datastructures: "Datastrukturer",
     learning_deep_learning: "Djupinlärning",
     learning_gans: "GANs" /* GANs remains GANs */,
+    learning_awp: "Antenner och Vågutbredning",
+    learning_cuda: "Parallell Beräkning (CUDA)",
     connect_heading: "Anslut",
   },
 };
